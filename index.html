@@ -85,6 +85,11 @@
 /* Optional: breaks out of a page builder container that limits the width */
 .spl.spl-breakout { width: 100vw; margin-left: calc(50% - 50vw); }
 
+/* Host page fixes (page builders often center text and pad sections) */
+.spl { text-align: left; }
+body:has(.spl-breakout) { background: #000; }
+.con-kit-frame:has(.spl-breakout) { padding-top: 0 !important; padding-bottom: 0 !important; }
+
 /* ---------- Type ---------- */
 .spl-h1 {
   font-family: var(--font-display);
