@@ -264,6 +264,7 @@ body.coa-lock{overflow:hidden}
   .coa .modal{padding:0;align-items:flex-end}
   .coa .modal .panel{max-width:none;border-radius:16px 16px 0 0;max-height:94vh;max-height:94svh}
 }
+@media (min-width:641px){.coa .sticky{display:none}}
 @media (prefers-reduced-motion:reduce){.coa .sticky,.coa .btn{transition:none}}
 </style>
 
@@ -593,15 +594,30 @@ body.coa-lock{overflow:hidden}
   var SURVEY='https://api.leadconnectorhq.com/widget/survey/qDKr7hHfu9DV9yq3xjVD';
   var modal=document.getElementById('coa-modal'), frame=document.getElementById('coa-frame'), loaded=false;
   function qs(){ try{ return window.location.search||''; }catch(e){ return ''; } }
+  // the GHL embed script must be listening before the survey iframe loads, so load it first
+  var embedReady=false, embedLoading=false, pendingMount=null;
+  function loadEmbed(cb){
+    if(embedReady){ cb(); return; }
+    pendingMount=cb;
+    if(embedLoading) return; embedLoading=true;
+    function ready(){ embedReady=true; if(pendingMount){ var f=pendingMount; pendingMount=null; f(); } }
+    var s=document.createElement('script'); s.src='https://link.msgsndr.com/js/form_embed.js'; s.async=true;
+    s.onload=ready; s.onerror=ready; document.body.appendChild(s);
+  }
+  loadEmbed(function(){});
   function loadSurvey(){
     if(loaded) return; loaded=true;
-    var src=SURVEY+qs();
-    var ifr=document.createElement('iframe');
-    ifr.src=src; ifr.id='qDKr7hHfu9DV9yq3xjVD'; ifr.title='Ad Strategy Session application';
-    ifr.setAttribute('scrolling','no'); ifr.setAttribute('data-cookie-consent','false');
-    ifr.style.cssText='border:none;width:100%;min-height:420px;';
-    frame.appendChild(ifr);
-    var s=document.createElement('script'); s.src='https://link.msgsndr.com/js/form_embed.js'; s.async=true; document.body.appendChild(s);
+    var src=SURVEY+qs(), mounted=false;
+    function mount(){
+      if(mounted) return; mounted=true;
+      var ifr=document.createElement('iframe');
+      ifr.src=src; ifr.id='qDKr7hHfu9DV9yq3xjVD'; ifr.title='Ad Strategy Session application';
+      ifr.setAttribute('scrolling','no'); ifr.setAttribute('data-cookie-consent','false');
+      ifr.style.cssText='border:none;width:100%;min-height:420px;';
+      frame.appendChild(ifr);
+    }
+    loadEmbed(mount);
+    setTimeout(mount,4000);
   }
   function openModal(e){
     if(e) e.preventDefault();
