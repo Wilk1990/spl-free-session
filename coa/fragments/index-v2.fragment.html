@@ -1,0 +1,211 @@
+<!-- City of Angels Advertising · VSL page (headline + video + application) · v2 · LA pilot until Nov 11 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fast.wistia.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+.coa,.coa *{box-sizing:border-box;margin:0;padding:0}
+.coa{--ink:#111;--muted:#5b5b5b;--line:#e5e1d8;--gold:#b8893a;--gold-2:#d9b86a;--dark:#0b0b0b;
+  font-family:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;overflow-x:clip;
+  width:100vw;position:relative;left:50%;margin-left:-50vw;text-align:left}
+@supports not (overflow:clip){.coa{overflow-x:hidden}}
+.coa img{display:block;max-width:100%;height:auto}
+.coa a{color:inherit;text-decoration:none}
+.coa .wrap{width:100%;max-width:980px;margin:0 auto;padding:0 20px}
+.coa .serif{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0}
+
+.coa .hero{position:relative;background:var(--dark);color:#fff;padding:26px 0 70px;overflow:hidden;isolation:isolate;text-align:center}
+.coa .hero .bg{position:absolute;inset:0;z-index:-2}
+.coa .hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;opacity:.35}
+.coa .hero .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,11,11,.6) 0%,rgba(11,11,11,.85) 50%,#0b0b0b 100%)}
+.coa .logo{display:flex;justify-content:center;margin-bottom:34px}
+.coa .logo img{height:40px;width:auto}
+.coa .eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2);margin-bottom:16px}
+.coa h1{font-size:clamp(32px,5vw,56px);line-height:1.06;letter-spacing:-.025em;font-weight:700;margin:0 auto 18px;max-width:900px;text-wrap:balance}
+.coa h1 .serif{color:var(--gold-2)}
+.coa .sub{font-size:clamp(17px,2vw,20px);color:#e4e0d6;max-width:720px;margin:0 auto 26px;line-height:1.5}
+.coa .deal{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 14px;background:rgba(217,184,106,.10);border:1px solid rgba(217,184,106,.4);border-radius:999px;padding:10px 20px;font-size:15px;color:#f3ead6;margin-bottom:30px}
+.coa .deal i{display:inline-block;width:9px;height:9px;border-radius:50%;background:#3fbf78;box-shadow:0 0 0 4px rgba(63,191,120,.2)}
+.coa .deal b{color:#fff}
+.coa .deal .cd{font-variant-numeric:tabular-nums;color:var(--gold-2);font-weight:600}
+
+.coa .vsl{max-width:900px;margin:0 auto}
+.coa .vsl .frame{position:relative;padding-top:56.25%;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.08)}
+.coa .vsl iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.coa .vsl.off{display:none}
+
+.coa .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:#111;font-weight:700;font-size:19px;line-height:1.2;padding:21px 36px;border-radius:8px;border:0;cursor:pointer;box-shadow:0 10px 30px rgba(184,137,58,.3);transition:transform .15s,background .15s;font-family:inherit}
+.coa .btn:hover{background:#c99a47;transform:translateY(-1px)}
+.coa .cta{margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.coa .note{font-size:14px;color:#b9b4a9;max-width:640px;line-height:1.5}
+
+.coa .apply{padding:70px 0 80px;background:#f6f4ef}
+.coa .apply .head{text-align:center;max-width:720px;margin:0 auto 26px}
+.coa .apply h2{font-size:clamp(28px,3.8vw,40px);line-height:1.1;letter-spacing:-.02em;margin-bottom:12px}
+.coa .apply p{font-size:17px;color:#333;line-height:1.55}
+.coa .terms{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:760px;margin:22px auto 26px}
+.coa .terms div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 12px;text-align:center;font-size:14px;color:var(--muted);line-height:1.4}
+.coa .terms b{display:block;font-size:20px;color:var(--ink);letter-spacing:-.01em;margin-bottom:2px}
+.coa .form{max-width:680px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 14px;box-shadow:0 20px 60px rgba(0,0,0,.07);min-height:460px}
+.coa .form iframe{width:100%;border:0;min-height:440px}
+.coa .small{font-size:13px;color:var(--muted);text-align:center;max-width:680px;margin:16px auto 0;line-height:1.5}
+
+.coa .foot{background:var(--dark);color:#9d978b;padding:40px 0 110px;font-size:13px;line-height:1.6;text-align:center}
+.coa .foot a{color:#d6d2c9;text-decoration:underline;text-underline-offset:3px}
+.coa .foot .links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin:12px 0 18px}
+.coa .foot .disc{max-width:860px;margin:0 auto;color:#7f7a70}
+
+.coa .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(11,11,11,.96);padding:12px 16px calc(12px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .25s ease;border-top:1px solid rgba(255,255,255,.08)}
+.coa .sticky.show{transform:translateY(0)}
+.coa .sticky .btn{width:100%;padding:17px 18px;font-size:17px;box-shadow:none}
+@media (min-width:641px){.coa .sticky{display:none}}
+@media (max-width:640px){
+  .coa .hero{padding:20px 0 54px}
+  .coa .logo{margin-bottom:24px}
+  .coa .logo img{height:34px}
+  .coa .deal{border-radius:12px;font-size:14px}
+  .coa .vsl{margin:0 -20px}
+  .coa .vsl .frame{border-radius:0;border-left:0;border-right:0}
+  .coa .btn{width:100%;padding:19px 18px;font-size:18px}
+  .coa .deal i{display:none}
+  .coa .terms{gap:8px}
+  .coa .terms div{padding:12px 6px;font-size:12px}
+  .coa .terms b{font-size:16px}
+  .coa .form{padding:12px 6px}
+  .coa .apply{padding:54px 0 64px}
+}
+@media (prefers-reduced-motion:reduce){.coa .sticky,.coa .btn{transition:none}}
+</style>
+
+<div class="coa" id="coa">
+
+<header class="hero" id="top">
+<div class="bg"><img src="https://wilk1990.github.io/spl-free-session/coa/img/hero-skyline-1200.jpg" srcset="https://wilk1990.github.io/spl-free-session/coa/img/hero-skyline-800.jpg 800w, https://wilk1990.github.io/spl-free-session/coa/img/hero-skyline-1200.jpg 1200w, https://wilk1990.github.io/spl-free-session/coa/img/hero-skyline-2000.jpg 2000w" sizes="100vw" alt="" fetchpriority="high" decoding="async"></div>
+<div class="shade"></div>
+<div class="wrap">
+<div class="logo"><img src="https://wilk1990.github.io/spl-free-session/coa/img/logo-lockup-720.png" width="1485" height="360" alt="City of Angels Advertising"></div>
+<span class="eyebrow">For Los Angeles service businesses doing $50K+ a month</span>
+<h1>More booked appointments from Meta ads. <span class="serif">Shot on location, tracked to the calendar.</span></h1>
+<p class="sub" id="coa-watch">Watch the 4 minute video. Everything is in there: how it works, what it costs, and who it's not for.</p>
+<div class="deal" id="coa-deal"><i></i><span><b>LA pilot:</b> $5,000 a month for the first 90 days. 3 spots.</span><span class="cd" id="coa-cd">Open until November 11</span></div>
+
+<div class="vsl" id="coa-vsl" data-wistia="">
+<div class="frame" id="coa-vsl-frame"></div>
+</div>
+
+<div class="cta">
+<a href="#apply" class="btn coa-go">Apply for a pilot spot <span aria-hidden="true">&rarr;</span></a>
+<span class="note">Five quick questions. If it's a fit, you pick a time right after and we build 3 ad concepts for your business before the call. Your ads go live within 14 days of the shoot day or your first month's fee is waived.</span>
+</div>
+</div>
+</header>
+
+<section class="apply" id="apply">
+<div class="wrap">
+<div class="head">
+<h2>Apply for one of 3 pilot spots</h2>
+<p id="coa-apply-sub">Until November 11 we take 3 Los Angeles businesses into a 90 day pilot. In return we ask for honest feedback and a case study if the numbers are good.</p>
+</div>
+<div class="terms" id="coa-terms">
+<div><b>$5,000 / mo</b>first 90 days</div>
+<div><b>$3,000+ / mo</b>your ad budget, paid to Meta</div>
+<div><b>$10,000 / mo</b>after the pilot</div>
+</div>
+<div class="form" id="coa-form"></div>
+<p class="small">Your answers are only used to prepare your call. We never sell or share your data.</p>
+</div>
+</section>
+
+<footer class="foot">
+<div class="wrap">
+<div>City of Angels Advertising LLC · 17827 Miranda Street, Encino, CA 91316 · <a href="mailto:info@cityofangelsadvertising.com">info@cityofangelsadvertising.com</a></div>
+<div class="links">
+<a href="/privacy-policy">Privacy Policy</a>
+<a href="/privacy-policy#your-choices">Do Not Sell or Share My Personal Information</a>
+<a href="/terms-of-service">Terms of Service</a>
+</div>
+<p class="disc">This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc. Results from our own business and from past clients are not a promise of your results. Your results depend on your offer, your market, your ad budget and your follow up. &copy; <span id="coa-year">2026</span> City of Angels Advertising LLC.</p>
+</div>
+</footer>
+
+<div class="sticky" id="coa-sticky"><a href="#apply" class="btn coa-go">Apply for a pilot spot <span aria-hidden="true">&rarr;</span></a></div>
+
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('coa'); if(!root) return;
+  var SURVEY='https://api.leadconnectorhq.com/widget/survey/qDKr7hHfu9DV9yq3xjVD';
+  var DEADLINE=Date.parse('2026-11-12T00:00:00-08:00'); // end of Nov 11, Pacific time
+  function qs(){ try{ return window.location.search||''; }catch(e){ return ''; } }
+
+  // VSL: Wistia media id lives in data-wistia on #coa-vsl
+  var vsl=document.getElementById('coa-vsl'), vid=vsl.getAttribute('data-wistia');
+  if(vid){
+    document.getElementById('coa-vsl-frame').innerHTML='<iframe src="https://fast.wistia.net/embed/iframe/'+vid+'?videoFoam=true&playbar=true&seo=false" allow="autoplay; fullscreen" allowfullscreen title="City of Angels Advertising: the LA pilot in 4 minutes"></iframe>';
+  } else {
+    vsl.classList.add('off'); var w=document.getElementById('coa-watch'); if(w) w.textContent='Ads we shoot at your location, a qualification step before your calendar, and four numbers every week: spend, qualified bookings, cost per booking, show rate.';
+  }
+
+  // deadline countdown, switches to standard terms after Nov 11 (PT)
+  var cd=document.getElementById('coa-cd');
+  function tick(){
+    var left=DEADLINE-Date.now();
+    if(left<=0){
+      document.getElementById('coa-deal').innerHTML='<i></i><span><b>Pilot closed.</b> Retainer $10,000 a month plus ad budget.</span>';
+      var s=document.getElementById('coa-apply-sub'); if(s) s.textContent='The pilot is closed. Apply below and we check together if it makes sense to work together at our standard retainer.';
+      var t=document.getElementById('coa-terms'); if(t) t.style.display='none';
+      return;
+    }
+    var d=Math.floor(left/864e5), h=Math.floor(left%864e5/36e5), m=Math.floor(left%36e5/6e4);
+    cd.textContent='Open until November 11 · '+(d>0?d+'d ':'')+h+'h '+m+'m left';
+    setTimeout(tick,30000);
+  }
+  tick();
+
+  // application: GHL embed script first, then the survey iframe (lazy, near viewport or on click)
+  var embedReady=false, embedLoading=false, queue=[];
+  function loadEmbed(cb){
+    if(embedReady){ cb(); return; } queue.push(cb);
+    if(embedLoading) return; embedLoading=true;
+    function ready(){ embedReady=true; while(queue.length){ queue.shift()(); } }
+    var s=document.createElement('script'); s.src='https://link.msgsndr.com/js/form_embed.js'; s.async=true; s.onload=ready; s.onerror=ready; document.body.appendChild(s);
+  }
+  var mounted=false, form=document.getElementById('coa-form');
+  function mount(){
+    if(mounted) return; mounted=true;
+    var ifr=document.createElement('iframe');
+    ifr.src=SURVEY+qs(); ifr.id='qDKr7hHfu9DV9yq3xjVD'; ifr.title='Pilot application';
+    ifr.setAttribute('scrolling','no'); ifr.setAttribute('data-cookie-consent','false');
+    ifr.style.cssText='border:none;width:100%;min-height:440px;';
+    form.appendChild(ifr);
+  }
+  function loadSurvey(){ loadEmbed(mount); setTimeout(mount,4000); }
+  loadEmbed(function(){});
+  var apply=document.getElementById('apply');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ for(var i=0;i<es.length;i++){ if(es[i].isIntersecting){ loadSurvey(); io.disconnect(); break; } } },{rootMargin:'500px 0px'});
+    io.observe(apply);
+  } else { loadSurvey(); }
+
+  var opened=false;
+  function go(e){
+    if(e) e.preventDefault();
+    loadSurvey();
+    apply.scrollIntoView({behavior:'smooth',block:'start'});
+    if(!opened){ opened=true; try{ if(window.fbq) fbq('trackCustom','OpenApplication'); }catch(err){} }
+  }
+  var gos=root.querySelectorAll('.coa-go'); for(var g=0;g<gos.length;g++){ gos[g].addEventListener('click',go); }
+  if(window.location.hash==='#apply'){ setTimeout(function(){ loadSurvey(); apply.scrollIntoView(); },300); }
+
+  // sticky mobile CTA: after the video, hidden once the application is on screen
+  var sticky=document.getElementById('coa-sticky'), cta=root.querySelector('.cta');
+  function onScroll(){
+    var past=cta.getBoundingClientRect().bottom<0, atForm=apply.getBoundingClientRect().top<window.innerHeight*0.6;
+    if(past&&!atForm) sticky.classList.add('show'); else sticky.classList.remove('show');
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  var y=document.getElementById('coa-year'); if(y) y.textContent=String(new Date().getFullYear());
+})();
+</script>
