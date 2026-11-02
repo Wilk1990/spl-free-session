@@ -1,7 +1,7 @@
 <!-- City of Angels Advertising · VSL page (headline + video + application) · v2 · $5K rate for calls booked by Nov 11 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fast.wistia.net" crossorigin>
+<link rel="preconnect" href="https://wilk1990.github.io" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 .coa,.coa *{box-sizing:border-box;margin:0;padding:0}
@@ -32,8 +32,11 @@ html,body{overflow-x:hidden}
 
 .coa .vsl{max-width:900px;margin:0 auto}
 .coa .vsl .frame{position:relative;padding-top:56.25%;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.08)}
-.coa .vsl iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.coa .vsl.off{display:none}
+.coa .vsl video{position:absolute;inset:0;width:100%;height:100%;background:#000;object-fit:cover}
+.coa .chapters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px}
+.coa .chapters button{font-family:inherit;font-size:13px;color:#e4e0d6;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:7px 12px;cursor:pointer;line-height:1.2}
+.coa .chapters button b{color:var(--gold-2);font-weight:600;margin-right:6px;font-variant-numeric:tabular-nums}
+.coa .chapters button:hover,.coa .chapters button.on{background:rgba(217,184,106,.16);border-color:rgba(217,184,106,.5)}
 
 .coa .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:#111;font-weight:700;font-size:19px;line-height:1.2;padding:21px 36px;border-radius:8px;border:0;cursor:pointer;box-shadow:0 10px 30px rgba(184,137,58,.3);transition:transform .15s,background .15s;font-family:inherit}
 .coa .btn:hover{background:#c99a47;transform:translateY(-1px)}
@@ -69,6 +72,9 @@ html,body{overflow-x:hidden}
   .coa .vsl .frame{border-radius:0;border-left:0;border-right:0}
   .coa .btn{width:100%;padding:19px 18px;font-size:18px}
   .coa .deal i{display:none}
+  .coa .chapters{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding:0 16px 4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .coa .chapters::-webkit-scrollbar{display:none}
+  .coa .chapters button{flex:0 0 auto}
   .coa .terms{gap:8px}
   .coa .terms div{padding:12px 6px;font-size:12px}
   .coa .terms b{font-size:16px}
@@ -90,8 +96,17 @@ html,body{overflow-x:hidden}
 <p class="sub" id="coa-watch">Watch the 4 minute video. Everything is in there: how it works, what it costs, and who it's for.</p>
 <div class="deal" id="coa-deal"><i></i><span><b>$5,000 a month</b> for everyone who books a call by November 11. After that the price goes up.</span><span class="cd" id="coa-cd">Until November 11</span></div>
 
-<div class="vsl" id="coa-vsl" data-wistia="">
-<div class="frame" id="coa-vsl-frame"></div>
+<div class="vsl" id="coa-vsl">
+<div class="frame"><video id="coa-video" controls playsinline preload="none" poster="https://wilk1990.github.io/spl-free-session/coa/vsl/poster.jpg" title="City of Angels Advertising in 4 minutes"></video></div>
+<div class="chapters" id="coa-ch">
+<button type="button" data-t="0"><b>0:00</b>The 90 second version</button>
+<button type="button" data-t="31"><b>0:31</b>The November offer</button>
+<button type="button" data-t="57"><b>0:57</b>Who I am</button>
+<button type="button" data-t="78"><b>1:18</b>Our own business</button>
+<button type="button" data-t="168"><b>2:48</b>A US client</button>
+<button type="button" data-t="215"><b>3:35</b>Why LA</button>
+<button type="button" data-t="248"><b>4:08</b>Next step</button>
+</div>
 </div>
 
 <div class="cta">
@@ -140,13 +155,25 @@ html,body{overflow-x:hidden}
   var DEADLINE=Date.parse('2026-11-12T00:00:00-08:00'); // end of Nov 11, Pacific time
   function qs(){ try{ return window.location.search||''; }catch(e){ return ''; } }
 
-  // VSL: Wistia media id lives in data-wistia on #coa-vsl
-  var vsl=document.getElementById('coa-vsl'), vid=vsl.getAttribute('data-wistia');
-  if(vid){
-    document.getElementById('coa-vsl-frame').innerHTML='<iframe src="https://fast.wistia.net/embed/iframe/'+vid+'?videoFoam=true&playbar=true&seo=false" allow="autoplay; fullscreen" allowfullscreen title="City of Angels Advertising in 4 minutes"></iframe>';
-  } else {
-    vsl.classList.add('off'); var w=document.getElementById('coa-watch'); if(w) w.textContent='Ads we shoot at your location, a qualification step before your calendar, and four numbers every week: spend, qualified bookings, cost per booking, show rate.';
+  // VSL: self hosted, 720p on phones, 1080p on large screens, chapters, progress events to the pixel
+  var v=document.getElementById('coa-video'), BASE='https://wilk1990.github.io/spl-free-session/coa/vsl/coa-vsl-';
+  var big=false; try{ big=window.innerWidth>=900 && !(navigator.connection&&navigator.connection.saveData); }catch(e){}
+  v.src=BASE+(big?'1080':'720')+'.mp4';
+  function px(n){ try{ if(window.fbq) fbq('trackCustom',n); }catch(e){} }
+  var played=false, marks={25:0,50:0,75:0,95:0};
+  v.addEventListener('play',function(){ if(!played){ played=true; px('VSLPlay'); } });
+  var chs=root.querySelectorAll('#coa-ch button');
+  v.addEventListener('timeupdate',function(){
+    var t=v.currentTime, d=v.duration||258, p=t/d*100;
+    for(var k in marks){ if(!marks[k] && p>=+k){ marks[k]=1; px('VSL'+k); } }
+    for(var i=0;i<chs.length;i++){ var a=+chs[i].getAttribute('data-t'), b=i+1<chs.length?+chs[i+1].getAttribute('data-t'):1e9; if(t>=a&&t<b) chs[i].classList.add('on'); else chs[i].classList.remove('on'); }
+  });
+  function seek(t){
+    if(v.readyState>=1){ try{ v.currentTime=t; }catch(e){} }
+    else { v.addEventListener('loadedmetadata',function f(){ v.removeEventListener('loadedmetadata',f); try{ v.currentTime=t; }catch(e){} }); }
+    var pr=v.play(); if(pr&&pr.catch) pr.catch(function(){});
   }
+  for(var c=0;c<chs.length;c++){ chs[c].addEventListener('click',function(){ seek(+this.getAttribute('data-t')); }); }
 
   // deadline countdown, switches to standard terms after Nov 11 (PT)
   var cd=document.getElementById('coa-cd');
