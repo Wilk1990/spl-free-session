@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soccer Performance Lab | Data Driven Youth Soccer Training in Glenwood Landing, NY</title>
+<meta name="description" content="Youth soccer training for ages 5 to 18 on Long Island's North Shore. 700 to 1,000 touches per session, live performance data, pro level coaches. Book a free trial session.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="https://wilk1990.github.io/spl-free-session/site/fonts/anton-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="https://wilk1990.github.io/spl-free-session/site/fonts/archivo-800.woff2">
+<style>html,body{margin:0;padding:0;background:#0A0A0A}</style>
+<style>
+/* ==========================================================================
+   SOCCER PERFORMANCE LAB — MAIN SITE (CSS BLOCK)
+   Brand: Orange #E96403 · Black #0A0A0A · Mint #9EE9E5 · White
+   Fonts: Anton (display) · Archivo (labels, headings) · Lato (body)
+   All selectors are scoped under .spl to stay clean inside Onepage.
+   ========================================================================== */
+
+@font-face{font-family:"SPL Anton";src:url("https://wilk1990.github.io/spl-free-session/site/fonts/anton-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"SPL Archivo";src:url("https://wilk1990.github.io/spl-free-session/site/fonts/archivo-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"SPL Archivo";src:url("https://wilk1990.github.io/spl-free-session/site/fonts/archivo-800.woff2") format("woff2");font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:"SPL Archivo";src:url("https://wilk1990.github.io/spl-free-session/site/fonts/archivo-900.woff2") format("woff2");font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:"SPL Lato";src:url("https://wilk1990.github.io/spl-free-session/site/fonts/lato-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"SPL Lato";src:url("https://wilk1990.github.io/spl-free-session/site/fonts/lato-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+
+.spl{
+  --black:#0A0A0A;--black-2:#111111;--black-3:#181818;--black-4:#202020;
+  --line:#262626;--line-2:#333333;
+  --white:#FFFFFF;--paper:#F4F2EF;--paper-2:#EAE7E2;
+  --orange:#E96403;--orange-2:#FF7A1A;--orange-3:#FF8C38;--orange-deep:#B84D02;
+  --orange-glow:rgba(233,100,3,.45);
+  --mint:#9EE9E5;--mint-2:#B6F0ED;--mint-deep:#5FC9C3;
+  --text:#ECE9E5;--text-soft:#A9A39D;--text-mute:#6E6862;
+  --ink:#0A0A0A;--ink-soft:#4A4642;--ink-mute:#8A847E;
+  --wrap:1280px;--gutter:28px;
+  --font-display:"SPL Anton",Impact,"Arial Narrow",sans-serif;
+  --font-head:"SPL Archivo","Helvetica Neue",Arial,sans-serif;
+  --font-body:"SPL Lato","Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+  background:var(--black);color:var(--text);
+  font-family:var(--font-body);font-size:16px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  text-align:left;overflow:hidden;position:relative;
+  -webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;
+}
+.spl *,.spl *::before,.spl *::after{box-sizing:border-box;margin:0;padding:0}
+.spl img,.spl video{display:block;max-width:100%}
+.spl a{color:inherit;text-decoration:none}
+.spl button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.spl ::selection{background:var(--orange);color:#fff}
+
+/* Onepage host fixes */
+.spl.spl-breakout{width:100vw;margin-left:calc(50% - 50vw)}
+body:has(.spl-breakout){background:#0A0A0A}
+.con-kit-frame:has(.spl-breakout){padding-top:0!important;padding-bottom:0!important}
+
+.spl .spl-wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+.spl .spl-display{font-family:var(--font-display);font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:.004em}
+.spl .spl-o{color:var(--orange)}
+.spl .spl-m{color:var(--mint)}
+.spl .spl-sec{position:relative;padding:130px 0}
+.spl .spl-sec-sm{padding:96px 0}
+.spl .spl-sec-head{max-width:900px;margin-bottom:64px}
+.spl .spl-sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.spl .spl-sec-head h2{font-size:clamp(38px,5.2vw,70px);margin-top:20px;color:var(--white)}
+.spl .spl-sec-head p{font-size:17.5px;color:var(--text-soft);margin-top:22px;line-height:1.65}
+.spl .spl-light .spl-sec-head h2{color:var(--ink)}
+.spl .spl-light .spl-sec-head p{color:var(--ink-soft)}
+
+/* eyebrow */
+.spl .spl-eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--font-head);font-weight:800;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--orange)}
+.spl .spl-eyebrow::before{content:"";width:30px;height:3px;background:currentColor;display:block;-webkit-transform:skewX(-18deg);transform:skewX(-18deg)}
+.spl .spl-eyebrow.mint{color:var(--mint)}
+.spl .spl-eyebrow.white{color:var(--white)}
+.spl .spl-eyebrow.ink{color:var(--ink)}
+
+/* slash motif */
+.spl .spl-slashes{display:inline-flex;gap:8px;-webkit-transform:skewX(-18deg);transform:skewX(-18deg)}
+.spl .spl-slashes i{display:block;width:8px;height:34px;border-radius:2px;background:var(--orange)}
+.spl .spl-slashes i:nth-child(2){background:var(--white)}
+.spl .spl-slashes i:nth-child(3){background:var(--mint)}
+
+/* ---------- buttons ---------- */
+.spl .spl-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:14.5px;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;border:0;padding:0;-webkit-transition:-webkit-transform .4s var(--ease),box-shadow .4s;transition:transform .4s var(--ease),box-shadow .4s;isolation:isolate}
+.spl .spl-btn-in{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:19px 36px;overflow:hidden;width:100%;-webkit-clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.spl .spl-btn-in::after{content:"";position:absolute;top:0;left:0;width:60%;height:100%;background:linear-gradient(110deg,transparent,rgba(255,255,255,.45),transparent);-webkit-transform:translateX(-180%) skewX(-20deg);transform:translateX(-180%) skewX(-20deg);-webkit-transition:-webkit-transform .9s var(--ease);transition:transform .9s var(--ease)}
+.spl .spl-btn:hover .spl-btn-in::after{-webkit-transform:translateX(280%) skewX(-20deg);transform:translateX(280%) skewX(-20deg)}
+.spl .spl-btn-primary .spl-btn-in{color:#fff;background:linear-gradient(135deg,var(--orange-2) 0%,var(--orange) 55%,var(--orange-deep) 130%)}
+.spl .spl-btn-primary{box-shadow:0 8px 24px -8px var(--orange-glow),0 2px 0 0 var(--orange-deep)}
+.spl .spl-btn-primary:hover{-webkit-transform:translateY(-4px);transform:translateY(-4px);box-shadow:0 22px 50px -12px var(--orange-glow),0 2px 0 0 var(--orange-deep)}
+.spl .spl-btn-dark .spl-btn-in{color:#fff;background:var(--black-3);box-shadow:inset 0 0 0 1.5px var(--line-2)}
+.spl .spl-btn-dark:hover{-webkit-transform:translateY(-4px);transform:translateY(-4px)}
+.spl .spl-btn-dark:hover .spl-btn-in{box-shadow:inset 0 0 0 1.5px var(--orange);color:var(--orange-3)}
+.spl .spl-btn-ink .spl-btn-in{color:#fff;background:var(--ink)}
+.spl .spl-btn-ink:hover{-webkit-transform:translateY(-4px);transform:translateY(-4px);box-shadow:0 18px 40px -14px rgba(0,0,0,.5)}
+.spl .spl-btn-mint .spl-btn-in{color:var(--ink);background:linear-gradient(135deg,var(--mint-2),var(--mint),var(--mint-deep))}
+.spl .spl-btn-mint:hover{-webkit-transform:translateY(-4px);transform:translateY(-4px);box-shadow:0 18px 40px -12px rgba(158,233,229,.4)}
+.spl .spl-btn-sm .spl-btn-in{padding:13px 22px;font-size:12.5px}
+.spl .spl-arr{font-family:Arial,sans-serif;-webkit-transition:-webkit-transform .4s var(--ease);transition:transform .4s var(--ease)}
+.spl .spl-btn:hover .spl-arr{-webkit-transform:translateX(5px);transform:translateX(5px)}
+.spl .spl-btn:focus-visible .spl-btn-in{outline:3px solid var(--mint);outline-offset:2px}
+
+/* ---------- progress + nav ---------- */
+.spl .spl-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--orange),var(--orange-3));z-index:9000;box-shadow:0 0 12px var(--orange-glow)}
+.spl .spl-nav{position:fixed;top:0;left:0;right:0;z-index:8000;-webkit-transition:background .4s,border-color .4s;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+.spl .spl-nav .spl-bar{display:flex;align-items:center;justify-content:space-between;padding:20px 0;-webkit-transition:padding .4s;transition:padding .4s}
+.spl .spl-nav.is-scrolled{background:rgba(10,10,10,.84);-webkit-backdrop-filter:blur(18px) saturate(1.2);backdrop-filter:blur(18px) saturate(1.2);border-color:var(--line)}
+.spl .spl-nav.is-scrolled .spl-bar{padding:12px 0}
+.spl .spl-logo img{height:38px;width:auto;-webkit-transition:-webkit-transform .5s var(--ease);transition:transform .5s var(--ease)}
+.spl .spl-logo:hover img{-webkit-transform:scale(1.04);transform:scale(1.04)}
+.spl .spl-nav-links{display:flex;gap:30px;align-items:center}
+.spl .spl-nav-links>a:not(.spl-btn){font-family:var(--font-head);color:var(--text-soft);font-size:13px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;position:relative;-webkit-transition:color .25s;transition:color .25s}
+.spl .spl-nav-links>a:not(.spl-btn)::after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:2px;background:var(--orange);-webkit-transform:skewX(-18deg);transform:skewX(-18deg);-webkit-transition:width .3s var(--ease);transition:width .3s var(--ease)}
+.spl .spl-nav-links>a:not(.spl-btn):hover{color:#fff}
+.spl .spl-nav-links>a:not(.spl-btn):hover::after{width:100%}
+.spl .spl-burger{display:none;flex-direction:column;gap:5px;padding:8px;z-index:8100}
+.spl .spl-burger span{width:26px;height:2.5px;background:#fff;display:block;-webkit-transition:.35s var(--ease);transition:.35s var(--ease)}
+.spl .spl-burger.is-open span:nth-child(1){-webkit-transform:translateY(7.5px) rotate(45deg);transform:translateY(7.5px) rotate(45deg)}
+.spl .spl-burger.is-open span:nth-child(2){opacity:0}
+.spl .spl-burger.is-open span:nth-child(3){-webkit-transform:translateY(-7.5px) rotate(-45deg);transform:translateY(-7.5px) rotate(-45deg)}
+.spl .spl-mobile-menu{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,.97);z-index:8050;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0;visibility:hidden;-webkit-transition:opacity .35s,visibility .35s;transition:opacity .35s,visibility .35s}
+.spl .spl-mobile-menu.is-open{opacity:1;visibility:visible}
+.spl .spl-mobile-menu>a:not(.spl-btn){font-family:var(--font-display);font-size:34px;color:#fff;text-transform:uppercase;padding:10px}
+.spl .spl-mobile-menu>a:not(.spl-btn):hover{color:var(--orange)}
+.spl .spl-mobile-menu .spl-btn{margin-top:20px}
+
+/* ---------- hero ---------- */
+.spl .spl-hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;padding:150px 0 90px;overflow:hidden;background:var(--black)}
+.spl .spl-hero-media{position:absolute;top:0;left:0;right:0;bottom:0;z-index:0}
+.spl .spl-hero-media img,.spl .spl-hero-media video{position:absolute;top:0;left:0;width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
+.spl .spl-hero-media video{opacity:0;-webkit-transition:opacity 1.2s;transition:opacity 1.2s}
+.spl .spl-hero-media video.is-ready{opacity:1}
+.spl .spl-hero-shade{position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;background:linear-gradient(180deg,rgba(10,10,10,.55) 0%,rgba(10,10,10,.2) 35%,rgba(10,10,10,.75) 75%,var(--black) 100%)}
+.spl .spl-hero-shade::after{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(90deg,rgba(10,10,10,.75) 0%,rgba(10,10,10,.25) 55%,rgba(10,10,10,.1) 100%)}
+.spl .spl-hero-grid{position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;opacity:.35;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:72px 72px;-webkit-mask-image:radial-gradient(90% 70% at 30% 40%,#000 20%,transparent 75%);mask-image:radial-gradient(90% 70% at 30% 40%,#000 20%,transparent 75%)}
+.spl .spl-hero-inner{position:relative;z-index:3;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:end}
+.spl .spl-hero-pre{display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:var(--font-head);font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-soft)}
+.spl .spl-hero-pre .spl-stars{display:inline-flex;gap:2px;color:var(--orange)}
+.spl .spl-hero-pre .spl-stars svg{width:14px;height:14px}
+.spl .spl-hero-pre b{color:#fff}
+.spl .spl-hero-pre .dot{width:5px;height:5px;background:var(--orange);-webkit-transform:skewX(-18deg);transform:skewX(-18deg)}
+.spl .spl-hero h1{font-size:clamp(54px,8.6vw,124px);color:#fff;margin-top:22px}
+.spl .spl-hero h1 .spl-o{position:relative;display:inline-block}
+.spl .spl-hero h1 .spl-o::after{content:"";position:absolute;left:0;bottom:.06em;width:100%;height:.07em;background:var(--orange);-webkit-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:left;transform-origin:left;-webkit-animation:splUnderline 1s var(--ease) .9s forwards;animation:splUnderline 1s var(--ease) .9s forwards}
+@-webkit-keyframes splUnderline{to{-webkit-transform:scaleX(1);transform:scaleX(1)}}
+@keyframes splUnderline{to{-webkit-transform:scaleX(1);transform:scaleX(1)}}
+.spl .spl-hero-sub{max-width:580px;font-size:clamp(16px,1.9vw,19.5px);color:var(--text);margin-top:26px;line-height:1.6}
+.spl .spl-hero-sub b{color:#fff;font-weight:700}
+.spl .spl-hero-cta{display:flex;gap:16px;margin-top:38px;flex-wrap:wrap}
+.spl .spl-hero-left>*{opacity:0;-webkit-transform:translateY(26px);transform:translateY(26px);-webkit-animation:splRise .9s var(--ease) forwards;animation:splRise .9s var(--ease) forwards}
+.spl .spl-hero-left>*:nth-child(1){-webkit-animation-delay:.1s;animation-delay:.1s}
+.spl .spl-hero-left>*:nth-child(2){-webkit-animation-delay:.22s;animation-delay:.22s}
+.spl .spl-hero-left>*:nth-child(3){-webkit-animation-delay:.34s;animation-delay:.34s}
+.spl .spl-hero-left>*:nth-child(4){-webkit-animation-delay:.46s;animation-delay:.46s}
+@-webkit-keyframes splRise{to{opacity:1;-webkit-transform:none;transform:none}}
+@keyframes splRise{to{opacity:1;-webkit-transform:none;transform:none}}
+/* live KPI card */
+.spl .spl-hero-card{justify-self:end;width:300px;padding:22px 22px 20px;background:rgba(14,14,14,.72);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);-webkit-clip-path:polygon(0 0,100% 0,100% 90%,94% 100%,0 100%);clip-path:polygon(0 0,100% 0,100% 90%,94% 100%,0 100%);opacity:0;-webkit-animation:splRise 1s var(--ease) .6s forwards;animation:splRise 1s var(--ease) .6s forwards}
+.spl .spl-hc-top{display:flex;align-items:center;gap:9px;margin-bottom:18px;font-family:var(--font-head);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-soft);font-weight:800}
+.spl .spl-hc-dot{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 12px var(--orange);-webkit-animation:splPulse 1.8s infinite;animation:splPulse 1.8s infinite}
+@-webkit-keyframes splPulse{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes splPulse{0%,100%{opacity:1}50%{opacity:.3}}
+.spl .spl-hc-row{display:flex;align-items:baseline;justify-content:space-between;margin-top:14px}
+.spl .spl-hc-row:first-of-type{margin-top:0}
+.spl .spl-hc-name{font-size:12.5px;color:var(--text-soft)}
+.spl .spl-hc-val{font-family:var(--font-head);font-weight:900;font-size:15px;color:#fff}
+.spl .spl-hc-val.o{color:var(--orange-3)}
+.spl .spl-hc-val.m{color:var(--mint)}
+.spl .spl-hc-bar{height:4px;background:var(--black-4);margin-top:6px;overflow:hidden}
+.spl .spl-hc-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--orange),var(--orange-3));-webkit-transition:width 1.4s var(--ease);transition:width 1.4s var(--ease)}
+.spl .spl-hc-bar i.m{background:linear-gradient(90deg,var(--mint-deep),var(--mint))}
+.spl .spl-hero-card.is-live .spl-hc-bar i{width:var(--w)}
+.spl .spl-hero-scroll{position:absolute;left:50%;bottom:26px;z-index:3;-webkit-transform:translateX(-50%);transform:translateX(-50%);width:26px;height:42px;border:2px solid rgba(255,255,255,.3);border-radius:14px}
+.spl .spl-hero-scroll::before{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--orange);-webkit-animation:splScroll 1.8s infinite;animation:splScroll 1.8s infinite}
+@-webkit-keyframes splScroll{0%{opacity:0;-webkit-transform:translateY(0)}30%{opacity:1}100%{opacity:0;-webkit-transform:translateY(16px)}}
+@keyframes splScroll{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(16px)}}
+
+/* ---------- trust bar ---------- */
+.spl .spl-trust{background:var(--black-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.spl .spl-trust-in{display:flex;align-items:center;gap:36px;padding:22px 0;flex-wrap:wrap;justify-content:space-between}
+.spl .spl-trust-lab{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-mute)}
+.spl .spl-trust-list{display:flex;gap:30px;flex-wrap:wrap;align-items:center}
+.spl .spl-trust-list span{font-family:var(--font-head);font-weight:900;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-soft);white-space:nowrap}
+.spl .spl-trust-list span b{color:var(--orange)}
+
+/* ---------- marquee ---------- */
+.spl .spl-marquee{background:var(--orange);padding:14px 0;overflow:hidden;position:relative}
+.spl .spl-marquee-track{display:flex;white-space:nowrap;width:-webkit-max-content;width:max-content;-webkit-animation:splScrollX 34s linear infinite;animation:splScrollX 34s linear infinite}
+.spl .spl-marquee:hover .spl-marquee-track{-webkit-animation-play-state:paused;animation-play-state:paused}
+@-webkit-keyframes splScrollX{to{-webkit-transform:translateX(-50%);transform:translateX(-50%)}}
+@keyframes splScrollX{to{transform:translateX(-50%)}}
+.spl .spl-mq-item{display:inline-flex;align-items:center;gap:18px;font-family:var(--font-display);font-size:19px;letter-spacing:.04em;color:#fff;text-transform:uppercase;padding:0 26px}
+.spl .spl-mq-item svg{width:14px;height:14px;color:var(--black);flex-shrink:0}
+
+/* ---------- problem: comparison ---------- */
+.spl .spl-problem{background:var(--black)}
+.spl .spl-compare{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:18px;align-items:stretch}
+.spl .spl-cmp{position:relative;padding:38px 32px 40px;background:var(--black-2);border:1px solid var(--line);display:flex;flex-direction:column;-webkit-transition:-webkit-transform .45s var(--ease),border-color .45s;transition:transform .45s var(--ease),border-color .45s}
+.spl .spl-cmp:hover{-webkit-transform:translateY(-6px);transform:translateY(-6px);border-color:var(--line-2)}
+.spl .spl-cmp-lab{font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-mute);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.spl .spl-cmp-lab i{width:8px;height:8px;background:var(--text-mute);-webkit-transform:skewX(-18deg);transform:skewX(-18deg)}
+.spl .spl-cmp h3{font-family:var(--font-head);font-weight:900;font-size:23px;line-height:1.08;color:#fff;text-transform:uppercase;margin-bottom:16px}
+.spl .spl-cmp-num{font-family:var(--font-display);font-size:60px;line-height:.9;color:var(--text-mute);margin:6px 0 4px}
+.spl .spl-cmp-num small{display:block;font-family:var(--font-head);font-weight:700;font-size:11.5px;letter-spacing:.14em;color:var(--text-mute);margin-top:8px;text-transform:uppercase}
+.spl .spl-cmp ul{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:11px}
+.spl .spl-cmp li{position:relative;padding-left:24px;font-size:14.5px;color:var(--text-soft);line-height:1.5}
+.spl .spl-cmp li::before{content:"";position:absolute;left:0;top:9px;width:12px;height:2px;background:var(--text-mute)}
+.spl .spl-cmp.is-spl{background:linear-gradient(165deg,var(--black-3),var(--black-2));border-color:rgba(233,100,3,.55);box-shadow:0 30px 70px -30px rgba(233,100,3,.35)}
+.spl .spl-cmp.is-spl::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--orange),var(--mint))}
+.spl .spl-cmp.is-spl .spl-cmp-lab{color:var(--orange)}
+.spl .spl-cmp.is-spl .spl-cmp-lab i{background:var(--orange)}
+.spl .spl-cmp.is-spl .spl-cmp-num{color:var(--orange)}
+.spl .spl-cmp.is-spl .spl-cmp-num small{color:var(--text-soft)}
+.spl .spl-cmp.is-spl li{color:var(--text)}
+.spl .spl-cmp.is-spl li::before{width:12px;height:12px;top:5px;background:none;border:2px solid var(--orange);border-top:0;border-right:0;-webkit-transform:rotate(-45deg) scale(.8);transform:rotate(-45deg) scale(.8)}
+.spl .spl-cmp-foot{margin-top:auto;padding-top:22px}
+
+/* ---------- mechanism: inside the lab ---------- */
+.spl .spl-lab{background:var(--black-2);border-top:1px solid var(--line);position:relative;overflow:hidden}
+.spl .spl-ghost{position:absolute;font-family:var(--font-display);font-size:clamp(140px,22vw,320px);color:rgba(255,255,255,.025);line-height:.8;z-index:0;pointer-events:none;-webkit-user-select:none;user-select:none}
+.spl .spl-lab-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center;position:relative;z-index:1}
+.spl .spl-lab-grid.rev{direction:rtl}.spl .spl-lab-grid.rev>*{direction:ltr}
+.spl .spl-media{position:relative;overflow:hidden;background:var(--black-3);-webkit-clip-path:polygon(0 0,100% 0,100% 91%,93% 100%,0 100%);clip-path:polygon(0 0,100% 0,100% 91%,93% 100%,0 100%)}
+.spl .spl-media.tall{aspect-ratio:4/5}
+.spl .spl-media.wide{aspect-ratio:3/2}
+.spl .spl-media img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-webkit-transition:-webkit-transform 1.1s var(--ease);transition:transform 1.1s var(--ease)}
+.spl .spl-media:hover img{-webkit-transform:scale(1.06);transform:scale(1.06)}
+.spl .spl-media .shade{position:absolute;left:0;right:0;bottom:0;height:55%;background:linear-gradient(180deg,transparent,rgba(10,10,10,.8))}
+.spl .spl-media-tag{position:absolute;left:20px;bottom:22px;z-index:2;display:inline-flex;align-items:center;gap:10px;padding:11px 16px;background:var(--orange);color:#fff;font-family:var(--font-head);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.spl .spl-media-tag.mint{background:var(--mint);color:var(--ink)}
+.spl .spl-media .spl-slashes{position:absolute;right:18px;top:18px;z-index:2}
+.spl .spl-steps{display:flex;flex-direction:column;gap:0;margin-top:34px;border-top:1px solid var(--line)}
+.spl .spl-step{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:24px 0;border-bottom:1px solid var(--line);-webkit-transition:padding-left .35s var(--ease);transition:padding-left .35s var(--ease)}
+.spl .spl-step:hover{padding-left:6px}
+.spl .spl-step-n{font-family:var(--font-display);font-size:40px;line-height:.9;color:var(--orange)}
+.spl .spl-step h4{font-family:var(--font-head);font-weight:800;font-size:18px;text-transform:uppercase;color:#fff;margin-bottom:8px}
+.spl .spl-step p{font-size:15px;color:var(--text-soft);line-height:1.6}
+.spl .spl-lab h3{font-family:var(--font-head);font-weight:900;font-size:clamp(28px,3.6vw,44px);line-height:1.04;text-transform:uppercase;color:#fff;margin:16px 0 16px}
+.spl .spl-lab-grid>div>p{font-size:16.5px;color:var(--text-soft);line-height:1.66}
+.spl .spl-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
+.spl .spl-kpi{padding:16px 14px;background:var(--black-3);border:1px solid var(--line);font-family:var(--font-head);font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text);display:flex;align-items:center;gap:10px;-webkit-transition:border-color .3s,-webkit-transform .3s;transition:border-color .3s,transform .3s}
+.spl .spl-kpi:hover{border-color:var(--orange);-webkit-transform:translateY(-3px);transform:translateY(-3px)}
+.spl .spl-kpi i{width:7px;height:7px;background:var(--orange);-webkit-transform:skewX(-18deg);transform:skewX(-18deg);flex-shrink:0}
+.spl .spl-kpi:nth-child(even) i{background:var(--mint)}
+.spl .spl-pillars{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.spl .spl-pillars span{padding:10px 15px;border:1px solid var(--line-2);font-family:var(--font-head);font-weight:700;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-soft);-webkit-clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+
+/* ---------- stat band ---------- */
+.spl .spl-stats{background:linear-gradient(135deg,var(--orange-2),var(--orange) 60%,var(--orange-deep));position:relative;overflow:hidden}
+.spl .spl-stats::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;opacity:.12;background-image:repeating-linear-gradient(-18deg,transparent 0 30px,#000 30px 31px)}
+.spl .spl-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);position:relative;z-index:2}
+.spl .spl-stat{padding:58px 28px;text-align:center;border-right:1.5px solid rgba(255,255,255,.18)}
+.spl .spl-stat:last-child{border-right:0}
+.spl .spl-stat-num{font-family:var(--font-display);font-size:clamp(46px,5.2vw,74px);line-height:1;color:#fff}
+.spl .spl-stat-lab{font-family:var(--font-head);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-top:14px}
+
+/* ---------- programs ---------- */
+.spl .spl-programs{background:var(--black);position:relative;overflow:hidden}
+.spl .spl-prog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.spl .spl-prog{position:relative;display:flex;flex-direction:column;background:linear-gradient(168deg,var(--black-3),var(--black-2));border:1px solid var(--line);overflow:hidden;-webkit-transition:-webkit-transform .45s var(--ease),border-color .45s,box-shadow .45s;transition:transform .45s var(--ease),border-color .45s,box-shadow .45s;-webkit-clip-path:polygon(0 0,100% 0,100% 94%,96% 100%,0 100%);clip-path:polygon(0 0,100% 0,100% 94%,96% 100%,0 100%)}
+.spl .spl-prog:hover{-webkit-transform:translateY(-8px);transform:translateY(-8px);border-color:var(--orange);box-shadow:0 34px 70px -28px rgba(0,0,0,.7)}
+.spl .spl-prog-img{position:relative;aspect-ratio:16/8.5;overflow:hidden}
+.spl .spl-prog-img img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-webkit-transition:-webkit-transform .8s var(--ease);transition:transform .8s var(--ease)}
+.spl .spl-prog:hover .spl-prog-img img{-webkit-transform:scale(1.06);transform:scale(1.06)}
+.spl .spl-prog-img::after{content:"";position:absolute;left:0;right:0;bottom:0;height:60%;background:linear-gradient(180deg,transparent,rgba(17,17,17,.95))}
+.spl .spl-prog-tag{position:absolute;top:16px;left:16px;z-index:2;background:var(--orange);color:#fff;font-family:var(--font-head);font-weight:800;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:8px 13px;-webkit-clip-path:polygon(0 0,100% 0,calc(100% - 8px) 100%,0 100%);clip-path:polygon(0 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+.spl .spl-prog-tag.mint{background:var(--mint);color:var(--ink)}
+.spl .spl-prog-tag.white{background:#fff;color:var(--ink)}
+.spl .spl-prog-body{padding:26px 28px 30px;display:flex;flex-direction:column;flex:1}
+.spl .spl-prog h3{font-family:var(--font-head);font-weight:900;font-size:24px;text-transform:uppercase;color:#fff;line-height:1.06}
+.spl .spl-prog-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;font-family:var(--font-head);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange-3)}
+.spl .spl-prog-meta span{display:inline-flex;align-items:center;gap:7px}
+.spl .spl-prog-meta svg{width:14px;height:14px}
+.spl .spl-prog p{font-size:15px;color:var(--text-soft);line-height:1.62;margin-top:14px}
+.spl .spl-prog ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:8px}
+.spl .spl-prog li{position:relative;padding-left:22px;font-size:14px;color:var(--text)}
+.spl .spl-prog li::before{content:"";position:absolute;left:0;top:5px;width:10px;height:10px;border:2px solid var(--orange);border-top:0;border-right:0;-webkit-transform:rotate(-45deg) scale(.8);transform:rotate(-45deg) scale(.8)}
+.spl .spl-prog-foot{margin-top:auto;padding-top:24px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.spl .spl-prog-note{font-size:12.5px;color:var(--text-mute)}
+.spl .spl-prog.is-free{border-color:rgba(158,233,229,.5)}
+.spl .spl-prog.is-free::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--mint),var(--orange));z-index:3}
+.spl .spl-prog-promo{display:block;line-height:1.5;margin-top:14px;padding:10px 14px;background:rgba(158,233,229,.08);border:1px dashed rgba(158,233,229,.45);font-size:13px;color:var(--text)}
+.spl .spl-prog-promo code{font-family:var(--font-head);font-weight:900;letter-spacing:.1em;color:var(--mint);font-size:13px}
+
+/* ---------- roadmap ---------- */
+.spl .spl-roadmap{background:var(--black-2);border-top:1px solid var(--line);position:relative;overflow:hidden}
+.spl .spl-road{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
+.spl .spl-road::before{content:"";position:absolute;left:8%;right:8%;top:30px;height:3px;background:repeating-linear-gradient(90deg,var(--orange) 0 10px,transparent 10px 18px);-webkit-transform:skewX(-18deg);transform:skewX(-18deg);opacity:.7}
+.spl .spl-road-step{position:relative;padding:0 28px;text-align:center}
+.spl .spl-road-n{position:relative;z-index:2;width:62px;height:62px;margin:0 auto 26px;background:var(--orange);display:grid;place-items:center;font-family:var(--font-head);font-weight:900;font-size:13px;letter-spacing:.06em;color:#fff;-webkit-clip-path:polygon(0 0,100% 0,100% 100%,18% 100%);clip-path:polygon(0 0,100% 0,100% 100%,18% 100%);-webkit-transition:-webkit-transform .4s var(--ease);transition:transform .4s var(--ease)}
+.spl .spl-road-step:hover .spl-road-n{-webkit-transform:scale(1.1) rotate(-6deg);transform:scale(1.1) rotate(-6deg)}
+.spl .spl-road-step:nth-child(2) .spl-road-n{background:var(--mint);color:var(--ink)}
+.spl .spl-road-step:nth-child(3) .spl-road-n{background:#fff;color:var(--ink)}
+.spl .spl-road-step h4{font-family:var(--font-head);font-weight:900;font-size:21px;text-transform:uppercase;color:#fff;margin-bottom:10px}
+.spl .spl-road-step p{font-size:15px;color:var(--text-soft);line-height:1.6;max-width:320px;margin:0 auto}
+.spl .spl-road-big{font-family:var(--font-display);font-size:34px;color:var(--orange);line-height:1;margin:14px 0 6px}
+.spl .spl-road-step:nth-child(2) .spl-road-big{color:var(--mint)}
+.spl .spl-road-step:nth-child(3) .spl-road-big{color:#fff}
+
+/* ---------- coaches (light section) ---------- */
+.spl .spl-coaches{background:var(--paper);color:var(--ink);position:relative;overflow:hidden}
+.spl .spl-coaches .spl-ghost{color:rgba(10,10,10,.035)}
+.spl .spl-coach-hero{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center;margin-bottom:28px}
+.spl .spl-coach-photo{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--paper-2);-webkit-clip-path:polygon(0 0,100% 0,100% 92%,92% 100%,0 100%);clip-path:polygon(0 0,100% 0,100% 92%,92% 100%,0 100%)}
+.spl .spl-coach-photo img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center top;object-position:center top;-webkit-transition:-webkit-transform 1s var(--ease);transition:transform 1s var(--ease)}
+.spl .spl-coach-photo:hover img{-webkit-transform:scale(1.04);transform:scale(1.04)}
+.spl .spl-coach-badge{position:absolute;left:0;bottom:0;z-index:2;background:var(--orange);color:#fff;padding:16px 22px;-webkit-clip-path:polygon(0 0,100% 0,calc(100% - 12px) 100%,0 100%);clip-path:polygon(0 0,100% 0,calc(100% - 12px) 100%,0 100%)}
+.spl .spl-coach-badge b{display:block;font-family:var(--font-display);font-size:24px;line-height:1;text-transform:uppercase}
+.spl .spl-coach-badge span{display:block;font-family:var(--font-head);font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.92;margin-top:3px}
+.spl .spl-coach-name{font-family:var(--font-display);font-size:clamp(40px,5vw,72px);color:var(--ink);text-transform:uppercase;line-height:.92;margin-top:16px}
+.spl .spl-coach-role{font-family:var(--font-head);font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-top:12px}
+.spl .spl-coach-quote{font-family:var(--font-head);font-weight:700;font-size:clamp(18px,2vw,22px);line-height:1.4;color:var(--ink);margin-top:22px;padding-left:18px;border-left:4px solid var(--orange)}
+.spl .spl-cred{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;margin-top:26px}
+.spl .spl-cred-item{display:flex;gap:12px;align-items:flex-start}
+.spl .spl-cred-item i{flex-shrink:0;width:22px;height:22px;background:var(--ink);display:grid;place-items:center;margin-top:2px;-webkit-clip-path:polygon(0 0,100% 0,100% 100%,15% 100%);clip-path:polygon(0 0,100% 0,100% 100%,15% 100%)}
+.spl .spl-cred-item i::after{content:"";width:9px;height:5px;border:2px solid #fff;border-top:0;border-right:0;-webkit-transform:rotate(-45deg) translate(1px,-1px);transform:rotate(-45deg) translate(1px,-1px)}
+.spl .spl-cred-item span{font-size:14.5px;color:var(--ink-soft);line-height:1.45}
+.spl .spl-cred-item span b{color:var(--ink);font-weight:700}
+.spl .spl-spec{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.spl .spl-spec span{padding:8px 13px;background:#fff;border:1px solid var(--paper-2);font-family:var(--font-head);font-weight:700;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);-webkit-clip-path:polygon(7px 0,100% 0,calc(100% - 7px) 100%,0 100%);clip-path:polygon(7px 0,100% 0,calc(100% - 7px) 100%,0 100%)}
+.spl .spl-coach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:60px}
+.spl .spl-coach{background:#fff;border:1px solid var(--paper-2);overflow:hidden;-webkit-transition:-webkit-transform .45s var(--ease),box-shadow .45s;transition:transform .45s var(--ease),box-shadow .45s;-webkit-clip-path:polygon(0 0,100% 0,100% 94%,95% 100%,0 100%);clip-path:polygon(0 0,100% 0,100% 94%,95% 100%,0 100%)}
+.spl .spl-coach:hover{-webkit-transform:translateY(-8px);transform:translateY(-8px);box-shadow:0 30px 60px -28px rgba(0,0,0,.35)}
+.spl .spl-coach-img{position:relative;aspect-ratio:4/4.2;overflow:hidden;background:var(--paper-2)}
+.spl .spl-coach-img img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center top;object-position:center top;-webkit-transition:-webkit-transform .8s var(--ease);transition:transform .8s var(--ease)}
+.spl .spl-coach:hover .spl-coach-img img{-webkit-transform:scale(1.05);transform:scale(1.05)}
+.spl .spl-coach-img .spl-slashes{position:absolute;right:14px;top:14px}
+.spl .spl-coach-body{padding:22px 24px 26px}
+.spl .spl-coach-body h4{font-family:var(--font-head);font-weight:900;font-size:21px;text-transform:uppercase;color:var(--ink);line-height:1.05}
+.spl .spl-coach-body .role{font-family:var(--font-head);font-weight:800;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-top:6px}
+.spl .spl-coach-body ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:7px}
+.spl .spl-coach-body li{position:relative;padding-left:18px;font-size:13.5px;color:var(--ink-soft);line-height:1.45}
+.spl .spl-coach-body li::before{content:"";position:absolute;left:0;top:8px;width:9px;height:2px;background:var(--orange)}
+.spl .spl-coach-body li.tbd{color:var(--ink-mute);font-style:italic}
+.spl .spl-coach-trust{margin-top:48px;display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:stretch}
+.spl .spl-coach-trust .spl-media{-webkit-clip-path:polygon(0 0,100% 0,100% 92%,95% 100%,0 100%);clip-path:polygon(0 0,100% 0,100% 92%,95% 100%,0 100%)}
+.spl .spl-trust-card{background:var(--ink);color:#fff;padding:40px 38px;display:flex;flex-direction:column;justify-content:center;-webkit-clip-path:polygon(0 0,100% 0,100% 92%,95% 100%,0 100%);clip-path:polygon(0 0,100% 0,100% 92%,95% 100%,0 100%)}
+.spl .spl-trust-card h3{font-family:var(--font-display);font-size:clamp(30px,3.4vw,44px);text-transform:uppercase;line-height:.95}
+.spl .spl-trust-card p{font-size:15.5px;color:var(--text-soft);margin-top:16px;line-height:1.62}
+.spl .spl-trust-card ul{list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:10px}
+.spl .spl-trust-card li{display:flex;gap:11px;align-items:center;font-family:var(--font-head);font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#fff}
+.spl .spl-trust-card li i{width:8px;height:8px;background:var(--mint);-webkit-transform:skewX(-18deg);transform:skewX(-18deg);flex-shrink:0}
+
+/* ---------- parents / facility ---------- */
+.spl .spl-parents{background:var(--black);border-top:1px solid var(--line);position:relative;overflow:hidden}
+.spl .spl-par-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.spl .spl-par-list{margin-top:30px;display:grid;gap:18px}
+.spl .spl-par-item{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
+.spl .spl-par-ico{width:52px;height:52px;background:var(--black-3);border:1px solid var(--line-2);display:grid;place-items:center;color:var(--orange)}
+.spl .spl-par-ico svg{width:24px;height:24px}
+.spl .spl-par-item h4{font-family:var(--font-head);font-weight:800;font-size:16.5px;text-transform:uppercase;color:#fff;margin-bottom:5px}
+.spl .spl-par-item p{font-size:14.5px;color:var(--text-soft);line-height:1.58}
+.spl .spl-par-towns{margin-top:28px;font-size:13.5px;color:var(--text-mute);line-height:1.7}
+.spl .spl-par-towns b{color:var(--text-soft);font-weight:700}
+.spl .spl-par-media{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.spl .spl-par-media .spl-media{aspect-ratio:4/5}
+.spl .spl-par-media .spl-media:nth-child(2){margin-top:48px}
+
+/* ---------- reviews ---------- */
+.spl .spl-reviews{background:var(--black-2);border-top:1px solid var(--line);position:relative;overflow:hidden}
+.spl .spl-rev-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:54px}
+.spl .spl-rev-score{display:flex;align-items:center;gap:18px;padding:18px 22px;background:var(--black-3);border:1px solid var(--line)}
+.spl .spl-rev-score .big{font-family:var(--font-display);font-size:54px;line-height:1;color:#fff}
+.spl .spl-rev-score .stars{display:flex;gap:3px;color:var(--orange)}
+.spl .spl-rev-score .stars svg{width:18px;height:18px}
+.spl .spl-rev-score small{display:block;font-family:var(--font-head);font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-soft);margin-top:6px}
+.spl .spl-rev-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.spl .spl-rcard{position:relative;padding:30px 26px 28px;background:linear-gradient(168deg,var(--black-3),var(--black-2));border:1px solid var(--line);display:flex;flex-direction:column;gap:16px;-webkit-transition:border-color .4s,-webkit-transform .4s;transition:border-color .4s,transform .4s;-webkit-clip-path:polygon(0 0,100% 0,100% 92%,93% 100%,0 100%);clip-path:polygon(0 0,100% 0,100% 92%,93% 100%,0 100%)}
+.spl .spl-rcard::before{content:"\201C";position:absolute;top:4px;right:22px;font-family:var(--font-display);font-size:88px;color:rgba(233,100,3,.14);line-height:1}
+.spl .spl-rcard:hover{border-color:var(--orange);-webkit-transform:translateY(-6px);transform:translateY(-6px)}
+.spl .spl-rcard .stars{display:flex;gap:2px;color:var(--orange)}
+.spl .spl-rcard .stars svg{width:15px;height:15px}
+.spl .spl-rcard p{font-size:14.5px;color:var(--text);line-height:1.62;position:relative;z-index:1}
+.spl .spl-rcard footer{margin-top:auto;display:flex;align-items:center;gap:11px}
+.spl .spl-rcard .ava{width:38px;height:38px;display:grid;place-items:center;font-family:var(--font-head);font-weight:900;font-size:13px;color:#fff;background:var(--orange);-webkit-clip-path:polygon(0 0,100% 0,100% 100%,18% 100%);clip-path:polygon(0 0,100% 0,100% 100%,18% 100%)}
+.spl .spl-rcard .ava.m{background:var(--mint);color:var(--ink)}
+.spl .spl-rcard .who b{display:block;font-family:var(--font-head);font-weight:800;font-size:13.5px;color:#fff}
+.spl .spl-rcard .who span{font-size:12px;color:var(--text-mute)}
+
+/* ---------- FAQ ---------- */
+.spl .spl-faq{background:var(--black);border-top:1px solid var(--line)}
+.spl .spl-faq-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.spl .spl-faq-side{position:-webkit-sticky;position:sticky;top:110px}
+.spl .spl-faq-side .spl-sec-head{margin-bottom:28px}
+.spl .spl-faq-item{border:1px solid var(--line);background:var(--black-2);margin-bottom:12px;overflow:hidden;-webkit-transition:border-color .35s;transition:border-color .35s}
+.spl .spl-faq-item.is-open{border-color:var(--orange)}
+.spl .spl-faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 26px;text-align:left;font-family:var(--font-head);font-weight:800;font-size:16.5px;color:#fff;line-height:1.3}
+.spl .spl-faq-item.is-open .spl-faq-q{color:var(--orange-3)}
+.spl .spl-faq-ico{flex-shrink:0;width:28px;height:28px;position:relative}
+.spl .spl-faq-ico::before,.spl .spl-faq-ico::after{content:"";position:absolute;background:currentColor;border-radius:2px}
+.spl .spl-faq-ico::before{top:13px;left:6px;width:16px;height:2.5px}
+.spl .spl-faq-ico::after{top:6px;left:13px;width:2.5px;height:16px;-webkit-transition:-webkit-transform .4s var(--ease);transition:transform .4s var(--ease)}
+.spl .spl-faq-item.is-open .spl-faq-ico::after{-webkit-transform:rotate(90deg);transform:rotate(90deg)}
+.spl .spl-faq-a{max-height:0;overflow:hidden;-webkit-transition:max-height .45s var(--ease);transition:max-height .45s var(--ease)}
+.spl .spl-faq-a p{padding:0 26px 24px;font-size:15px;color:var(--text-soft);line-height:1.66}
+.spl .spl-faq-a p b{color:#fff;font-weight:700}
+
+/* ---------- final CTA ---------- */
+.spl .spl-cta{background:var(--black-2);border-top:1px solid var(--line);position:relative;overflow:hidden}
+.spl .spl-cta-bg{position:absolute;top:0;left:0;right:0;bottom:0;z-index:0}
+.spl .spl-cta-bg img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;opacity:.28}
+.spl .spl-cta-bg::after{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(80% 80% at 50% 50%,rgba(10,10,10,.5),var(--black-2) 85%)}
+.spl .spl-cta-in{position:relative;z-index:2;text-align:center;max-width:860px;margin:0 auto}
+.spl .spl-cta h2{font-size:clamp(44px,7vw,96px);color:#fff;margin-top:20px}
+.spl .spl-cta p{font-size:18px;color:var(--text);margin-top:22px;line-height:1.62;max-width:620px;margin-left:auto;margin-right:auto}
+.spl .spl-cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+.spl .spl-cta-meta{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:28px;font-family:var(--font-head);font-weight:700;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-soft)}
+.spl .spl-cta-meta span{display:inline-flex;align-items:center;gap:8px}
+.spl .spl-cta-meta i{width:6px;height:6px;background:var(--orange);-webkit-transform:skewX(-18deg);transform:skewX(-18deg)}
+
+/* ---------- footer ---------- */
+.spl .spl-footer{background:var(--black);border-top:1px solid var(--line);padding:70px 0 100px}
+.spl .spl-ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:44px;margin-bottom:50px}
+.spl .spl-ft-about p{font-size:14px;color:var(--text-soft);line-height:1.65;margin-top:20px;max-width:320px}
+.spl .spl-ft h5{font-family:var(--font-head);font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-mute);margin-bottom:18px}
+.spl .spl-ft-col a{display:block;font-size:14px;color:var(--text-soft);margin-bottom:12px;-webkit-transition:color .2s,padding-left .2s;transition:color .2s,padding-left .2s}
+.spl .spl-ft-col a:hover{color:var(--orange);padding-left:5px}
+.spl .spl-ft-loc{font-size:14px;color:var(--text-soft);line-height:1.7}
+.spl .spl-ft-loc a{color:var(--text);text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px}
+.spl .spl-ft-social{display:flex;gap:12px;margin-top:20px}
+.spl .spl-ft-social a{width:40px;height:40px;background:var(--black-3);border:1px solid var(--line);display:grid;place-items:center;color:var(--text-soft);-webkit-transition:all .3s;transition:all .3s}
+.spl .spl-ft-social a:hover{background:var(--orange);border-color:var(--orange);color:#fff;-webkit-transform:translateY(-3px);transform:translateY(-3px)}
+.spl .spl-ft-social svg{width:18px;height:18px}
+.spl .spl-ft-bottom{border-top:1px solid var(--line);padding-top:26px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-mute)}
+.spl .spl-ft-bottom .links{display:flex;gap:24px}
+.spl .spl-ft-bottom .links a:hover{color:var(--orange)}
+
+/* ---------- sticky mobile CTA ---------- */
+.spl .spl-sticky{position:fixed;left:0;right:0;bottom:0;z-index:7900;display:none;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(10,10,10,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line);-webkit-transform:translateY(110%);transform:translateY(110%);-webkit-transition:-webkit-transform .4s var(--ease);transition:transform .4s var(--ease)}
+.spl .spl-sticky.is-visible{-webkit-transform:translateY(0);transform:translateY(0)}
+.spl .spl-sticky-txt{min-width:0}
+.spl .spl-sticky-txt b{display:block;font-family:var(--font-head);font-weight:800;font-size:13px;text-transform:uppercase;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.spl .spl-sticky-txt span{display:block;font-size:11.5px;color:var(--text-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.spl .spl-sticky .spl-btn-in{padding:13px 18px;font-size:12.5px;white-space:nowrap}
+
+/* ---------- reveal ---------- */
+.spl .spl-reveal,.spl .spl-reveal-l,.spl .spl-reveal-r{opacity:0;-webkit-transition:opacity .8s var(--ease),-webkit-transform .8s var(--ease);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.spl .spl-reveal{-webkit-transform:translateY(32px);transform:translateY(32px)}
+.spl .spl-reveal-l{-webkit-transform:translateX(-36px);transform:translateX(-36px)}
+.spl .spl-reveal-r{-webkit-transform:translateX(36px);transform:translateX(36px)}
+.spl .spl-reveal.in,.spl .spl-reveal-l.in,.spl .spl-reveal-r.in{opacity:1;-webkit-transform:none;transform:none}
+.spl .spl-stagger.in>*{-webkit-animation:splRise .7s var(--ease) backwards;animation:splRise .7s var(--ease) backwards}
+.spl .spl-stagger.in>*:nth-child(1){-webkit-animation-delay:.05s;animation-delay:.05s}
+.spl .spl-stagger.in>*:nth-child(2){-webkit-animation-delay:.13s;animation-delay:.13s}
+.spl .spl-stagger.in>*:nth-child(3){-webkit-animation-delay:.21s;animation-delay:.21s}
+.spl .spl-stagger.in>*:nth-child(4){-webkit-animation-delay:.29s;animation-delay:.29s}
+.spl .spl-stagger.in>*:nth-child(5){-webkit-animation-delay:.37s;animation-delay:.37s}
+.spl .spl-stagger.in>*:nth-child(6){-webkit-animation-delay:.45s;animation-delay:.45s}
+/* no JS fallback: show everything */
+.spl.no-js .spl-reveal,.spl.no-js .spl-reveal-l,.spl.no-js .spl-reveal-r{opacity:1;-webkit-transform:none;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:1100px){
+  .spl .spl-rev-grid{grid-template-columns:repeat(2,1fr)}
+  .spl .spl-kpis{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:980px){
+  .spl .spl-nav-links{display:none}
+  .spl .spl-burger{display:flex}
+  .spl .spl-hero{padding:120px 0 80px}
+  .spl .spl-hero-inner{grid-template-columns:1fr;gap:34px}
+  .spl .spl-hero-card{justify-self:start;width:100%;max-width:340px}
+  .spl .spl-compare{grid-template-columns:1fr}
+  .spl .spl-lab-grid,.spl .spl-par-grid,.spl .spl-faq-grid,.spl .spl-coach-hero{grid-template-columns:1fr;gap:40px}
+  .spl .spl-lab-grid.rev{direction:ltr}
+  .spl .spl-stats-grid{grid-template-columns:repeat(2,1fr)}
+  .spl .spl-stat:nth-child(2){border-right:0}
+  .spl .spl-stat:nth-child(1),.spl .spl-stat:nth-child(2){border-bottom:1.5px solid rgba(255,255,255,.18)}
+  .spl .spl-prog-grid{grid-template-columns:1fr}
+  .spl .spl-road{grid-template-columns:1fr;gap:44px}
+  .spl .spl-road::before{display:none}
+  .spl .spl-coach-grid{grid-template-columns:1fr}
+  .spl .spl-coach-trust{grid-template-columns:1fr}
+  .spl .spl-faq-side{position:static}
+  .spl .spl-ft-grid{grid-template-columns:1fr 1fr}
+  .spl .spl-sec{padding:92px 0}
+  .spl .spl-sticky{display:flex}
+  .spl .spl-footer{padding-bottom:120px}
+}
+@media(max-width:600px){
+  .spl{--gutter:20px}
+  .spl .spl-sec-head h2 br,.spl .spl-cta h2 br{display:none}
+  .spl .spl-hero h1{font-size:clamp(50px,15vw,72px)}
+  .spl .spl-hero-cta{flex-direction:column}
+  .spl .spl-hero-cta .spl-btn{width:100%}
+  .spl .spl-cred{grid-template-columns:1fr}
+  .spl .spl-par-media{grid-template-columns:1fr}
+  .spl .spl-par-media .spl-media:nth-child(2){margin-top:0}
+  .spl .spl-rev-grid{grid-template-columns:1fr}
+  .spl .spl-ft-grid{grid-template-columns:1fr}
+  .spl .spl-ft-bottom{flex-direction:column;align-items:flex-start}
+  .spl .spl-mq-item{font-size:16px}
+  .spl .spl-cta-row{flex-direction:column}
+  .spl .spl-cta-row .spl-btn{width:100%}
+  .spl .spl-trust-in{justify-content:flex-start}
+  .spl .spl-hero-scroll{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .spl *{-webkit-animation-duration:.01ms!important;animation-duration:.01ms!important;-webkit-animation-iteration-count:1!important;animation-iteration-count:1!important;-webkit-transition-duration:.01ms!important;transition-duration:.01ms!important}
+  .spl .spl-reveal,.spl .spl-reveal-l,.spl .spl-reveal-r,.spl .spl-hero-left>*,.spl .spl-hero-card{opacity:1;-webkit-transform:none;transform:none}
+}
+
+</style>
+</head>
+<body>
+<!-- ==========================================================================
+     SOCCER PERFORMANCE LAB — MAIN SITE (HTML BLOCK)
+     Links: Free Trial → /book · Soccer IQ Lab → /iq · Little Ballers → /littleballers
+     Private Training → mailto:info@soccerperformancelabinc.com?subject=Private%20Training%20Request (replace once)
+     ========================================================================== -->
+<div class="spl spl-breakout no-js" id="spl-top">
+
+  <div class="spl-progress" id="splProgress"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="spl-nav" id="splNav">
+    <div class="spl-wrap">
+      <div class="spl-bar">
+        <a class="spl-logo" href="#spl-top" aria-label="Soccer Performance Lab">
+          <img src="https://wilk1990.github.io/spl-free-session/assets/img/logo-nav.png" alt="Soccer Performance Lab" width="560" height="169">
+        </a>
+        <nav class="spl-nav-links" aria-label="Main">
+          <a href="#programs">Programs</a>
+          <a href="#lab">The Lab</a>
+          <a href="#coaches">Coaches</a>
+          <a href="#results">Results</a>
+          <a href="#faq">FAQ</a>
+          <a href="https://soccerperformancelabinc.com/book" class="spl-btn spl-btn-primary spl-btn-sm"><span class="spl-btn-in">Book Free Session</span></a>
+        </nav>
+        <button class="spl-burger" id="splBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="spl-mobile-menu" id="splMobileMenu">
+    <a href="#programs">Programs</a>
+    <a href="#lab">The Lab</a>
+    <a href="#coaches">Coaches</a>
+    <a href="#results">Results</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://soccerperformancelabinc.com/book" class="spl-btn spl-btn-primary"><span class="spl-btn-in">Book Free Session</span></a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="spl-hero" id="hero">
+    <div class="spl-hero-media">
+      <img src="https://wilk1990.github.io/spl-free-session/assets/img/hero-poster-1200.webp" alt="" fetchpriority="high" decoding="async" width="1200" height="675">
+      <video id="splHeroVideo" muted playsinline loop preload="none" poster="https://wilk1990.github.io/spl-free-session/assets/img/hero-poster-1200.webp" data-src="https://wilk1990.github.io/spl-free-session/assets/video/hero-1080.mp4" aria-hidden="true"></video>
+    </div>
+    <div class="spl-hero-shade"></div>
+    <div class="spl-hero-grid"></div>
+    <div class="spl-wrap">
+      <div class="spl-hero-inner">
+        <div class="spl-hero-left">
+          <div class="spl-hero-pre">
+            <span class="spl-stars" aria-label="4.9 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg>
+            </span>
+            <span><b>4.9</b> on Google</span><span class="dot"></span>
+            <span>Glenwood Landing, NY</span><span class="dot"></span>
+            <span>Ages 5 to 18</span>
+          </div>
+          <h1 class="spl-display">Where Players<br>Become <span class="spl-o">Athletes.</span></h1>
+          <p class="spl-hero-sub"><b>Data driven youth soccer training on Long Island's North Shore.</b> 700 to 1,000 quality touches per session, decisions made under real pressure, and live performance data. So you never have to wonder if training is working. You can see it.</p>
+          <div class="spl-hero-cta">
+            <a href="https://soccerperformancelabinc.com/book" class="spl-btn spl-btn-primary"><span class="spl-btn-in">Book Your Free Trial Session <span class="spl-arr">→</span></span></a>
+            <a href="#programs" class="spl-btn spl-btn-dark"><span class="spl-btn-in">See Programs</span></a>
+          </div>
+        </div>
+        <div class="spl-hero-card" id="splHeroCard" aria-hidden="true">
+          <div class="spl-hc-top"><span class="spl-hc-dot"></span>Live Session · Player KPIs</div>
+          <div class="spl-hc-row"><span class="spl-hc-name">Quality touches</span><span class="spl-hc-val o" data-count="912">0</span></div>
+          <div class="spl-hc-bar"><i style="--w:91%"></i></div>
+          <div class="spl-hc-row"><span class="spl-hc-name">Scan before first touch</span><span class="spl-hc-val m" data-count="84" data-suffix="%">0</span></div>
+          <div class="spl-hc-bar"><i class="m" style="--w:84%"></i></div>
+          <div class="spl-hc-row"><span class="spl-hc-name">Reaction time</span><span class="spl-hc-val" data-count="0.41" data-decimals="2" data-suffix="s">0</span></div>
+          <div class="spl-hc-bar"><i style="--w:72%"></i></div>
+          <div class="spl-hc-row"><span class="spl-hc-name">Weak foot passing</span><span class="spl-hc-val m" data-count="78" data-suffix="%">0</span></div>
+          <div class="spl-hc-bar"><i class="m" style="--w:78%"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="spl-hero-scroll" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <div class="spl-trust">
+    <div class="spl-wrap">
+      <div class="spl-trust-in">
+        <span class="spl-trust-lab">Methods adapted from clubs in</span>
+        <div class="spl-trust-list">
+          <span>Premier League</span><span>Bundesliga</span><span>La Liga</span><span>Serie A</span><span>MLS</span><span><b>NYCFC</b> Youth Partner</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="spl-marquee" aria-hidden="true"><div class="spl-marquee-track" id="splMarquee"></div></div>
+
+  <!-- ===== PROBLEM: WHY TRAINING HITS A WALL ===== -->
+  <section class="spl-sec spl-problem" id="why">
+    <div class="spl-wrap">
+      <div class="spl-sec-head spl-reveal">
+        <span class="spl-eyebrow">Why Soccer Performance Lab</span>
+        <h2 class="spl-display">Most Kids Work Hard.<br>Few Get Better <span class="spl-o">On Game Day.</span></h2>
+        <p>It is not a lack of effort. Crowded team practices and static cone trainers were never built to develop speed of play. Your player needs more touches, real pressure, and proof it is working.</p>
+      </div>
+      <div class="spl-compare spl-reveal spl-stagger">
+        <div class="spl-cmp">
+          <div class="spl-cmp-lab"><i></i>Team Practice</div>
+          <h3>Crowded team sessions</h3>
+          <div class="spl-cmp-num" data-count="80" data-suffix="">0<small>touches per player, per session</small></div>
+          <ul>
+            <li>18 to 22 kids, long lines, one ball</li>
+            <li>Built around team tactics, not your child's technique</li>
+            <li>The top five athletes get the attention</li>
+            <li>No individual data. No way to know what improved</li>
+          </ul>
+        </div>
+        <div class="spl-cmp">
+          <div class="spl-cmp-lab"><i></i>1 on 1 Cone Trainer</div>
+          <h3>Same cones. Same drills.</h3>
+          <div class="spl-cmp-num" data-count="250" data-suffix="">0<small>touches, zero pressure</small></div>
+          <ul>
+            <li>Technique in isolation, no opponent, no clock</li>
+            <li>Looks clean in training, freezes in the game</li>
+            <li>Speed of play is never trained</li>
+            <li>$100 or more per hour with nothing measured</li>
+          </ul>
+        </div>
+        <div class="spl-cmp is-spl">
+          <div class="spl-cmp-lab"><i></i>Soccer IQ Lab at SPL</div>
+          <h3>Touches. Pressure. Proof.</h3>
+          <div class="spl-cmp-num" data-count="1000" data-suffix="+">0<small>quality touches per 60 minute session</small></div>
+          <ul>
+            <li>5 players per coach, no standing in line</li>
+            <li>Stations that force scanning before the first touch</li>
+            <li>Match realistic scenarios under time and opponent pressure</li>
+            <li>Live KPIs and benchmarks, re tested every 8 sessions</li>
+          </ul>
+          <div class="spl-cmp-foot"><a href="https://soccerperformancelabinc.com/book" class="spl-btn spl-btn-primary spl-btn-sm"><span class="spl-btn-in">Try It Free <span class="spl-arr">→</span></span></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSIDE THE LAB ===== -->
+  <section class="spl-sec spl-lab" id="lab">
+    <div class="spl-ghost" style="top:40px;right:-20px">LAB</div>
+    <div class="spl-wrap">
+      <div class="spl-sec-head spl-reveal">
+        <span class="spl-eyebrow mint">Inside The Soccer IQ Lab</span>
+        <h2 class="spl-display">Every Session Has Purpose.<br>Every Metric Has <span class="spl-m">Meaning.</span></h2>
+        <p>A neuro technical training environment that builds the complete modern player. Here is what happens in a 60 minute session.</p>
+      </div>
+
+      <div class="spl-lab-grid" style="margin-bottom:110px">
+        <div class="spl-media tall spl-reveal-l">
+          <img src="https://wilk1990.github.io/spl-free-session/site/img/lab-cage.webp" alt="A coach triggering a reaction light inside the OmniCage at Soccer Performance Lab" loading="lazy" decoding="async" width="1600" height="2400">
+          <div class="shade"></div>
+          <div class="spl-slashes" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="spl-media-tag">OmniCage · ROXPro Lights</div>
+        </div>
+        <div class="spl-reveal-r">
+          <span class="spl-eyebrow">The Method</span>
+          <h3>Three phases. One hour. Zero wasted reps.</h3>
+          <p>Most training stops at technique. The lab is built so that technique gets tested under the same pressure your player faces on Saturday, and then measured.</p>
+          <div class="spl-steps">
+            <div class="spl-step"><div class="spl-step-n">01</div><div><h4>High frequency stations</h4><p>Passing, first touch, dribbling, finishing and agility in rotating stations. 700 to 1,000 quality touches per player. Both feet, every session.</p></div></div>
+            <div class="spl-step"><div class="spl-step-n">02</div><div><h4>Cognitive load under pressure</h4><p>Inside the OmniCage and on ROXPro reaction mats, light signals force players to scan before the ball arrives and decide in a split second. This is where speed of play is built.</p></div></div>
+            <div class="spl-step"><div class="spl-step-n">03</div><div><h4>Measure, benchmark, re test</h4><p>Speed, reaction time, scanning and accuracy are tracked live. Coaches correct on the spot. Every 8 sessions we re test, so parents and players see the progress in numbers.</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spl-lab-grid rev">
+        <div class="spl-media tall spl-reveal-r">
+          <img src="https://wilk1990.github.io/spl-free-session/assets/img/dome-boy-810.webp" alt="A young player reacting to a light signal on the ROXPro platform inside the performance dome" loading="lazy" decoding="async" width="810" height="1013">
+          <div class="shade"></div>
+          <div class="spl-slashes" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="spl-media-tag mint">Live Performance Data</div>
+        </div>
+        <div class="spl-reveal-l">
+          <span class="spl-eyebrow mint">What We Measure</span>
+          <h3>Seven live KPIs. Five pillars of development.</h3>
+          <p>Scan to take in data. Process the data. Make a decision based on the data. The systems in the lab train exactly that loop, and track it, so you are not guessing whether the money and the driving are paying off.</p>
+          <div class="spl-kpis">
+            <div class="spl-kpi"><i></i>Speed</div>
+            <div class="spl-kpi"><i></i>Agility</div>
+            <div class="spl-kpi"><i></i>Reaction time</div>
+            <div class="spl-kpi"><i></i>Scanning</div>
+            <div class="spl-kpi"><i></i>First touch</div>
+            <div class="spl-kpi"><i></i>Left / right passing</div>
+            <div class="spl-kpi"><i></i>Dribbling</div>
+            <div class="spl-kpi"><i></i>Decision speed</div>
+          </div>
+          <div class="spl-pillars">
+            <span>Technical &amp; Tactical</span><span>Physical &amp; Athletic</span><span>Cognitive Speed</span><span>Mental Resilience</span><span>Training Mindset</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STAT BAND ===== -->
+  <section class="spl-stats" id="splStats">
+    <div class="spl-wrap">
+      <div class="spl-stats-grid spl-reveal spl-stagger">
+        <div class="spl-stat"><div class="spl-stat-num" data-count="1000" data-suffix="+">0</div><div class="spl-stat-lab">Touches per session</div></div>
+        <div class="spl-stat"><div class="spl-stat-num" data-count="5" data-suffix=":1">0</div><div class="spl-stat-lab">Players per coach</div></div>
+        <div class="spl-stat"><div class="spl-stat-num" data-count="8">0</div><div class="spl-stat-lab">Sessions, then re test</div></div>
+        <div class="spl-stat"><div class="spl-stat-num" data-count="4.9" data-decimals="1" data-suffix="★">0</div><div class="spl-stat-lab">Google rating, 40 reviews</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAMS ===== -->
+  <section class="spl-sec spl-programs" id="programs">
+    <div class="spl-wrap">
+      <div class="spl-sec-head spl-reveal">
+        <span class="spl-eyebrow">Programs</span>
+        <h2 class="spl-display">Structured Pathways<br>For Ages <span class="spl-o">5 To 18.</span></h2>
+        <p>Pick the format that fits your player and your week. Every program is booked through our Bond Sports page in a few taps. New to SPL? Start with the free trial.</p>
+      </div>
+      <div class="spl-prog-grid spl-reveal spl-stagger">
+
+        <article class="spl-prog is-free">
+          <div class="spl-prog-img">
+            <img src="https://wilk1990.github.io/spl-free-session/assets/img/coach-kids-810.webp" alt="A Soccer Performance Lab coach giving feedback to a group of young players" loading="lazy" decoding="async" width="810" height="1215">
+            <span class="spl-prog-tag mint">Start Here · 100% Free</span>
+          </div>
+          <div class="spl-prog-body">
+            <h3>Free Trial Session</h3>
+            <div class="spl-prog-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>60 min</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Ages 8 to 18</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Thu 6:30 PM · Sat 10 AM</span>
+            </div>
+            <p>A full session in the lab for players who have never trained with us. Your player gets a baseline benchmark, real coaching and the whole SPL experience. Afterwards a coach recommends the right program. No commitment.</p>
+            <ul>
+              <li>Personal baseline assessment included</li>
+              <li>New players only, all levels welcome</li>
+              <li>Parents are welcome to watch</li>
+            </ul>
+            <div class="spl-prog-promo">Enter code <code>FREESESSION</code> at checkout and the $75 drops to $0</div>
+            <div class="spl-prog-foot">
+              <a href="https://soccerperformancelabinc.com/book" class="spl-btn spl-btn-primary"><span class="spl-btn-in">Claim Free Session <span class="spl-arr">→</span></span></a>
+              <span class="spl-prog-note">Limited spots each week</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="spl-prog">
+          <div class="spl-prog-img">
+            <img src="https://wilk1990.github.io/spl-free-session/assets/img/arena-girl-900.webp" alt="Players training inside the reaction light arena at Soccer Performance Lab" loading="lazy" decoding="async" width="900" height="600">
+            <span class="spl-prog-tag">Core Program</span>
+          </div>
+          <div class="spl-prog-body">
+            <h3>Soccer IQ Lab Group Training</h3>
+            <div class="spl-prog-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>60 min</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Ages 8 to 18</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Mon to Fri evenings</span>
+            </div>
+            <p>Our signature program. Small groups sorted by birth year, 5 players per coach, and the full three phase method: stations, cognitive pressure, measurement. Most players come 1 to 3 times a week alongside their club.</p>
+            <ul>
+              <li>700 to 1,000 quality touches per session</li>
+              <li>Grouped by birth year and level, beginner to academy</li>
+              <li>Drop in or monthly passes, no long contracts</li>
+            </ul>
+            <div class="spl-prog-foot">
+              <a href="https://soccerperformancelabinc.com/iq" class="spl-btn spl-btn-dark"><span class="spl-btn-in">View Schedule &amp; Book <span class="spl-arr">→</span></span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="spl-prog">
+          <div class="spl-prog-img">
+            <img src="https://wilk1990.github.io/spl-free-session/assets/img/coach-goal-900.webp" alt="A coach explaining a drill to a group of young children at Soccer Performance Lab" loading="lazy" decoding="async" width="900" height="600">
+            <span class="spl-prog-tag white">Little Ballers</span>
+          </div>
+          <div class="spl-prog-body">
+            <h3>Little Ballers</h3>
+            <div class="spl-prog-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>45 min</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Ages 5 to 8</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Saturday mornings</span>
+            </div>
+            <p>Not babysitting with a ball. Coordination, comfort on the ball and confidence, taught by professional coaches in a safe indoor space. The foundation that makes the first travel tryout at 8 or 9 a lot less scary.</p>
+            <ul>
+              <li>Positive, structured coaching for the youngest players</li>
+              <li>Climate controlled, weather proof indoor turf</li>
+              <li>Minutes from Sea Cliff, Glen Head, Glen Cove and Roslyn Harbor</li>
+            </ul>
+            <div class="spl-prog-foot">
+              <a href="https://soccerperformancelabinc.com/littleballers" class="spl-btn spl-btn-dark"><span class="spl-btn-in">View Schedule &amp; Book <span class="spl-arr">→</span></span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="spl-prog">
+          <div class="spl-prog-img">
+            <img src="https://wilk1990.github.io/spl-free-session/site/img/lab-floor.webp" alt="Head coach Artur Piperkov on the training floor at Soccer Performance Lab" loading="lazy" decoding="async" width="1600" height="2399" style="object-position:center 18%">
+            <span class="spl-prog-tag">1 On 1</span>
+          </div>
+          <div class="spl-prog-body">
+            <h3>Private Training</h3>
+            <div class="spl-prog-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>60 min</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Ages 8 to 18</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>By appointment</span>
+            </div>
+            <p>One coach, one player, the full lab. Built for a specific goal: a position change, tryout prep, a weak foot, a showcase in six weeks. Every minute is designed around your player's numbers.</p>
+            <ul>
+              <li>Individual plan built from the baseline data</li>
+              <li>Position specific and tryout specific work</li>
+              <li>Same technology, full attention</li>
+            </ul>
+            <div class="spl-prog-foot">
+              <a href="mailto:info@soccerperformancelabinc.com?subject=Private%20Training%20Request" class="spl-btn spl-btn-dark"><span class="spl-btn-in">Request A Session <span class="spl-arr">→</span></span></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROADMAP ===== -->
+  <section class="spl-sec spl-roadmap" id="progress">
+    <div class="spl-ghost" style="bottom:20px;left:-10px">90</div>
+    <div class="spl-wrap">
+      <div class="spl-sec-head center spl-reveal">
+        <span class="spl-eyebrow" style="justify-content:center">See Real Progress</span>
+        <h2 class="spl-display">You Don't Have To Wonder<br>If It's Working. <span class="spl-o">You Can See It.</span></h2>
+        <p style="margin-left:auto;margin-right:auto">A structured, periodized curriculum with ongoing benchmarking. This is what the first 90 days typically look like for a player training once or twice a week.</p>
+      </div>
+      <div class="spl-road spl-reveal spl-stagger">
+        <div class="spl-road-step">
+          <div class="spl-road-n">DAY 1</div>
+          <h4>Free session &amp; baseline</h4>
+          <div class="spl-road-big">7 KPIs</div>
+          <p>Your player trains a full session and gets benchmarked. Speed, reaction, scanning, first touch, both feet. You get a clear picture of where they stand and what to work on first.</p>
+        </div>
+        <div class="spl-road-step">
+          <div class="spl-road-n">DAY 30</div>
+          <h4>Volume &amp; head up habits</h4>
+          <div class="spl-road-big">+4,000 touches</div>
+          <p>Four to eight sessions in, your player has logged thousands of quality touches and the scanning habit starts to show. Fewer survival touches, more command touches.</p>
+        </div>
+        <div class="spl-road-step">
+          <div class="spl-road-n">DAY 90</div>
+          <h4>Measurable jump</h4>
+          <div class="spl-road-big">Re tested</div>
+          <p>Benchmarks re tested against day one. Faster decisions, cleaner first touch, more confidence in tight spaces. The difference your coach, and you, will notice on game day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COACHES (light) ===== -->
+  <section class="spl-sec spl-coaches spl-light" id="coaches">
+    <div class="spl-ghost" style="top:30px;right:-30px">PRO</div>
+    <div class="spl-wrap">
+      <div class="spl-sec-head spl-reveal">
+        <span class="spl-eyebrow">Your Coaches</span>
+        <h2 class="spl-display">Coached By People Who've<br>Played And Worked <span class="spl-o">At The Top.</span></h2>
+        <p>Parents want to know who is on the floor with their kid. Here is the team. Licensed, experienced, and used to working with youth, academy and professional players.</p>
+      </div>
+
+      <!-- Head coach -->
+      <div class="spl-coach-hero">
+        <div class="spl-coach-photo spl-reveal-l">
+          <img src="https://wilk1990.github.io/spl-free-session/site/img/coach-artur.webp" alt="Artur Piperkov, Founder and Head Coach of Soccer Performance Lab" loading="lazy" decoding="async" width="900" height="1125">
+          <div class="spl-coach-badge"><b>10+ Years</b><span>Player development</span></div>
+        </div>
+        <div class="spl-reveal-r">
+          <span class="spl-eyebrow">Founder &amp; Head Coach</span>
+          <div class="spl-coach-name">Artur<br>Piperkov</div>
+          <div class="spl-coach-role">Former professional, German Bundesliga · USSF licensed</div>
+          <p class="spl-coach-quote">"We develop the modern player through technical excellence, soccer intelligence and mental performance. Complete, confident players who make better decisions on and off the field."</p>
+          <div class="spl-cred">
+            <div class="spl-cred-item"><i></i><span><b>Former professional soccer player</b>, German Bundesliga</span></div>
+            <div class="spl-cred-item"><i></i><span><b>USSF licensed</b> soccer coach</span></div>
+            <div class="spl-cred-item"><i></i><span><b>10+ years</b> coaching youth, academy and professional players</span></div>
+            <div class="spl-cred-item"><i></i><span><b>Founder &amp; Director</b> of Soccer Performance Lab, previously PI Soccer</span></div>
+          </div>
+          <div class="spl-spec">
+            <span>Complete player development</span><span>Soccer IQ &amp; cognition</span><span>Mental performance</span><span>Technical &amp; tactical</span><span>Scanning &amp; game awareness</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coaching team -->
+      <div class="spl-coach-grid spl-reveal spl-stagger">
+        <article class="spl-coach">
+          <div class="spl-coach-img"><img src="https://wilk1990.github.io/spl-free-session/site/img/coach-2.webp" alt="Soccer Performance Lab coach" loading="lazy" decoding="async" width="900" height="1125"><div class="spl-slashes" aria-hidden="true"><i></i><i></i><i></i></div></div>
+          <div class="spl-coach-body">
+            <h4>[Coach Name]</h4>
+            <div class="role">[Role, e.g. Performance Coach]</div>
+            <ul>
+              <li class="tbd">[Years coaching youth and teens]</li>
+              <li class="tbd">[License or certification]</li>
+              <li class="tbd">[Club or academy background]</li>
+              <li class="tbd">[Specialization]</li>
+            </ul>
+          </div>
+        </article>
+        <article class="spl-coach">
+          <div class="spl-coach-img"><img src="https://wilk1990.github.io/spl-free-session/site/img/coach-3.webp" alt="Soccer Performance Lab coach" loading="lazy" decoding="async" width="900" height="1125"><div class="spl-slashes" aria-hidden="true"><i></i><i></i><i></i></div></div>
+          <div class="spl-coach-body">
+            <h4>[Coach Name]</h4>
+            <div class="role">[Role, e.g. Performance Coach]</div>
+            <ul>
+              <li class="tbd">[Years coaching youth and teens]</li>
+              <li class="tbd">[License or certification]</li>
+              <li class="tbd">[Club or academy background]</li>
+              <li class="tbd">[Specialization]</li>
+            </ul>
+          </div>
+        </article>
+        <article class="spl-coach">
+          <div class="spl-coach-img"><img src="https://wilk1990.github.io/spl-free-session/site/img/coach-4.webp" alt="Soccer Performance Lab coach" loading="lazy" decoding="async" width="900" height="1125"><div class="spl-slashes" aria-hidden="true"><i></i><i></i><i></i></div></div>
+          <div class="spl-coach-body">
+            <h4>[Coach Name]</h4>
+            <div class="role">[Role, e.g. Performance Coach]</div>
+            <ul>
+              <li class="tbd">[Years coaching youth and teens]</li>
+              <li class="tbd">[License or certification]</li>
+              <li class="tbd">[Club or academy background]</li>
+              <li class="tbd">[Specialization]</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="spl-coach-trust spl-reveal">
+        <div class="spl-media wide">
+          <img src="https://wilk1990.github.io/spl-free-session/site/img/team.webp" alt="The Soccer Performance Lab coaching team inside the facility" loading="lazy" decoding="async" width="1600" height="1066">
+          <div class="shade"></div>
+          <div class="spl-media-tag">The SPL coaching team</div>
+        </div>
+        <div class="spl-trust-card">
+          <h3>Experienced. Licensed. <span class="spl-m">Trusted.</span></h3>
+          <p>Our coaches and performance staff work with and consult for clubs across Europe and the MLS. The same principles used at the highest level of the game, adapted for youth development in a safe, supervised environment.</p>
+          <ul>
+            <li><i></i>USSF licensed coaching</li>
+            <li><i></i>Pro and academy playing backgrounds</li>
+            <li><i></i>Supervised, age appropriate groups</li>
+            <li><i></i>Parents welcome to watch every session</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARENTS / FACILITY ===== -->
+  <section class="spl-sec spl-parents" id="facility">
+    <div class="spl-wrap">
+      <div class="spl-par-grid">
+        <div class="spl-reveal-l">
+          <span class="spl-eyebrow">For Parents · The Facility</span>
+          <h2 class="spl-display" style="font-size:clamp(38px,5vw,66px);color:#fff;margin-top:20px">Drop Them Off.<br><span class="spl-o">Watch Them Grow.</span></h2>
+          <p style="font-size:17px;color:var(--text-soft);margin-top:22px;line-height:1.65">A purpose built indoor performance lab at 1 Shore Rd in Glenwood Landing. Climate controlled turf, pro grade equipment, small groups, and a lounge where you are welcome to watch every session.</p>
+          <div class="spl-par-list">
+            <div class="spl-par-item">
+              <div class="spl-par-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+              <div><h4>Safe and supervised</h4><p>Structured, positive coaching. Five players per coach means every child is seen, corrected and encouraged.</p></div>
+            </div>
+            <div class="spl-par-item">
+              <div class="spl-par-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+              <div><h4>Progress you can read</h4><p>Benchmarks and coach feedback in plain language. You will know what improved and what is next.</p></div>
+            </div>
+            <div class="spl-par-item">
+              <div class="spl-par-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+              <div><h4>Fits a club schedule</h4><p>60 minute sessions, weekday evenings and Saturday mornings. Most players come once or twice a week next to their club training.</p></div>
+            </div>
+          </div>
+          <p class="spl-par-towns"><b>Minutes from</b> Manhasset, Roslyn, Port Washington, Sea Cliff, Glen Cove, Locust Valley, Oyster Bay and Syosset. Free parking on site.</p>
+        </div>
+        <div class="spl-par-media spl-reveal-r">
+          <div class="spl-media"><img src="https://wilk1990.github.io/spl-free-session/site/img/jersey-wall.webp" alt="Framed professional jerseys on the wall of the Soccer Performance Lab lounge" loading="lazy" decoding="async" width="1600" height="2400"><div class="shade"></div><div class="spl-media-tag">The lounge</div></div>
+          <div class="spl-media"><img src="https://wilk1990.github.io/spl-free-session/assets/img/group-coaching-900.webp" alt="Young players listening to a coach during a group session" loading="lazy" decoding="async" width="900" height="600"><div class="shade"></div><div class="spl-media-tag mint">Small groups</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS ===== -->
+  <section class="spl-sec spl-reviews" id="results">
+    <div class="spl-wrap">
+      <div class="spl-rev-head spl-reveal">
+        <div class="spl-sec-head" style="margin-bottom:0">
+          <span class="spl-eyebrow">Parents On Google</span>
+          <h2 class="spl-display">Trusted By Soccer Families<br>Across The <span class="spl-o">North Shore.</span></h2>
+        </div>
+        <a class="spl-rev-score" href="https://g.page/r/CV1hWQmZhvikEBM/review" target="_blank" rel="noopener">
+          <span class="big">4.9</span>
+          <span><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg></span><small>40 Google reviews</small></span>
+        </a>
+      </div>
+      <div class="spl-rev-grid spl-reveal spl-stagger">
+        <blockquote class="spl-rcard">
+          <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg></div>
+          <p>Coach Arthur and Coach Jose have been training my boys for the past 5 years. The growth, development and confidence I have seen in my boys has been fantastic. The sessions are technical, challenging but fun at the same time. I cannot recommend them enough.</p>
+          <footer><span class="ava">CK</span><span class="who"><b>Chris K.</b><span>Google review</span></span></footer>
+        </blockquote>
+        <blockquote class="spl-rcard">
+          <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg></div>
+          <p>My daughter improved both technically and mentally after training here. The confidence she gained has been amazing to see.</p>
+          <footer><span class="ava m">ZP</span><span class="who"><b>Zsolt P.</b><span>Google review</span></span></footer>
+        </blockquote>
+        <blockquote class="spl-rcard">
+          <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg></div>
+          <p>My 12 &amp; 13 year old love it here! The trainers are professional and knowledgeable. My kids said they learned a lot and had a great workout.</p>
+          <footer><span class="ava">LG</span><span class="who"><b>Lauren G.</b><span>Google review</span></span></footer>
+        </blockquote>
+        <blockquote class="spl-rcard">
+          <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg></div>
+          <p>As a parent, I appreciate how professional and organized everything is. The coaches communicate well and truly care about development.</p>
+          <footer><span class="ava m">RM</span><span class="who"><b>Richárd M.</b><span>Google review</span></span></footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="spl-sec spl-faq" id="faq">
+    <div class="spl-wrap">
+      <div class="spl-faq-grid">
+        <div class="spl-faq-side spl-reveal-l">
+          <div class="spl-sec-head">
+            <span class="spl-eyebrow mint">Questions Parents Ask</span>
+            <h2 class="spl-display">Before You <span class="spl-m">Book.</span></h2>
+            <p>Straight answers. If yours is not here, email us at info@soccerperformancelabinc.com and a coach will reply.</p>
+          </div>
+          <a href="https://soccerperformancelabinc.com/book" class="spl-btn spl-btn-primary"><span class="spl-btn-in">Book The Free Session <span class="spl-arr">→</span></span></a>
+        </div>
+        <div class="spl-faq-list spl-reveal-r" id="splFaq">
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">What makes SPL different from club practice or a private trainer?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>Team practice develops the team. A cone trainer develops technique with no pressure. The Soccer IQ Lab does both at once: <b>700 to 1,000 quality touches</b> per session, applied in match realistic scenarios under time and opponent pressure, with every key metric tracked. Five players per coach, no lines.</p></div></div>
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">Does lab training actually transfer to the real 11v11 game?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>That is the whole point of the design. Every session connects high frequency technical work directly to game like situations with constant decision making. Players learn to scan before the ball arrives, not after. That habit is exactly what shows up on Saturday.</p></div></div>
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">My child already trains 3 times a week with their club. How often should they come?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>Most players train with us <b>1 to 3 times per week</b>. Even once a week doubles the quality touches your child gets. Many competitive and club players use SPL as individual development next to team training. Sessions run weekday evenings and Saturday mornings so they fit around the club schedule.</p></div></div>
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">Does my child need to be an elite player? Do you group by level?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>No. We train boys and girls from beginners to academy level players. Groups are sorted by birth year and ability, so nobody is thrown in over their head. Some soccer experience is recommended for the Soccer IQ Lab. Little Ballers is built for ages 5 to 8.</p></div></div>
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">How do you measure progress, and do parents get to see it?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>Professional sports technology tracks speed, agility, reaction time, scanning, first touch and both foot passing during sessions. Players are benchmarked and re tested every 8 sessions. You see the numbers and the coach explains what they mean and what comes next.</p></div></div>
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">How does the free trial session work?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>The free trial is for players ages 8 to 18 who have never trained at SPL. Sessions run <b>Thursdays at 6:30 PM and Saturdays at 10 AM</b>. Book through our Bond Sports page, create a parent account, pick a date and enter the code <b>FREESESSION</b> at checkout so the $75 drops to $0. One free session per player. Afterwards a coach recommends the right program.</p></div></div>
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">What should my child bring?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>Indoor soccer shoes or turf cleats (no outdoor cleats), comfortable training clothes and a water bottle. Shin guards are optional. Please arrive 5 minutes early so the coach can get your player set up.</p></div></div>
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">Can I watch the session?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>Yes. Parents are welcome to watch from the lounge. We are at 1 Shore Rd, Glenwood Landing, NY 11547, with free parking on site.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="spl-sec spl-cta" id="book">
+    <div class="spl-cta-bg"><img src="https://wilk1990.github.io/spl-free-session/assets/img/facility-wide-1400.webp" alt="" loading="lazy" decoding="async" width="1400" height="933"></div>
+    <div class="spl-wrap">
+      <div class="spl-cta-in spl-reveal">
+        <span class="spl-eyebrow" style="justify-content:center">Your Player's First Session Is On Us</span>
+        <h2 class="spl-display">Give Your Player<br>An <span class="spl-o">Unfair Edge.</span></h2>
+        <p>One free session in the lab. A baseline benchmark, real coaching and a clear recommendation. No pressure, no contract. Just bring indoor shoes and a water bottle.</p>
+        <div class="spl-cta-row">
+          <a href="https://soccerperformancelabinc.com/book" class="spl-btn spl-btn-primary"><span class="spl-btn-in">Book Your Free Trial Session <span class="spl-arr">→</span></span></a>
+          <a href="https://soccerperformancelabinc.com/iq" class="spl-btn spl-btn-dark"><span class="spl-btn-in">Already Trained With Us? Book Here</span></a>
+        </div>
+        <div class="spl-cta-meta">
+          <span><i></i>Ages 8 to 18</span><span><i></i>Thu 6:30 PM · Sat 10 AM</span><span><i></i>Code FREESESSION</span><span><i></i>Glenwood Landing, NY</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="spl-footer spl-ft">
+    <div class="spl-wrap">
+      <div class="spl-ft-grid">
+        <div class="spl-ft-about">
+          <a class="spl-logo" href="#spl-top" aria-label="Soccer Performance Lab"><img src="https://wilk1990.github.io/spl-free-session/assets/img/logo-nav.png" alt="Soccer Performance Lab" width="560" height="169" loading="lazy" decoding="async"></a>
+          <p>Professional coaching, elite training frameworks and advanced sports technology. Building complete players ages 5 to 18 in a safe, structured, motivating environment on Long Island's North Shore.</p>
+          <div class="spl-ft-social">
+            <a href="https://www.instagram.com/soccerperformancelabinc" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com/profile.php?id=61587502930338" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.tiktok.com/@soccerperformancelabinc" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 8a5 5 0 0 1-3-1v7a6 6 0 1 1-6-6v3a3 3 0 1 0 3 3V2h3a5 5 0 0 0 3 4z"/></svg></a>
+          </div>
+        </div>
+        <div class="spl-ft-col">
+          <h5>Explore</h5>
+          <a href="#why">Why SPL</a><a href="#lab">The Lab</a><a href="#coaches">Coaches</a><a href="#results">Results</a><a href="#faq">FAQ</a>
+        </div>
+        <div class="spl-ft-col">
+          <h5>Programs</h5>
+          <a href="https://soccerperformancelabinc.com/book">Free Trial Session</a>
+          <a href="https://soccerperformancelabinc.com/iq">Soccer IQ Lab</a>
+          <a href="https://soccerperformancelabinc.com/littleballers">Little Ballers</a>
+          <a href="mailto:info@soccerperformancelabinc.com?subject=Private%20Training%20Request">Private Training</a>
+        </div>
+        <div class="spl-ft-col">
+          <h5>Visit Us</h5>
+          <p class="spl-ft-loc">1 Shore Rd<br>Glenwood Landing, NY 11547<br><a href="https://www.google.com/maps/place/1+Shore+Rd,+Glenwood+Landing,+NY+11547" target="_blank" rel="noopener">Get directions</a><br><a href="mailto:info@soccerperformancelabinc.com">info@soccerperformancelabinc.com</a></p>
+        </div>
+      </div>
+      <div class="spl-ft-bottom">
+        <span>© 2026 Soccer Performance Lab Inc. All rights reserved.</span>
+        <span class="links"><a href="https://soccerperformancelabinc.com/termsofservice">Terms of Use</a><a href="https://soccerperformancelabinc.com/privacypolicy">Privacy Policy</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== STICKY MOBILE CTA ===== -->
+  <div class="spl-sticky" id="splSticky">
+    <div class="spl-sticky-txt"><b>Free Trial Session</b><span>Ages 8 to 18 · Thu 6:30 PM · Sat 10 AM</span></div>
+    <a href="https://soccerperformancelabinc.com/book" class="spl-btn spl-btn-primary"><span class="spl-btn-in">Book Free</span></a>
+  </div>
+
+</div>
+
+<script>
+/* ==========================================================================
+   SOCCER PERFORMANCE LAB — MAIN SITE (JS BLOCK)
+   Plain ES5 style, no dependencies. Safe to paste into Onepage's JS pane.
+   ========================================================================== */
+(function () {
+  'use strict';
+  var root = document.getElementById('spl-top');
+  if (!root) return;
+  root.classList.remove('no-js');
+
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var raf = window.requestAnimationFrame || function (f) { return setTimeout(f, 16); };
+
+  /* ---------- nav + progress bar ---------- */
+  var nav = document.getElementById('splNav');
+  var progress = document.getElementById('splProgress');
+  var sticky = document.getElementById('splSticky');
+  var hero = document.getElementById('hero');
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    raf(function () {
+      var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+      if (nav) nav.classList.toggle('is-scrolled', y > 40);
+      if (progress) {
+        var h = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        progress.style.width = Math.min(100, (y / h) * 100) + '%';
+      }
+      if (sticky && hero) sticky.classList.toggle('is-visible', y > hero.offsetHeight * 0.7);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- mobile menu ---------- */
+  var burger = document.getElementById('splBurger');
+  var menu = document.getElementById('splMobileMenu');
+  function closeMenu() {
+    if (!burger || !menu) return;
+    burger.classList.remove('is-open');
+    burger.setAttribute('aria-expanded', 'false');
+    menu.classList.remove('is-open');
+    document.documentElement.style.overflow = '';
+  }
+  if (burger && menu) {
+    burger.addEventListener('click', function () {
+      var open = !burger.classList.contains('is-open');
+      burger.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menu.classList.toggle('is-open', open);
+      document.documentElement.style.overflow = open ? 'hidden' : '';
+    });
+    var links = menu.querySelectorAll('a');
+    for (var i = 0; i < links.length; i++) links[i].addEventListener('click', closeMenu);
+  }
+
+  /* ---------- smooth anchor scroll with nav offset ---------- */
+  var anchors = root.querySelectorAll('a[href^="#"]');
+  for (var a = 0; a < anchors.length; a++) {
+    anchors[a].addEventListener('click', function (e) {
+      var id = this.getAttribute('href');
+      if (!id || id === '#') return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + (window.pageYOffset || 0) - 70;
+      if (id === '#spl-top') top = 0;
+      try { window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' }); }
+      catch (err) { window.scrollTo(0, top); }
+    });
+  }
+
+  /* ---------- hero video (lazy, only when it can autoplay) ---------- */
+  var video = document.getElementById('splHeroVideo');
+  if (video && !reduce) {
+    var saveData = navigator.connection && navigator.connection.saveData;
+    if (!saveData) {
+      var src = video.getAttribute('data-src');
+      if (src) {
+        video.src = src;
+        video.load();
+        var p = video.play();
+        var mark = function () { video.classList.add('is-ready'); };
+        video.addEventListener('playing', mark, { once: true });
+        if (p && typeof p.catch === 'function') p.catch(function () { /* poster stays */ });
+      }
+    }
+  }
+
+  /* ---------- marquee ---------- */
+  var mq = document.getElementById('splMarquee');
+  if (mq) {
+    var items = ['Train Smarter', 'Play Faster', 'Show Progress', '700 to 1,000 Touches Per Session', 'Live Performance Data', '5 Players Per Coach', 'Ages 5 to 18 · All Levels', 'Glenwood Landing, NY'];
+    var star = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg>';
+    var html = '';
+    for (var k = 0; k < 2; k++) for (var m = 0; m < items.length; m++) html += '<span class="spl-mq-item">' + star + items[m] + '</span>';
+    mq.innerHTML = html;
+  }
+
+  /* ---------- count up ---------- */
+  function fmt(n, dec) {
+    var s = dec ? n.toFixed(dec) : Math.round(n).toString();
+    if (!dec) s = s.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return s;
+  }
+  function countUp(el) {
+    if (el.getAttribute('data-done')) return;
+    el.setAttribute('data-done', '1');
+    var target = parseFloat(el.getAttribute('data-count')) || 0;
+    var dec = parseInt(el.getAttribute('data-decimals') || '0', 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var keep = el.querySelector('small');
+    var keepHtml = keep ? keep.outerHTML : '';
+    if (reduce) { el.innerHTML = fmt(target, dec) + suffix + keepHtml; return; }
+    var dur = 1500, start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.innerHTML = fmt(eased * target, dec) + (p >= 1 ? suffix : '') + keepHtml;
+      if (p < 1) raf(step);
+    }
+    raf(step);
+  }
+
+  /* ---------- reveal on scroll ---------- */
+  var revealEls = root.querySelectorAll('.spl-reveal, .spl-reveal-l, .spl-reveal-r');
+  var counters = root.querySelectorAll('[data-count]');
+  var heroCard = document.getElementById('splHeroCard');
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        var e = entries[i];
+        if (!e.isIntersecting) continue;
+        e.target.classList.add('in');
+        var nums = e.target.querySelectorAll('[data-count]');
+        for (var n = 0; n < nums.length; n++) countUp(nums[n]);
+        if (e.target.hasAttribute('data-count')) countUp(e.target);
+        io.unobserve(e.target);
+      }
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    for (var r = 0; r < revealEls.length; r++) io.observe(revealEls[r]);
+    for (var c = 0; c < counters.length; c++) io.observe(counters[c]);
+  } else {
+    for (var r2 = 0; r2 < revealEls.length; r2++) revealEls[r2].classList.add('in');
+    for (var c2 = 0; c2 < counters.length; c2++) countUp(counters[c2]);
+  }
+
+  /* hero KPI card plays on load */
+  if (heroCard) {
+    setTimeout(function () {
+      heroCard.classList.add('is-live');
+      var hn = heroCard.querySelectorAll('[data-count]');
+      for (var h = 0; h < hn.length; h++) countUp(hn[h]);
+    }, 900);
+  }
+
+  /* ---------- FAQ accordion ---------- */
+  var faq = document.getElementById('splFaq');
+  if (faq) {
+    var faqItems = faq.querySelectorAll('.spl-faq-item');
+    function setOpen(item, open) {
+      var q = item.querySelector('.spl-faq-q');
+      var ans = item.querySelector('.spl-faq-a');
+      item.classList.toggle('is-open', open);
+      q.setAttribute('aria-expanded', open ? 'true' : 'false');
+      ans.style.maxHeight = open ? ans.scrollHeight + 'px' : '0px';
+    }
+    for (var f = 0; f < faqItems.length; f++) {
+      (function (item) {
+        item.querySelector('.spl-faq-q').addEventListener('click', function () {
+          var isOpen = item.classList.contains('is-open');
+          for (var j = 0; j < faqItems.length; j++) setOpen(faqItems[j], false);
+          if (!isOpen) setOpen(item, true);
+        });
+      })(faqItems[f]);
+    }
+    window.addEventListener('resize', function () {
+      for (var j = 0; j < faqItems.length; j++) {
+        if (faqItems[j].classList.contains('is-open')) {
+          var ans = faqItems[j].querySelector('.spl-faq-a');
+          ans.style.maxHeight = ans.scrollHeight + 'px';
+        }
+      }
+    });
+  }
+})();
+
+</script>
+</body>
+</html>
