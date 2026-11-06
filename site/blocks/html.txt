@@ -1,0 +1,614 @@
+<!-- ==========================================================================
+     SOCCER PERFORMANCE LAB — MAIN SITE (HTML BLOCK)
+     Links: Free Trial → /book · Soccer IQ Lab → /iq · Little Ballers → /littleballers
+     Private Training → https://bondsports.co/online-rentals/organization/659/portal/678?duration=60&amp;productId=181468&amp;view=list (replace once)
+     ========================================================================== -->
+<div class="spl spl-breakout no-js" id="spl-top">
+
+  <div class="spl-progress" id="splProgress"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="spl-nav" id="splNav">
+    <div class="spl-wrap">
+      <div class="spl-bar">
+        <a class="spl-logo" href="#spl-top" aria-label="Soccer Performance Lab">
+          <img src="https://wilk1990.github.io/spl-free-session/assets/img/logo-nav.png" alt="Soccer Performance Lab" width="560" height="169">
+        </a>
+        <nav class="spl-nav-links" aria-label="Main">
+          <a href="#programs">Programs</a>
+          <a href="#lab">The Lab</a>
+          <a href="#coaches">Coaches</a>
+          <a href="#results">Results</a>
+          <a href="#faq">FAQ</a>
+          <a href="https://bondsports.co/activity/programs/CO_ED-youth-SOCCER/17220" class="spl-btn spl-btn-primary spl-btn-sm"><span class="spl-btn-in">Book Free Session</span></a>
+        </nav>
+        <button class="spl-burger" id="splBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="spl-mobile-menu" id="splMobileMenu">
+    <a href="#programs">Programs</a>
+    <a href="#lab">The Lab</a>
+    <a href="#coaches">Coaches</a>
+    <a href="#results">Results</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://bondsports.co/activity/programs/CO_ED-youth-SOCCER/17220" class="spl-btn spl-btn-primary"><span class="spl-btn-in">Book Free Session</span></a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="spl-hero" id="hero">
+    <div class="spl-hero-media">
+      <img src="https://wilk1990.github.io/spl-free-session/assets/img/hero-poster-1200.webp" alt="" fetchpriority="high" decoding="async" width="1200" height="675">
+      <video id="splHeroVideo" muted playsinline loop preload="none" poster="https://wilk1990.github.io/spl-free-session/assets/img/hero-poster-1200.webp" data-src="https://wilk1990.github.io/spl-free-session/assets/video/hero-1080.mp4" aria-hidden="true"></video>
+    </div>
+    <div class="spl-hero-shade"></div>
+    <div class="spl-hero-grid"></div>
+    <div class="spl-wrap">
+      <div class="spl-hero-inner">
+        <div class="spl-hero-left">
+          <div class="spl-hero-pre">
+            <span class="spl-stars" aria-label="4.9 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg>
+            </span>
+            <span><b>4.9</b> on Google</span><span class="dot"></span>
+            <span>Glenwood Landing, NY</span><span class="dot"></span>
+            <span>Ages 5 to 18</span>
+          </div>
+          <h1 class="spl-display">Where Players<br>Become <span class="spl-o">Athletes.</span></h1>
+          <p class="spl-hero-sub"><b>Data driven youth soccer training on Long Island's North Shore.</b> 700 to 1,000 quality touches per session, decisions made under real pressure, and live performance data. So you never have to wonder if training is working. You can see it.</p>
+          <div class="spl-hero-cta">
+            <a href="https://bondsports.co/activity/programs/CO_ED-youth-SOCCER/17220" class="spl-btn spl-btn-primary"><span class="spl-btn-in">Book Your Free Trial Session <span class="spl-arr">→</span></span></a>
+            <a href="#programs" class="spl-btn spl-btn-dark"><span class="spl-btn-in">See Programs</span></a>
+          </div>
+        </div>
+        <div class="spl-hero-card" id="splHeroCard" aria-hidden="true">
+          <div class="spl-hc-top"><span class="spl-hc-dot"></span>Live Session · Player KPIs</div>
+          <div class="spl-hc-row"><span class="spl-hc-name">Quality touches</span><span class="spl-hc-val o" data-count="912">0</span></div>
+          <div class="spl-hc-bar"><i style="--w:91%"></i></div>
+          <div class="spl-hc-row"><span class="spl-hc-name">Scan before first touch</span><span class="spl-hc-val m" data-count="84" data-suffix="%">0</span></div>
+          <div class="spl-hc-bar"><i class="m" style="--w:84%"></i></div>
+          <div class="spl-hc-row"><span class="spl-hc-name">Reaction time</span><span class="spl-hc-val" data-count="0.41" data-decimals="2" data-suffix="s">0</span></div>
+          <div class="spl-hc-bar"><i style="--w:72%"></i></div>
+          <div class="spl-hc-row"><span class="spl-hc-name">Weak foot passing</span><span class="spl-hc-val m" data-count="78" data-suffix="%">0</span></div>
+          <div class="spl-hc-bar"><i class="m" style="--w:78%"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="spl-hero-scroll" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <div class="spl-trust">
+    <div class="spl-wrap">
+      <div class="spl-trust-in">
+        <span class="spl-trust-lab">Methods adapted from clubs in</span>
+        <div class="spl-trust-list">
+          <span>Premier League</span><span>Bundesliga</span><span>La Liga</span><span>Serie A</span><span>MLS</span><span><b>NYCFC</b> Youth Partner</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="spl-marquee" aria-hidden="true"><div class="spl-marquee-track" id="splMarquee"></div></div>
+
+  <!-- ===== PROBLEM: WHY TRAINING HITS A WALL ===== -->
+  <section class="spl-sec spl-problem" id="why">
+    <div class="spl-wrap">
+      <div class="spl-sec-head spl-reveal">
+        <span class="spl-eyebrow">Why Soccer Performance Lab</span>
+        <h2 class="spl-display">Most Kids Work Hard.<br>Few Get Better <span class="spl-o">On Game Day.</span></h2>
+        <p>It is not a lack of effort. Crowded team practices and static cone trainers were never built to develop speed of play. Your player needs more touches, real pressure, and proof it is working.</p>
+      </div>
+      <div class="spl-compare spl-reveal spl-stagger">
+        <div class="spl-cmp">
+          <div class="spl-cmp-lab"><i></i>Team Practice</div>
+          <h3>Crowded team sessions</h3>
+          <div class="spl-cmp-num" data-count="80" data-suffix="">0<small>touches per player, per session</small></div>
+          <ul>
+            <li>18 to 22 kids, long lines, one ball</li>
+            <li>Built around team tactics, not your child's technique</li>
+            <li>The top five athletes get the attention</li>
+            <li>No individual data. No way to know what improved</li>
+          </ul>
+        </div>
+        <div class="spl-cmp">
+          <div class="spl-cmp-lab"><i></i>1 on 1 Cone Trainer</div>
+          <h3>Same cones. Same drills.</h3>
+          <div class="spl-cmp-num" data-count="250" data-suffix="">0<small>touches, zero pressure</small></div>
+          <ul>
+            <li>Technique in isolation, no opponent, no clock</li>
+            <li>Looks clean in training, freezes in the game</li>
+            <li>Speed of play is never trained</li>
+            <li>$100 or more per hour with nothing measured</li>
+          </ul>
+        </div>
+        <div class="spl-cmp is-spl">
+          <div class="spl-cmp-lab"><i></i>Soccer IQ Lab at SPL</div>
+          <h3>Touches. Pressure. Proof.</h3>
+          <div class="spl-cmp-num" data-count="1000" data-suffix="+">0<small>quality touches per 60 minute session</small></div>
+          <ul>
+            <li>5 players per coach, no standing in line</li>
+            <li>Stations that force scanning before the first touch</li>
+            <li>Match realistic scenarios under time and opponent pressure</li>
+            <li>Live KPIs and benchmarks, re tested every 8 sessions</li>
+          </ul>
+          <div class="spl-cmp-foot"><a href="https://bondsports.co/activity/programs/CO_ED-youth-SOCCER/17220" class="spl-btn spl-btn-primary spl-btn-sm"><span class="spl-btn-in">Try It Free <span class="spl-arr">→</span></span></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSIDE THE LAB ===== -->
+  <section class="spl-sec spl-lab" id="lab">
+    <div class="spl-ghost" style="top:40px;right:-20px">LAB</div>
+    <div class="spl-wrap">
+      <div class="spl-sec-head spl-reveal">
+        <span class="spl-eyebrow mint">Inside The Soccer IQ Lab</span>
+        <h2 class="spl-display">Every Session Has Purpose.<br>Every Metric Has <span class="spl-m">Meaning.</span></h2>
+        <p>A neuro technical training environment that builds the complete modern player. Here is what happens in a 60 minute session.</p>
+      </div>
+
+      <div class="spl-lab-grid" style="margin-bottom:110px">
+        <div class="spl-media tall spl-reveal-l">
+          <img src="https://wilk1990.github.io/spl-free-session/site/img/lab-cage.webp" alt="A coach triggering a reaction light inside the OmniCage at Soccer Performance Lab" loading="lazy" decoding="async" width="1600" height="2400">
+          <div class="shade"></div>
+          <div class="spl-slashes" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="spl-media-tag">OmniCage · ROXPro Lights</div>
+        </div>
+        <div class="spl-reveal-r">
+          <span class="spl-eyebrow">The Method</span>
+          <h3>Three phases. One hour. Zero wasted reps.</h3>
+          <p>Most training stops at technique. The lab is built so that technique gets tested under the same pressure your player faces on Saturday, and then measured.</p>
+          <div class="spl-steps">
+            <div class="spl-step"><div class="spl-step-n">01</div><div><h4>High frequency stations</h4><p>Passing, first touch, dribbling, finishing and agility in rotating stations. 700 to 1,000 quality touches per player. Both feet, every session.</p></div></div>
+            <div class="spl-step"><div class="spl-step-n">02</div><div><h4>Cognitive load under pressure</h4><p>Inside the OmniCage and on ROXPro reaction mats, light signals force players to scan before the ball arrives and decide in a split second. This is where speed of play is built.</p></div></div>
+            <div class="spl-step"><div class="spl-step-n">03</div><div><h4>Measure, benchmark, re test</h4><p>Speed, reaction time, scanning and accuracy are tracked live. Coaches correct on the spot. Every 8 sessions we re test, so parents and players see the progress in numbers.</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spl-lab-grid rev">
+        <div class="spl-media tall spl-reveal-r">
+          <img src="https://wilk1990.github.io/spl-free-session/assets/img/dome-boy-810.webp" alt="A young player reacting to a light signal on the ROXPro platform inside the performance dome" loading="lazy" decoding="async" width="810" height="1013">
+          <div class="shade"></div>
+          <div class="spl-slashes" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="spl-media-tag mint">Live Performance Data</div>
+        </div>
+        <div class="spl-reveal-l">
+          <span class="spl-eyebrow mint">What We Measure</span>
+          <h3>Seven live KPIs. Five pillars of development.</h3>
+          <p>Scan to take in data. Process the data. Make a decision based on the data. The systems in the lab train exactly that loop, and track it, so you are not guessing whether the money and the driving are paying off.</p>
+          <div class="spl-kpis">
+            <div class="spl-kpi"><i></i>Speed</div>
+            <div class="spl-kpi"><i></i>Agility</div>
+            <div class="spl-kpi"><i></i>Reaction time</div>
+            <div class="spl-kpi"><i></i>Scanning</div>
+            <div class="spl-kpi"><i></i>First touch</div>
+            <div class="spl-kpi"><i></i>Left / right passing</div>
+            <div class="spl-kpi"><i></i>Dribbling</div>
+            <div class="spl-kpi"><i></i>Decision speed</div>
+          </div>
+          <div class="spl-pillars">
+            <span>Technical &amp; Tactical</span><span>Physical &amp; Athletic</span><span>Cognitive Speed</span><span>Mental Resilience</span><span>Training Mindset</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STAT BAND ===== -->
+  <section class="spl-stats" id="splStats">
+    <div class="spl-wrap">
+      <div class="spl-stats-grid spl-reveal spl-stagger">
+        <div class="spl-stat"><div class="spl-stat-num" data-count="1000" data-suffix="+">0</div><div class="spl-stat-lab">Touches per session</div></div>
+        <div class="spl-stat"><div class="spl-stat-num" data-count="5" data-suffix=":1">0</div><div class="spl-stat-lab">Players per coach</div></div>
+        <div class="spl-stat"><div class="spl-stat-num" data-count="8">0</div><div class="spl-stat-lab">Sessions, then re test</div></div>
+        <div class="spl-stat"><div class="spl-stat-num" data-count="4.9" data-decimals="1" data-suffix="★">0</div><div class="spl-stat-lab">Google rating, 40 reviews</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAMS ===== -->
+  <section class="spl-sec spl-programs" id="programs">
+    <div class="spl-wrap">
+      <div class="spl-sec-head spl-reveal">
+        <span class="spl-eyebrow">Programs</span>
+        <h2 class="spl-display">Structured Pathways<br>For Ages <span class="spl-o">5 To 18.</span></h2>
+        <p>Pick the format that fits your player and your week. Every program is booked online in a few taps. New to SPL? Start with the free trial.</p>
+      </div>
+      <div class="spl-prog-grid spl-reveal spl-stagger">
+
+        <article class="spl-prog is-free">
+          <div class="spl-prog-img">
+            <img src="https://wilk1990.github.io/spl-free-session/assets/img/coach-kids-810.webp" alt="A Soccer Performance Lab coach giving feedback to a group of young players" loading="lazy" decoding="async" width="810" height="1215">
+            <span class="spl-prog-tag mint">Start Here · 100% Free</span>
+          </div>
+          <div class="spl-prog-body">
+            <h3>Free Trial Session</h3>
+            <div class="spl-prog-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>60 min</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Ages 8 to 18</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Thu 6:30 PM · Sat 10 AM</span>
+            </div>
+            <p>A full session in the lab for players who have never trained with us. Your player gets a baseline benchmark, real coaching and the whole SPL experience. Afterwards a coach recommends the right program. No commitment.</p>
+            <ul>
+              <li>Personal baseline assessment included</li>
+              <li>New players only, all levels welcome</li>
+              <li>Parents are welcome to watch</li>
+            </ul>
+            <div class="spl-prog-promo">Enter code <code>FREESESSION</code> at checkout and the $75 drops to $0</div>
+            <div class="spl-prog-price"><span class="pp-big">$0</span><span class="pp-small"><s>$75</s> with code FREESESSION</span></div>
+            <div class="spl-prog-foot">
+              <a href="https://bondsports.co/activity/programs/CO_ED-youth-SOCCER/17220" class="spl-btn spl-btn-primary"><span class="spl-btn-in">Claim Free Session <span class="spl-arr">→</span></span></a>
+              <span class="spl-prog-note">Limited spots each week</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="spl-prog">
+          <div class="spl-prog-img">
+            <img src="https://wilk1990.github.io/spl-free-session/assets/img/arena-girl-900.webp" alt="Players training inside the reaction light arena at Soccer Performance Lab" loading="lazy" decoding="async" width="900" height="600">
+            <span class="spl-prog-tag">Core Program</span>
+          </div>
+          <div class="spl-prog-body">
+            <h3>Soccer IQ Lab Group Training</h3>
+            <div class="spl-prog-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>60 min</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Ages 8 to 18</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Mon to Fri evenings</span>
+            </div>
+            <p>Our signature program. Small groups sorted by birth year, 5 players per coach, and the full three phase method: stations, cognitive pressure, measurement. Most players come 1 to 3 times a week alongside their club.</p>
+            <ul>
+              <li>700 to 1,000 quality touches per session</li>
+              <li>Grouped by birth year and level, beginner to academy</li>
+              <li>Single sessions or 30 day session packs, no contracts</li>
+            </ul>
+            <div class="spl-prog-price"><span class="pp-big">$75</span><span class="pp-small">per session · 4 pack $275 · 8 pack $500</span></div>
+            <div class="spl-prog-foot">
+              <a href="https://bondsports.co/activity/programs/CO_ED-youth-SOCCER/17135" class="spl-btn spl-btn-dark"><span class="spl-btn-in">View Schedule &amp; Book <span class="spl-arr">→</span></span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="spl-prog">
+          <div class="spl-prog-img">
+            <img src="https://wilk1990.github.io/spl-free-session/assets/img/coach-goal-900.webp" alt="A coach explaining a drill to a group of young children at Soccer Performance Lab" loading="lazy" decoding="async" width="900" height="600">
+            <span class="spl-prog-tag white">Little Ballers</span>
+          </div>
+          <div class="spl-prog-body">
+            <h3>Little Ballers</h3>
+            <div class="spl-prog-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>60 min</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Ages 5 to 8</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Sat 9 AM</span>
+            </div>
+            <p>Not babysitting with a ball. Coordination, comfort on the ball and confidence, taught by professional coaches in a safe indoor space. The foundation that makes the first travel tryout at 8 or 9 a lot less scary.</p>
+            <ul>
+              <li>Positive, structured coaching for the youngest players</li>
+              <li>Climate controlled, weather proof indoor turf</li>
+              <li>Minutes from Sea Cliff, Glen Head, Glen Cove and Roslyn Harbor</li>
+            </ul>
+            <div class="spl-prog-price"><span class="pp-big">$70</span><span class="pp-small">per session · 4 pack $240</span></div>
+            <div class="spl-prog-foot">
+              <a href="https://bondsports.co/activity/programs/CO_ED-youth-SOCCER/17212" class="spl-btn spl-btn-dark"><span class="spl-btn-in">View Schedule &amp; Book <span class="spl-arr">→</span></span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="spl-prog">
+          <div class="spl-prog-img">
+            <img src="https://wilk1990.github.io/spl-free-session/site/img/lab-floor.webp" alt="Head coach Artur Piperkov on the training floor at Soccer Performance Lab" loading="lazy" decoding="async" width="1600" height="2399" style="object-position:center 18%">
+            <span class="spl-prog-tag">1 On 1</span>
+          </div>
+          <div class="spl-prog-body">
+            <h3>Private Training</h3>
+            <div class="spl-prog-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>60 min</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Ages 8 to 18</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>By appointment</span>
+            </div>
+            <p>One coach, one player, the full lab. Built for a specific goal: a position change, tryout prep, a weak foot, a showcase in six weeks. Every minute is designed around your player's numbers.</p>
+            <ul>
+              <li>Individual plan built from the baseline data</li>
+              <li>Position specific and tryout specific work</li>
+              <li>Same technology, full attention</li>
+            </ul>
+            <div class="spl-prog-price"><span class="pp-big">$150</span><span class="pp-small">per 60 minute session</span></div>
+            <div class="spl-prog-foot">
+              <a href="https://bondsports.co/online-rentals/organization/659/portal/678?duration=60&amp;productId=181468&amp;view=list" class="spl-btn spl-btn-dark"><span class="spl-btn-in">Book A Private Session <span class="spl-arr">→</span></span></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROADMAP ===== -->
+  <section class="spl-sec spl-roadmap" id="progress">
+    <div class="spl-ghost" style="bottom:20px;left:-10px">90</div>
+    <div class="spl-wrap">
+      <div class="spl-sec-head center spl-reveal">
+        <span class="spl-eyebrow" style="justify-content:center">See Real Progress</span>
+        <h2 class="spl-display">You Don't Have To Wonder<br>If It's Working. <span class="spl-o">You Can See It.</span></h2>
+        <p style="margin-left:auto;margin-right:auto">A structured, periodized curriculum with ongoing benchmarking. This is what the first 90 days typically look like for a player training once or twice a week.</p>
+      </div>
+      <div class="spl-road spl-reveal spl-stagger">
+        <div class="spl-road-step">
+          <div class="spl-road-n">DAY 1</div>
+          <h4>Free session &amp; baseline</h4>
+          <div class="spl-road-big">7 KPIs</div>
+          <p>Your player trains a full session and gets benchmarked. Speed, reaction, scanning, first touch, both feet. You get a clear picture of where they stand and what to work on first.</p>
+        </div>
+        <div class="spl-road-step">
+          <div class="spl-road-n">DAY 30</div>
+          <h4>Volume &amp; head up habits</h4>
+          <div class="spl-road-big">+4,000 touches</div>
+          <p>Four to eight sessions in, your player has logged thousands of quality touches and the scanning habit starts to show. Fewer survival touches, more command touches.</p>
+        </div>
+        <div class="spl-road-step">
+          <div class="spl-road-n">DAY 90</div>
+          <h4>Measurable jump</h4>
+          <div class="spl-road-big">Re tested</div>
+          <p>Benchmarks re tested against day one. Faster decisions, cleaner first touch, more confidence in tight spaces. The difference your coach, and you, will notice on game day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COACHES (light) ===== -->
+  <section class="spl-sec spl-coaches spl-light" id="coaches">
+    <div class="spl-ghost" style="top:30px;right:-30px">PRO</div>
+    <div class="spl-wrap">
+      <div class="spl-sec-head spl-reveal">
+        <span class="spl-eyebrow">Your Coaches</span>
+        <h2 class="spl-display">Coached By People Who've<br>Played And Worked <span class="spl-o">At The Top.</span></h2>
+        <p>Parents want to know who is on the floor with their kid. Here is the team. Licensed, experienced, and used to working with youth, academy and professional players.</p>
+      </div>
+
+      <!-- Head coach -->
+      <div class="spl-coach-hero">
+        <div class="spl-coach-photo spl-reveal-l">
+          <img src="https://wilk1990.github.io/spl-free-session/site/img/coach-artur.webp" alt="Artur Piperkov, Founder and Head Coach of Soccer Performance Lab" loading="lazy" decoding="async" width="900" height="1125">
+          <div class="spl-coach-badge"><b>10+ Years</b><span>Player development</span></div>
+        </div>
+        <div class="spl-reveal-r">
+          <span class="spl-eyebrow">Founder &amp; Head Coach</span>
+          <div class="spl-coach-name">Artur<br>Piperkov</div>
+          <div class="spl-coach-role">Former professional, German Bundesliga · USSF licensed</div>
+          <p class="spl-coach-quote">"We develop the modern player through technical excellence, soccer intelligence and mental performance. Complete, confident players who make better decisions on and off the field."</p>
+          <div class="spl-cred">
+            <div class="spl-cred-item"><i></i><span><b>Former professional soccer player</b>, German Bundesliga</span></div>
+            <div class="spl-cred-item"><i></i><span><b>USSF licensed</b> soccer coach</span></div>
+            <div class="spl-cred-item"><i></i><span><b>10+ years</b> coaching youth, academy and professional players</span></div>
+            <div class="spl-cred-item"><i></i><span><b>Founder &amp; Director</b> of Soccer Performance Lab, previously PI Soccer</span></div>
+          </div>
+          <div class="spl-spec">
+            <span>Complete player development</span><span>Soccer IQ &amp; cognition</span><span>Mental performance</span><span>Technical &amp; tactical</span><span>Scanning &amp; game awareness</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coaching team -->
+      <div class="spl-coach-grid spl-reveal spl-stagger">
+        <article class="spl-coach">
+          <div class="spl-coach-img"><img src="https://wilk1990.github.io/spl-free-session/site/img/coach-2.webp" alt="Soccer Performance Lab coach" loading="lazy" decoding="async" width="900" height="1125"><div class="spl-slashes" aria-hidden="true"><i></i><i></i><i></i></div></div>
+          <div class="spl-coach-body">
+            <h4>[Coach Name]</h4>
+            <div class="role">[Role, e.g. Performance Coach]</div>
+            <ul>
+              <li class="tbd">[Years coaching youth and teens]</li>
+              <li class="tbd">[License or certification]</li>
+              <li class="tbd">[Club or academy background]</li>
+              <li class="tbd">[Specialization]</li>
+            </ul>
+          </div>
+        </article>
+        <article class="spl-coach">
+          <div class="spl-coach-img"><img src="https://wilk1990.github.io/spl-free-session/site/img/coach-3.webp" alt="Soccer Performance Lab coach" loading="lazy" decoding="async" width="900" height="1125"><div class="spl-slashes" aria-hidden="true"><i></i><i></i><i></i></div></div>
+          <div class="spl-coach-body">
+            <h4>[Coach Name]</h4>
+            <div class="role">[Role, e.g. Performance Coach]</div>
+            <ul>
+              <li class="tbd">[Years coaching youth and teens]</li>
+              <li class="tbd">[License or certification]</li>
+              <li class="tbd">[Club or academy background]</li>
+              <li class="tbd">[Specialization]</li>
+            </ul>
+          </div>
+        </article>
+        <article class="spl-coach">
+          <div class="spl-coach-img"><img src="https://wilk1990.github.io/spl-free-session/site/img/coach-4.webp" alt="Soccer Performance Lab coach" loading="lazy" decoding="async" width="900" height="1125"><div class="spl-slashes" aria-hidden="true"><i></i><i></i><i></i></div></div>
+          <div class="spl-coach-body">
+            <h4>[Coach Name]</h4>
+            <div class="role">[Role, e.g. Performance Coach]</div>
+            <ul>
+              <li class="tbd">[Years coaching youth and teens]</li>
+              <li class="tbd">[License or certification]</li>
+              <li class="tbd">[Club or academy background]</li>
+              <li class="tbd">[Specialization]</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="spl-coach-trust spl-reveal">
+        <div class="spl-media wide">
+          <img src="https://wilk1990.github.io/spl-free-session/site/img/team.webp" alt="The Soccer Performance Lab coaching team inside the facility" loading="lazy" decoding="async" width="1600" height="1066">
+          <div class="shade"></div>
+          <div class="spl-media-tag">The SPL coaching team</div>
+        </div>
+        <div class="spl-trust-card">
+          <h3>Experienced. Licensed. <span class="spl-m">Trusted.</span></h3>
+          <p>Our coaches and performance staff work with and consult for clubs across Europe and the MLS. The same principles used at the highest level of the game, adapted for youth development in a safe, supervised environment.</p>
+          <ul>
+            <li><i></i>USSF licensed coaching</li>
+            <li><i></i>Pro and academy playing backgrounds</li>
+            <li><i></i>Supervised, age appropriate groups</li>
+            <li><i></i>Parents welcome to watch every session</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARENTS / FACILITY ===== -->
+  <section class="spl-sec spl-parents" id="facility">
+    <div class="spl-wrap">
+      <div class="spl-par-grid">
+        <div class="spl-reveal-l">
+          <span class="spl-eyebrow">For Parents · The Facility</span>
+          <h2 class="spl-display" style="font-size:clamp(38px,5vw,66px);color:#fff;margin-top:20px">Drop Them Off.<br><span class="spl-o">Watch Them Grow.</span></h2>
+          <p style="font-size:17px;color:var(--text-soft);margin-top:22px;line-height:1.65">A purpose built indoor performance lab at 1 Shore Rd in Glenwood Landing. Climate controlled turf, pro grade equipment, small groups, and a lounge where you are welcome to watch every session.</p>
+          <div class="spl-par-list">
+            <div class="spl-par-item">
+              <div class="spl-par-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+              <div><h4>Safe and supervised</h4><p>Structured, positive coaching. Five players per coach means every child is seen, corrected and encouraged.</p></div>
+            </div>
+            <div class="spl-par-item">
+              <div class="spl-par-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+              <div><h4>Progress you can read</h4><p>Benchmarks and coach feedback in plain language. You will know what improved and what is next.</p></div>
+            </div>
+            <div class="spl-par-item">
+              <div class="spl-par-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+              <div><h4>Fits a club schedule</h4><p>60 minute sessions, weekday evenings and Saturday mornings. Most players come once or twice a week next to their club training.</p></div>
+            </div>
+          </div>
+          <p class="spl-par-towns"><b>Minutes from</b> Manhasset, Roslyn, Port Washington, Sea Cliff, Glen Cove, Locust Valley, Oyster Bay and Syosset. Free parking on site.</p>
+        </div>
+        <div class="spl-par-media spl-reveal-r">
+          <div class="spl-media"><img src="https://wilk1990.github.io/spl-free-session/site/img/jersey-wall.webp" alt="Framed professional jerseys on the wall of the Soccer Performance Lab lounge" loading="lazy" decoding="async" width="1600" height="2400"><div class="shade"></div><div class="spl-media-tag">The lounge</div></div>
+          <div class="spl-media"><img src="https://wilk1990.github.io/spl-free-session/assets/img/group-coaching-900.webp" alt="Young players listening to a coach during a group session" loading="lazy" decoding="async" width="900" height="600"><div class="shade"></div><div class="spl-media-tag mint">Small groups</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS ===== -->
+  <section class="spl-sec spl-reviews" id="results">
+    <div class="spl-wrap">
+      <div class="spl-rev-head spl-reveal">
+        <div class="spl-sec-head" style="margin-bottom:0">
+          <span class="spl-eyebrow">Parents On Google</span>
+          <h2 class="spl-display">Trusted By Soccer Families<br>Across The <span class="spl-o">North Shore.</span></h2>
+        </div>
+        <a class="spl-rev-score" href="https://g.page/r/CV1hWQmZhvikEBM/review" target="_blank" rel="noopener">
+          <span class="big">4.9</span>
+          <span><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg></span><small>40 Google reviews</small></span>
+        </a>
+      </div>
+      <div class="spl-rev-grid spl-reveal spl-stagger">
+        <blockquote class="spl-rcard">
+          <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg></div>
+          <p>Coach Arthur and Coach Jose have been training my boys for the past 5 years. The growth, development and confidence I have seen in my boys has been fantastic. The sessions are technical, challenging but fun at the same time. I cannot recommend them enough.</p>
+          <footer><span class="ava">CK</span><span class="who"><b>Chris K.</b><span>Google review</span></span></footer>
+        </blockquote>
+        <blockquote class="spl-rcard">
+          <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg></div>
+          <p>My daughter improved both technically and mentally after training here. The confidence she gained has been amazing to see.</p>
+          <footer><span class="ava m">ZP</span><span class="who"><b>Zsolt P.</b><span>Google review</span></span></footer>
+        </blockquote>
+        <blockquote class="spl-rcard">
+          <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg></div>
+          <p>My 12 &amp; 13 year old love it here! The trainers are professional and knowledgeable. My kids said they learned a lot and had a great workout.</p>
+          <footer><span class="ava">LG</span><span class="who"><b>Lauren G.</b><span>Google review</span></span></footer>
+        </blockquote>
+        <blockquote class="spl-rcard">
+          <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg></div>
+          <p>As a parent, I appreciate how professional and organized everything is. The coaches communicate well and truly care about development.</p>
+          <footer><span class="ava m">RM</span><span class="who"><b>Richárd M.</b><span>Google review</span></span></footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="spl-sec spl-faq" id="faq">
+    <div class="spl-wrap">
+      <div class="spl-faq-grid">
+        <div class="spl-faq-side spl-reveal-l">
+          <div class="spl-sec-head">
+            <span class="spl-eyebrow mint">Questions Parents Ask</span>
+            <h2 class="spl-display">Before You <span class="spl-m">Book.</span></h2>
+            <p>Straight answers. If yours is not here, email us at info@soccerperformancelabinc.com and a coach will reply.</p>
+          </div>
+          <a href="https://bondsports.co/activity/programs/CO_ED-youth-SOCCER/17220" class="spl-btn spl-btn-primary"><span class="spl-btn-in">Book The Free Session <span class="spl-arr">→</span></span></a>
+        </div>
+        <div class="spl-faq-list spl-reveal-r" id="splFaq">
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">What makes SPL different from club practice or a private trainer?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>Team practice develops the team. A cone trainer develops technique with no pressure. The Soccer IQ Lab does both at once: <b>700 to 1,000 quality touches</b> per session, applied in match realistic scenarios under time and opponent pressure, with every key metric tracked. Five players per coach, no lines.</p></div></div>
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">Does lab training actually transfer to the real 11v11 game?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>That is the whole point of the design. Every session connects high frequency technical work directly to game like situations with constant decision making. Players learn to scan before the ball arrives, not after. That habit is exactly what shows up on Saturday.</p></div></div>
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">My child already trains 3 times a week with their club. How often should they come?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>Most players train with us <b>1 to 3 times per week</b>. Even once a week doubles the quality touches your child gets. Many competitive and club players use SPL as individual development next to team training. Sessions run weekday evenings and Saturday mornings so they fit around the club schedule.</p></div></div>
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">Does my child need to be an elite player? Do you group by level?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>No. We train boys and girls from beginners to academy level players. Groups are sorted by birth year and ability, so nobody is thrown in over their head. Some soccer experience is recommended for the Soccer IQ Lab. Little Ballers is built for ages 5 to 8.</p></div></div>
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">How do you measure progress, and do parents get to see it?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>Professional sports technology tracks speed, agility, reaction time, scanning, first touch and both foot passing during sessions. Players are benchmarked and re tested every 8 sessions. You see the numbers and the coach explains what they mean and what comes next.</p></div></div>
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">How does the free trial session work?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>The free trial is for players ages 8 to 18 who have never trained at SPL. Sessions run <b>Thursdays at 6:30 PM and Saturdays at 10 AM</b>. Book through our Bond Sports page, create a parent account, pick a date and enter the code <b>FREESESSION</b> at checkout so the $75 drops to $0. One free session per player. Afterwards a coach recommends the right program.</p></div></div>
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">What should my child bring?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>Indoor soccer shoes or turf cleats (no outdoor cleats), comfortable training clothes and a water bottle. Shin guards are optional. Please arrive 5 minutes early so the coach can get your player set up.</p></div></div>
+          <div class="spl-faq-item"><button class="spl-faq-q" type="button" aria-expanded="false">Can I watch the session?<span class="spl-faq-ico" aria-hidden="true"></span></button><div class="spl-faq-a"><p>Yes. Parents are welcome to watch from the lounge. We are at 1 Shore Rd, Glenwood Landing, NY 11547, with free parking on site.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="spl-sec spl-cta" id="book">
+    <div class="spl-cta-bg"><img src="https://wilk1990.github.io/spl-free-session/assets/img/facility-wide-1400.webp" alt="" loading="lazy" decoding="async" width="1400" height="933"></div>
+    <div class="spl-wrap">
+      <div class="spl-cta-in spl-reveal">
+        <span class="spl-eyebrow" style="justify-content:center">Your Player's First Session Is On Us</span>
+        <h2 class="spl-display">Give Your Player<br>An <span class="spl-o">Unfair Edge.</span></h2>
+        <p>One free session in the lab. A baseline benchmark, real coaching and a clear recommendation. No pressure, no contract. Just bring indoor shoes and a water bottle.</p>
+        <div class="spl-cta-row">
+          <a href="https://bondsports.co/activity/programs/CO_ED-youth-SOCCER/17220" class="spl-btn spl-btn-primary"><span class="spl-btn-in">Book Your Free Trial Session <span class="spl-arr">→</span></span></a>
+          <a href="https://bondsports.co/activity/programs/CO_ED-youth-SOCCER/17135" class="spl-btn spl-btn-dark"><span class="spl-btn-in">Already Trained With Us? Book Here</span></a>
+        </div>
+        <div class="spl-cta-meta">
+          <span><i></i>Ages 8 to 18</span><span><i></i>Thu 6:30 PM · Sat 10 AM</span><span><i></i>Code FREESESSION</span><span><i></i>Glenwood Landing, NY</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="spl-footer spl-ft">
+    <div class="spl-wrap">
+      <div class="spl-ft-grid">
+        <div class="spl-ft-about">
+          <a class="spl-logo" href="#spl-top" aria-label="Soccer Performance Lab"><img src="https://wilk1990.github.io/spl-free-session/assets/img/logo-nav.png" alt="Soccer Performance Lab" width="560" height="169" loading="lazy" decoding="async"></a>
+          <p>Professional coaching, elite training frameworks and advanced sports technology. Building complete players ages 5 to 18 in a safe, structured, motivating environment on Long Island's North Shore.</p>
+          <div class="spl-ft-social">
+            <a href="https://www.instagram.com/soccerperformancelabinc" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com/profile.php?id=61587502930338" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.tiktok.com/@soccerperformancelabinc" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 8a5 5 0 0 1-3-1v7a6 6 0 1 1-6-6v3a3 3 0 1 0 3 3V2h3a5 5 0 0 0 3 4z"/></svg></a>
+          </div>
+        </div>
+        <div class="spl-ft-col">
+          <h5>Explore</h5>
+          <a href="#why">Why SPL</a><a href="#lab">The Lab</a><a href="#coaches">Coaches</a><a href="#results">Results</a><a href="#faq">FAQ</a>
+        </div>
+        <div class="spl-ft-col">
+          <h5>Programs</h5>
+          <a href="https://bondsports.co/activity/programs/CO_ED-youth-SOCCER/17220">Free Trial Session</a>
+          <a href="https://bondsports.co/activity/programs/CO_ED-youth-SOCCER/17135">Soccer IQ Lab</a>
+          <a href="https://bondsports.co/activity/programs/CO_ED-youth-SOCCER/17212">Little Ballers</a>
+          <a href="https://bondsports.co/online-rentals/organization/659/portal/678?duration=60&amp;productId=181468&amp;view=list">Private Training</a>
+        </div>
+        <div class="spl-ft-col">
+          <h5>Visit Us</h5>
+          <p class="spl-ft-loc">1 Shore Rd<br>Glenwood Landing, NY 11547<br><a href="https://www.google.com/maps/place/1+Shore+Rd,+Glenwood+Landing,+NY+11547" target="_blank" rel="noopener">Get directions</a><br><a href="mailto:info@soccerperformancelabinc.com">info@soccerperformancelabinc.com</a></p>
+        </div>
+      </div>
+      <div class="spl-ft-bottom">
+        <span>© 2026 Soccer Performance Lab Inc. All rights reserved.</span>
+        <span class="links"><a href="https://soccerperformancelabinc.com/termsofservice">Terms of Use</a><a href="https://soccerperformancelabinc.com/privacypolicy">Privacy Policy</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== STICKY MOBILE CTA ===== -->
+  <div class="spl-sticky" id="splSticky">
+    <div class="spl-sticky-txt"><b>Free Trial Session</b><span>Ages 8 to 18 · Thu 6:30 PM · Sat 10 AM</span></div>
+    <a href="https://bondsports.co/activity/programs/CO_ED-youth-SOCCER/17220" class="spl-btn spl-btn-primary"><span class="spl-btn-in">Book Free</span></a>
+  </div>
+
+</div>

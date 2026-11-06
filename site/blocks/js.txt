@@ -1,0 +1,190 @@
+/* ==========================================================================
+   SOCCER PERFORMANCE LAB — MAIN SITE (JS BLOCK)
+   Plain ES5 style, no dependencies. Safe to paste into Onepage's JS pane.
+   ========================================================================== */
+(function () {
+  'use strict';
+  var root = document.getElementById('spl-top');
+  if (!root) return;
+  root.classList.remove('no-js');
+
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var raf = window.requestAnimationFrame || function (f) { return setTimeout(f, 16); };
+
+  /* ---------- nav + progress bar ---------- */
+  var nav = document.getElementById('splNav');
+  var progress = document.getElementById('splProgress');
+  var sticky = document.getElementById('splSticky');
+  var hero = document.getElementById('hero');
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    raf(function () {
+      var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+      if (nav) nav.classList.toggle('is-scrolled', y > 40);
+      if (progress) {
+        var h = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        progress.style.width = Math.min(100, (y / h) * 100) + '%';
+      }
+      if (sticky && hero) sticky.classList.toggle('is-visible', y > hero.offsetHeight * 0.7);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- mobile menu ---------- */
+  var burger = document.getElementById('splBurger');
+  var menu = document.getElementById('splMobileMenu');
+  function closeMenu() {
+    if (!burger || !menu) return;
+    burger.classList.remove('is-open');
+    burger.setAttribute('aria-expanded', 'false');
+    menu.classList.remove('is-open');
+    document.documentElement.style.overflow = '';
+  }
+  if (burger && menu) {
+    burger.addEventListener('click', function () {
+      var open = !burger.classList.contains('is-open');
+      burger.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menu.classList.toggle('is-open', open);
+      document.documentElement.style.overflow = open ? 'hidden' : '';
+    });
+    var links = menu.querySelectorAll('a');
+    for (var i = 0; i < links.length; i++) links[i].addEventListener('click', closeMenu);
+  }
+
+  /* ---------- smooth anchor scroll with nav offset ---------- */
+  var anchors = root.querySelectorAll('a[href^="#"]');
+  for (var a = 0; a < anchors.length; a++) {
+    anchors[a].addEventListener('click', function (e) {
+      var id = this.getAttribute('href');
+      if (!id || id === '#') return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + (window.pageYOffset || 0) - 70;
+      if (id === '#spl-top') top = 0;
+      try { window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' }); }
+      catch (err) { window.scrollTo(0, top); }
+    });
+  }
+
+  /* ---------- hero video (lazy, only when it can autoplay) ---------- */
+  var video = document.getElementById('splHeroVideo');
+  if (video && !reduce) {
+    var saveData = navigator.connection && navigator.connection.saveData;
+    if (!saveData) {
+      var src = video.getAttribute('data-src');
+      if (src) {
+        video.src = src;
+        video.load();
+        var p = video.play();
+        var mark = function () { video.classList.add('is-ready'); };
+        video.addEventListener('playing', mark, { once: true });
+        if (p && typeof p.catch === 'function') p.catch(function () { /* poster stays */ });
+      }
+    }
+  }
+
+  /* ---------- marquee ---------- */
+  var mq = document.getElementById('splMarquee');
+  if (mq) {
+    var items = ['Train Smarter', 'Play Faster', 'Show Progress', '700 to 1,000 Touches Per Session', 'Live Performance Data', '5 Players Per Coach', 'Ages 5 to 18 · All Levels', 'Glenwood Landing, NY'];
+    var star = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.5 6.8L12 17.3 5.9 20.9l1.5-6.8L2.2 8.9l6.9-.6z"/></svg>';
+    var html = '';
+    for (var k = 0; k < 2; k++) for (var m = 0; m < items.length; m++) html += '<span class="spl-mq-item">' + star + items[m] + '</span>';
+    mq.innerHTML = html;
+  }
+
+  /* ---------- count up ---------- */
+  function fmt(n, dec) {
+    var s = dec ? n.toFixed(dec) : Math.round(n).toString();
+    if (!dec) s = s.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return s;
+  }
+  function countUp(el) {
+    if (el.getAttribute('data-done')) return;
+    el.setAttribute('data-done', '1');
+    var target = parseFloat(el.getAttribute('data-count')) || 0;
+    var dec = parseInt(el.getAttribute('data-decimals') || '0', 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var keep = el.querySelector('small');
+    var keepHtml = keep ? keep.outerHTML : '';
+    if (reduce) { el.innerHTML = fmt(target, dec) + suffix + keepHtml; return; }
+    var dur = 1500, start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.innerHTML = fmt(eased * target, dec) + (p >= 1 ? suffix : '') + keepHtml;
+      if (p < 1) raf(step);
+    }
+    raf(step);
+  }
+
+  /* ---------- reveal on scroll ---------- */
+  var revealEls = root.querySelectorAll('.spl-reveal, .spl-reveal-l, .spl-reveal-r');
+  var counters = root.querySelectorAll('[data-count]');
+  var heroCard = document.getElementById('splHeroCard');
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        var e = entries[i];
+        if (!e.isIntersecting) continue;
+        e.target.classList.add('in');
+        var nums = e.target.querySelectorAll('[data-count]');
+        for (var n = 0; n < nums.length; n++) countUp(nums[n]);
+        if (e.target.hasAttribute('data-count')) countUp(e.target);
+        io.unobserve(e.target);
+      }
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    for (var r = 0; r < revealEls.length; r++) io.observe(revealEls[r]);
+    for (var c = 0; c < counters.length; c++) io.observe(counters[c]);
+  } else {
+    for (var r2 = 0; r2 < revealEls.length; r2++) revealEls[r2].classList.add('in');
+    for (var c2 = 0; c2 < counters.length; c2++) countUp(counters[c2]);
+  }
+
+  /* hero KPI card plays on load */
+  if (heroCard) {
+    setTimeout(function () {
+      heroCard.classList.add('is-live');
+      var hn = heroCard.querySelectorAll('[data-count]');
+      for (var h = 0; h < hn.length; h++) countUp(hn[h]);
+    }, 900);
+  }
+
+  /* ---------- FAQ accordion ---------- */
+  var faq = document.getElementById('splFaq');
+  if (faq) {
+    var faqItems = faq.querySelectorAll('.spl-faq-item');
+    function setOpen(item, open) {
+      var q = item.querySelector('.spl-faq-q');
+      var ans = item.querySelector('.spl-faq-a');
+      item.classList.toggle('is-open', open);
+      q.setAttribute('aria-expanded', open ? 'true' : 'false');
+      ans.style.maxHeight = open ? ans.scrollHeight + 'px' : '0px';
+    }
+    for (var f = 0; f < faqItems.length; f++) {
+      (function (item) {
+        item.querySelector('.spl-faq-q').addEventListener('click', function () {
+          var isOpen = item.classList.contains('is-open');
+          for (var j = 0; j < faqItems.length; j++) setOpen(faqItems[j], false);
+          if (!isOpen) setOpen(item, true);
+        });
+      })(faqItems[f]);
+    }
+    window.addEventListener('resize', function () {
+      for (var j = 0; j < faqItems.length; j++) {
+        if (faqItems[j].classList.contains('is-open')) {
+          var ans = faqItems[j].querySelector('.spl-faq-a');
+          ans.style.maxHeight = ans.scrollHeight + 'px';
+        }
+      }
+    });
+  }
+})();
