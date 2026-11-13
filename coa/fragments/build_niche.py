@@ -7,6 +7,7 @@ IMG = "https://wilk1990.github.io/spl-free-session/coa/img/"
 
 NICHES = {
 "dentists": dict(
+  work_h='Proof we can film', work_sub='This is what our crew and cameras have made for other businesses. Your practice gets the same treatment: real people, real rooms, shot like a film.',
   title="Meta video ads for LA dental practices",
   fonts="family=Manrope:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,500",
   sans='"Manrope"', serif='"Fraunces"',
@@ -47,6 +48,7 @@ NICHES = {
   small="Your answers are only used to prepare your call. We never sell or share your data.",
 ),
 "medspas": dict(
+  work_h='Proof we can film', work_sub='This is what our crew and cameras have made for other brands. Your spa gets the same look: your injectors, your rooms, shot like a film.',
   title="Meta video ads for LA med spas",
   fonts="family=Jost:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500",
   sans='"Jost"', serif='"Cormorant Garamond"',
@@ -87,6 +89,7 @@ NICHES = {
   small="Your answers are only used to prepare your call. We never sell or share your data.",
 ),
 "coaches": dict(
+  work_h='Proof we can film', work_sub='This is what our crew and cameras have made for creators and brands. You get the same treatment: your story, your voice, shot like a film.',
   title="Meta video ads for coaches and consultants",
   fonts="family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@1",
   sans='"Space Grotesk"', serif='"Instrument Serif"',
@@ -153,7 +156,7 @@ for slug, n in NICHES.items():
       "{{STEPS_H}}": html.escape(n["steps_h"]), "{{STEPS}}": steps(n["steps"]),
       "{{IDEAS_H}}": html.escape(n["ideas_h"]), "{{IDEAS_SUB}}": html.escape(n["ideas_sub"]), "{{IDEAS}}": ideas(n["ideas"]),
       "{{ABOUT}}": html.escape(n["about"]), "{{APPLY_H}}": html.escape(n["apply_h"]), "{{FAQ}}": faq(n["faq"]),
-      "{{SMALL}}": html.escape(n["small"]), "{{IMG}}": IMG, "{{TITLE}}": html.escape(n["title"]),
+      "{{SMALL}}": html.escape(n["small"]), "{{WORK_H}}": html.escape(n["work_h"]), "{{WORK_SUB}}": html.escape(n["work_sub"]), "{{IMG}}": IMG, "{{TITLE}}": html.escape(n["title"]),
     }
     for k, v in rep.items():
         page = page.replace(k, v)

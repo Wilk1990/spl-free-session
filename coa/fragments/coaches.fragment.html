@@ -50,6 +50,24 @@ html,body{overflow-x:hidden}
 .coa .cta{margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:12px}
 .coa .note{font-size:14px;color:var(--hero-sub);opacity:.85;max-width:640px;line-height:1.5}
 
+.coa .work{background:var(--bg)}
+.coa .work .lead{margin-bottom:34px}
+.coa .film{position:relative;display:block;width:100%;padding-top:56.25%;background:#000;border-radius:var(--radius);overflow:hidden;cursor:pointer;border:0}
+.coa .film img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,opacity .2s}
+.coa .film:hover img{transform:scale(1.03)}
+.coa .film .pl{position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:var(--accent);box-shadow:0 10px 30px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center}
+.coa .film .pl:after{content:"";margin-left:5px;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent var(--accent-ink)}
+.coa .film .du{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.65);color:#fff;font-size:13px;font-weight:600;padding:3px 8px;border-radius:4px;font-variant-numeric:tabular-nums}
+.coa .film iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.coa .feat{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;align-items:center;margin-bottom:34px;text-align:left}
+.coa .feat .film .pl{width:88px;height:88px;margin:-44px 0 0 -44px}
+.coa .wtag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--hl);margin-bottom:8px}
+.coa .feat h3{font-size:28px;margin-bottom:10px}
+.coa .feat p,.coa .wcard p{font-size:16px;color:var(--muted);line-height:1.55}
+.coa .res{display:inline-block;margin-top:10px;font-size:14px;font-weight:700;color:var(--ink);border-left:3px solid var(--accent);padding-left:10px}
+.coa .wgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;text-align:left}
+.coa .wcard h3{margin-top:14px}
+@media (max-width:860px){.coa .feat{grid-template-columns:1fr}.coa .wgrid{grid-template-columns:1fr}}
 .coa .pains{background:var(--soft)}
 .coa .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
 .coa .pain{background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px}
@@ -153,6 +171,23 @@ html,body{overflow-x:hidden}
 </div>
 </div>
 </header>
+
+<section class="work" id="work">
+<div class="wrap center">
+<h2>Proof we can film</h2>
+<p class="lead">This is what our crew and cameras have made for creators and brands. You get the same treatment: your story, your voice, shot like a film.</p>
+<div class="feat">
+<button type="button" class="film" data-w="m4gq0ahvgu" aria-label="Play OP Bros"><img src="https://embed-ssl.wistia.com/deliveries/55c2be7b6011f92209c79b7adbbdc411d90f0f3d.jpg?image_crop_resized=1280x720" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">0:27</span></button>
+<div><span class="wtag">YouTube production</span><h3>OP Bros</h3><p>Two operating room nurses who turned hospital humor into a channel millions of people watch. We shot their YouTube videos.</p><span class="res">1 billion views in their first year</span></div>
+</div>
+<div class="wgrid">
+<div class="wcard"><button type="button" class="film" data-w="dh9clkw3mv" aria-label="Play Harley Davidson dealership"><img src="https://embed-ssl.wistia.com/deliveries/88f994aaca594cb15f509ce07d5ab0db.jpg?image_crop_resized=1280x720" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">3:14</span></button><span class="wtag" style="margin-top:16px">Location film</span><h3 style="margin-top:0">Harley Davidson dealership</h3><p>One of the largest Harley Davidson dealerships in northern Germany. A location film that shows the place the way customers feel it.</p></div>
+<div class="wcard"><button type="button" class="film" data-w="629ti7yiya" aria-label="Play Tandler, six open positions"><img src="https://embed-ssl.wistia.com/deliveries/880d520f3c9cf0f87b49e63a31e4ea44.jpg?image_crop_resized=1280x720" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">0:44</span></button><span class="wtag" style="margin-top:16px">Short ad</span><h3 style="margin-top:0">Tandler, six open positions</h3><p>One short ad for six open roles at a 200+ employee manufacturer.</p><span class="res">All six filled in under 4 weeks</span></div>
+<div class="wcard"><button type="button" class="film" data-w="ba2ame6nvp" aria-label="Play Etelser"><img src="https://embed-ssl.wistia.com/deliveries/21590f94817846ad14d438c9896f5cd23afec67b.jpg?image_crop_resized=1280x720" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">1:15</span></button><span class="wtag" style="margin-top:16px">Brand film + Reels</span><h3 style="margin-top:0">Etelser</h3><p>A family owned food producer with nearly 300 employees. Brand films plus Reels for their marketing team.</p></div>
+<div class="wcard"><button type="button" class="film" data-w="vp09z32ku0" aria-label="Play HAWART"><img src="https://embed-ssl.wistia.com/deliveries/38fd724ae4270ad7ca6c0ac5d192bda5e3136a28.jpg?image_crop_resized=1280x720" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">4:19</span></button><span class="wtag" style="margin-top:16px">Brand film + Reels + ads</span><h3 style="margin-top:0">HAWART</h3><p>A manufacturer with three locations. A film, Reels and the ads that ran them.</p><span class="res">12 hires from 37 applicants</span></div>
+</div>
+</div>
+</section>
 
 <section class="pains">
 <div class="wrap center">
@@ -272,6 +307,19 @@ html,body{overflow-x:hidden}
     var pr=v.play(); if(pr&&pr.catch) pr.catch(function(){});
   }
   for(var c=0;c<chs.length;c++){ chs[c].addEventListener('click',function(){ seek(+this.getAttribute('data-t')); }); }
+
+
+  // showreel: click to play Wistia
+  var films=root.querySelectorAll('.film[data-w]');
+  for(var fi=0;fi<films.length;fi++){ films[fi].addEventListener('click',function(){
+    if(this.querySelector('iframe')) return;
+    try{ v.pause(); }catch(e){}
+    var id=this.getAttribute('data-w'), f=document.createElement('iframe');
+    f.src='https://fast.wistia.net/embed/iframe/'+id+'?autoPlay=true&playerColor=000000&videoFoam=false';
+    f.allow='autoplay; fullscreen'; f.setAttribute('allowfullscreen',''); f.title='Video';
+    this.appendChild(f); var pl=this.querySelector('.pl'); if(pl) pl.style.display='none';
+    px('WorkPlay_'+id);
+  }); }
 
   var cd=document.getElementById('coa-cd');
   function tick(){
