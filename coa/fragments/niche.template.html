@@ -1,0 +1,323 @@
+<!-- City of Angels Advertising · audience page: {{SLUG}} · {{TITLE}} · $5K rate for calls booked by Nov 20 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://wilk1990.github.io" crossorigin>
+<link href="https://fonts.googleapis.com/css2?{{FONTS}}&display=swap" rel="stylesheet">
+<style>
+.coa,.coa *{box-sizing:border-box;margin:0;padding:0}
+.coa{{{VARS}};
+  font-family:{{SANS}},-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;overflow-x:clip;
+  width:100vw;position:relative;left:50%;margin-left:-50vw;text-align:left}
+@supports not (overflow:clip){.coa{overflow-x:hidden}}
+html,body{overflow-x:hidden}
+.coa img{display:block;max-width:100%;height:auto}
+.coa a{color:inherit;text-decoration:none}
+.coa .wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 20px}
+.coa .serif{font-family:{{SERIF}},Georgia,serif;font-style:italic;font-weight:500;letter-spacing:0}
+.coa h2{font-size:clamp(28px,3.8vw,42px);line-height:1.1;letter-spacing:-.02em;font-weight:700;margin-bottom:14px;text-wrap:balance}
+.coa h3{font-size:19px;line-height:1.3;letter-spacing:-.01em;font-weight:700;margin-bottom:6px}
+.coa .lead{font-size:18px;color:var(--muted);max-width:680px;margin:0 auto}
+.coa section{padding:84px 0}
+.coa .center{text-align:center}
+
+.coa .hero{background:var(--hero-bg);color:var(--hero-ink);padding:26px 0 72px;text-align:center}
+.coa .logo{display:flex;justify-content:center;margin-bottom:34px}
+.coa .logo img{height:42px;width:auto}
+.coa .hero.light .logo img{filter:saturate(1.15) brightness(.82)}
+.coa .eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);margin-bottom:16px}
+.coa .hero.light .eyebrow{color:var(--accent)}
+.coa h1{font-size:clamp(34px,5.2vw,60px);line-height:1.05;letter-spacing:-.03em;font-weight:700;margin:0 auto 18px;max-width:940px;text-wrap:balance}
+.coa h1 .serif{display:block;color:var(--accent-2);font-size:1.02em}
+.coa .hero.light h1 .serif{color:var(--accent)}
+.coa .sub{font-size:clamp(17px,2vw,20px);color:var(--hero-sub);max-width:720px;margin:0 auto 26px;line-height:1.5}
+.coa .deal{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 14px;background:var(--pill-bg);border:1px solid var(--pill-line);border-radius:999px;padding:10px 20px;font-size:15px;color:var(--pill-ink);margin-bottom:30px}
+.coa .deal i{display:inline-block;width:9px;height:9px;border-radius:50%;background:#2fb26a;box-shadow:0 0 0 4px rgba(47,178,106,.2)}
+.coa .deal .cd{font-variant-numeric:tabular-nums;color:var(--accent);font-weight:600}
+.coa .hero.dark .deal .cd{color:var(--accent-2)}
+
+.coa .vsl{max-width:900px;margin:0 auto}
+.coa .vsl .frame{position:relative;padding-top:56.25%;background:#000;border-radius:var(--radius);overflow:hidden;box-shadow:var(--frame-shadow)}
+.coa .vsl video{position:absolute;inset:0;width:100%;height:100%;background:#000;object-fit:cover}
+.coa .chapters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px}
+.coa .chapters button{font-family:inherit;font-size:13px;color:var(--chip-ink);background:var(--chip-bg);border:1px solid var(--chip-line);border-radius:999px;padding:7px 12px;cursor:pointer;line-height:1.2}
+.coa .chapters button b{color:var(--accent);font-weight:600;margin-right:6px;font-variant-numeric:tabular-nums}
+.coa .hero.dark .chapters button b{color:var(--accent-2)}
+.coa .chapters button:hover,.coa .chapters button.on{border-color:var(--accent)}
+
+.coa .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:19px;line-height:1.2;padding:21px 38px;border-radius:var(--btn-radius);border:0;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.14);transition:transform .15s,filter .15s;font-family:inherit}
+.coa .btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.coa .cta{margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.coa .note{font-size:14px;color:var(--hero-sub);opacity:.85;max-width:640px;line-height:1.5}
+
+.coa .pains{background:var(--soft)}
+.coa .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+.coa .pain{background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px}
+.coa .pain h3{color:var(--hl)}
+.coa .pain p{font-size:16px;color:var(--muted);line-height:1.55}
+
+.coa .steps ol{list-style:none;max-width:780px;margin:34px auto 0;display:grid;gap:14px}
+.coa .steps li{display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-bottom:1px solid var(--line)}
+.coa .steps li:last-child{border-bottom:0}
+.coa .steps .n{flex:0 0 auto;font-family:{{SERIF}},Georgia,serif;font-style:italic;font-size:34px;line-height:1;color:var(--hl);min-width:52px}
+.coa .steps p{font-size:16px;color:var(--muted);line-height:1.55}
+
+.coa .ideas{background:var(--soft)}
+.coa .idea{background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;display:flex;flex-direction:column;gap:8px}
+.coa .idea .tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--hl)}
+.coa .idea h3{font-family:{{SERIF}},Georgia,serif;font-style:italic;font-weight:500;font-size:23px;line-height:1.25}
+.coa .idea p{font-size:16px;color:var(--muted);line-height:1.55}
+
+.coa .about .row{display:grid;grid-template-columns:320px 1fr;gap:44px;align-items:center;max-width:900px;margin:0 auto}
+.coa .about img{border-radius:var(--radius);width:100%;aspect-ratio:4/5;object-fit:cover}
+.coa .about p{font-size:19px;line-height:1.6;color:var(--ink)}
+.coa .about .sig{margin-top:14px;font-family:{{SERIF}},Georgia,serif;font-style:italic;font-size:26px;color:var(--hl)}
+
+.coa .apply{background:var(--soft);padding:80px 0 84px}
+.coa .apply .head{text-align:center;max-width:720px;margin:0 auto 26px}
+.coa .apply p{font-size:17px;color:var(--muted);line-height:1.55}
+.coa .terms{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:760px;margin:22px auto 26px}
+.coa .terms div{background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:14px 12px;text-align:center;font-size:14px;color:var(--muted);line-height:1.4}
+.coa .terms b{display:block;font-size:20px;color:var(--ink);letter-spacing:-.01em;margin-bottom:2px}
+.coa .form{max-width:680px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:calc(var(--radius) + 6px);padding:18px 14px;box-shadow:0 20px 60px rgba(0,0,0,.07);min-height:460px}
+.coa .form iframe{width:100%;border:0;min-height:440px}
+.coa .small{font-size:13px;color:var(--muted);text-align:center;max-width:680px;margin:16px auto 0;line-height:1.5}
+
+.coa .faq .list{max-width:760px;margin:30px auto 0}
+.coa .faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.coa .faq summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.coa .faq summary::-webkit-details-marker{display:none}
+.coa .faq summary:after{content:"+";color:var(--hl);font-weight:400;font-size:24px;line-height:1}
+.coa .faq details[open] summary:after{content:"\2212"}
+.coa .faq details p{margin-top:10px;color:var(--muted);font-size:16px;line-height:1.6}
+.coa .final{text-align:center;padding:10px 0 90px}
+
+.coa .foot{background:var(--foot-bg);color:#a6a29a;padding:40px 0 110px;font-size:13px;line-height:1.6;text-align:center}
+.coa .foot a{color:#e2ded6;text-decoration:underline;text-underline-offset:3px}
+.coa .foot .links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin:12px 0 18px}
+.coa .foot .disc{max-width:860px;margin:0 auto;color:#8a867e}
+
+.coa .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--foot-bg);padding:12px 16px calc(12px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .25s ease}
+.coa .sticky.show{transform:translateY(0)}
+.coa .sticky .btn{width:100%;padding:17px 18px;font-size:17px;box-shadow:none}
+@media (min-width:641px){.coa .sticky{display:none}}
+@media (max-width:860px){.coa .grid3{grid-template-columns:1fr}.coa .about .row{grid-template-columns:1fr;gap:24px}.coa .about img{max-width:300px;margin:0 auto}}
+@media (max-width:640px){
+  .coa section{padding:60px 0}
+  .coa .hero{padding:20px 0 54px}
+  .coa .logo{margin-bottom:24px}
+  .coa .logo img{height:34px}
+  .coa .deal{border-radius:12px;font-size:14px}
+  .coa .deal i{display:none}
+  .coa .vsl{margin:0 -20px}
+  .coa .vsl .frame{border-radius:0}
+  .coa .btn{width:100%;padding:19px 18px;font-size:18px}
+  .coa .chapters{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding:0 16px 4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .coa .chapters::-webkit-scrollbar{display:none}
+  .coa .chapters button{flex:0 0 auto}
+  .coa .terms{gap:8px}
+  .coa .terms div{padding:12px 6px;font-size:12px}
+  .coa .terms b{font-size:16px}
+  .coa .form{padding:12px 6px}
+  .coa .apply{padding:56px 0 64px}
+}
+@media (prefers-reduced-motion:reduce){.coa .sticky,.coa .btn{transition:none}}
+</style>
+
+<div class="coa" id="coa" data-niche="{{SLUG}}">
+
+<header class="hero {{HERO_CLASS}}" id="top">
+<div class="wrap">
+<div class="logo"><img src="{{LOGO}}" width="{{LOGO_W}}" height="{{LOGO_H}}" alt="City of Angels Advertising"></div>
+<span class="eyebrow">{{EYEBROW}}</span>
+<h1>{{H1}}</h1>
+<p class="sub">{{SUB}}</p>
+<div class="deal" id="coa-deal"><i></i><span><b>$5,000 a month</b> for everyone who books a call by November 20. After that the price goes up.</span><span class="cd" id="coa-cd">Until November 20</span></div>
+
+<div class="vsl" id="coa-vsl">
+<div class="frame"><video id="coa-video" controls playsinline preload="none" poster="https://wilk1990.github.io/spl-free-session/coa/vsl/poster.jpg" title="City of Angels Advertising in 4 minutes"></video></div>
+<div class="chapters" id="coa-ch">
+<button type="button" data-t="0"><b>0:00</b>The 90 second version</button>
+<button type="button" data-t="31"><b>0:31</b>The November offer</button>
+<button type="button" data-t="57"><b>0:57</b>Who I am</button>
+<button type="button" data-t="78"><b>1:18</b>Our own business</button>
+<button type="button" data-t="168"><b>2:48</b>A US client</button>
+<button type="button" data-t="215"><b>3:35</b>Why LA</button>
+<button type="button" data-t="248"><b>4:08</b>Next step</button>
+</div>
+</div>
+
+<div class="cta">
+<a href="#apply" class="btn coa-go">Apply and book your call <span aria-hidden="true">&rarr;</span></a>
+<span class="note">Five quick questions, then you pick a time. Your ads go live within 14 days of the shoot day or your first month's fee is waived.</span>
+</div>
+</div>
+</header>
+
+<section class="pains">
+<div class="wrap center">
+<h2>{{PAINS_H}}</h2>
+<div class="grid3" style="text-align:left">
+{{PAINS}}
+</div>
+</div>
+</section>
+
+<section class="steps">
+<div class="wrap center">
+<h2>{{STEPS_H}}</h2>
+<ol style="text-align:left">
+{{STEPS}}
+</ol>
+</div>
+</section>
+
+<section class="ideas">
+<div class="wrap center">
+<h2>{{IDEAS_H}}</h2>
+<p class="lead">{{IDEAS_SUB}}</p>
+<div class="grid3" style="text-align:left">
+{{IDEAS}}
+</div>
+</div>
+</section>
+
+<section class="about">
+<div class="wrap">
+<div class="row">
+<img src="{{IMG}}dennis-chair-900.jpg" srcset="{{IMG}}dennis-chair-600.jpg 600w, {{IMG}}dennis-chair-900.jpg 900w" sizes="(max-width:860px) 300px, 320px" width="900" height="1125" alt="Dennis Wilk, founder of City of Angels Advertising" loading="lazy" decoding="async">
+<div>
+<p>{{ABOUT}}</p>
+<div class="sig">Dennis Wilk</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="apply" id="apply">
+<div class="wrap">
+<div class="head">
+<h2>{{APPLY_H}}</h2>
+<p id="coa-apply-sub">Everyone who books a call by November 20 gets our management at $5,000 a month. After November 20 the price goes up. Five quick questions, then you pick your time.</p>
+</div>
+<div class="terms" id="coa-terms">
+<div><b>$5,000 / mo</b>if you book by Nov 20</div>
+<div><b>$3,000+ / mo</b>your ad budget, paid to Meta</div>
+<div><b>14 days</b>from shoot day to live ads</div>
+</div>
+<div class="form" id="coa-form"></div>
+<p class="small">{{SMALL}}</p>
+</div>
+</section>
+
+<section class="faq">
+<div class="wrap center">
+<h2>Questions we hear a lot</h2>
+<div class="list" style="text-align:left">
+{{FAQ}}
+</div>
+</div>
+</section>
+<div class="final"><div class="wrap"><a href="#apply" class="btn coa-go">Apply and book your call <span aria-hidden="true">&rarr;</span></a></div></div>
+
+<footer class="foot">
+<div class="wrap">
+<div>City of Angels Advertising LLC · 17827 Miranda Street, Encino, CA 91316 · <a href="mailto:info@cityofangelsadvertising.com">info@cityofangelsadvertising.com</a></div>
+<div class="links">
+<a href="/privacy-policy">Privacy Policy</a>
+<a href="/privacy-policy#your-choices">Do Not Sell or Share My Personal Information</a>
+<a href="/terms-of-service">Terms of Service</a>
+</div>
+<p class="disc">This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc. Results from our own business and from past clients are not a promise of your results. Your results depend on your offer, your market, your ad budget and your follow up. &copy; <span id="coa-year">2026</span> City of Angels Advertising LLC.</p>
+</div>
+</footer>
+
+<div class="sticky" id="coa-sticky"><a href="#apply" class="btn coa-go">Apply and book your call <span aria-hidden="true">&rarr;</span></a></div>
+
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('coa'); if(!root) return;
+  var NICHE=root.getAttribute('data-niche');
+  var SURVEY='https://api.leadconnectorhq.com/widget/survey/qDKr7hHfu9DV9yq3xjVD';
+  var DEADLINE=Date.parse('2026-11-21T00:00:00-08:00'); // end of Nov 20, Pacific time
+  function qs(){ try{ var s=window.location.search||''; return s+(s?'&':'?')+'page='+NICHE; }catch(e){ return '?page='+NICHE; } }
+
+  var v=document.getElementById('coa-video'), BASE='https://wilk1990.github.io/spl-free-session/coa/vsl/coa-vsl-';
+  var big=false; try{ big=window.innerWidth>=900 && !(navigator.connection&&navigator.connection.saveData); }catch(e){}
+  v.src=BASE+(big?'1080':'720')+'.mp4';
+  function px(n){ try{ if(window.fbq) fbq('trackCustom',n,{page:NICHE}); }catch(e){} }
+  var played=false, marks={25:0,50:0,75:0,95:0};
+  v.addEventListener('play',function(){ if(!played){ played=true; px('VSLPlay'); } });
+  var chs=root.querySelectorAll('#coa-ch button');
+  v.addEventListener('timeupdate',function(){
+    var t=v.currentTime, d=v.duration||258, p=t/d*100;
+    for(var k in marks){ if(!marks[k] && p>=+k){ marks[k]=1; px('VSL'+k); } }
+    for(var i=0;i<chs.length;i++){ var a=+chs[i].getAttribute('data-t'), b=i+1<chs.length?+chs[i+1].getAttribute('data-t'):1e9; if(t>=a&&t<b) chs[i].classList.add('on'); else chs[i].classList.remove('on'); }
+  });
+  function seek(t){
+    if(v.readyState>=1){ try{ v.currentTime=t; }catch(e){} }
+    else { v.addEventListener('loadedmetadata',function f(){ v.removeEventListener('loadedmetadata',f); try{ v.currentTime=t; }catch(e){} }); }
+    var pr=v.play(); if(pr&&pr.catch) pr.catch(function(){});
+  }
+  for(var c=0;c<chs.length;c++){ chs[c].addEventListener('click',function(){ seek(+this.getAttribute('data-t')); }); }
+
+  var cd=document.getElementById('coa-cd');
+  function tick(){
+    var left=DEADLINE-Date.now();
+    if(left<=0){
+      document.getElementById('coa-deal').innerHTML='<i></i><span><b>The November rate has ended.</b> Apply and we go through current pricing on the call.</span>';
+      var s=document.getElementById('coa-apply-sub'); if(s) s.textContent='The $5,000 rate was for calls booked by November 20. Apply below and we go through current pricing on the call.';
+      var t=document.getElementById('coa-terms'); if(t) t.style.display='none'; var hh=document.querySelector('#apply h2'); if(hh) hh.textContent='Apply and book your call';
+      return;
+    }
+    var d=Math.floor(left/864e5), h=Math.floor(left%864e5/36e5), m=Math.floor(left%36e5/6e4);
+    cd.textContent='Until November 20 · '+(d>0?d+'d ':'')+h+'h '+m+'m left';
+    setTimeout(tick,30000);
+  }
+  tick();
+
+  var embedReady=false, embedLoading=false, queue=[];
+  function loadEmbed(cb){
+    if(embedReady){ cb(); return; } queue.push(cb);
+    if(embedLoading) return; embedLoading=true;
+    function ready(){ embedReady=true; while(queue.length){ queue.shift()(); } }
+    var s=document.createElement('script'); s.src='https://link.msgsndr.com/js/form_embed.js'; s.async=true; s.onload=ready; s.onerror=ready; document.body.appendChild(s);
+  }
+  var mounted=false, form=document.getElementById('coa-form');
+  function mount(){
+    if(mounted) return; mounted=true;
+    var ifr=document.createElement('iframe');
+    ifr.src=SURVEY+qs(); ifr.id='qDKr7hHfu9DV9yq3xjVD'; ifr.title='Application';
+    ifr.setAttribute('scrolling','no'); ifr.setAttribute('data-cookie-consent','false');
+    ifr.style.cssText='border:none;width:100%;min-height:440px;';
+    form.appendChild(ifr);
+  }
+  function loadSurvey(){ loadEmbed(mount); setTimeout(mount,4000); }
+  loadEmbed(function(){});
+  var apply=document.getElementById('apply');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ for(var i=0;i<es.length;i++){ if(es[i].isIntersecting){ loadSurvey(); io.disconnect(); break; } } },{rootMargin:'500px 0px'});
+    io.observe(apply);
+  } else { loadSurvey(); }
+
+  var opened=false;
+  function go(e){
+    if(e) e.preventDefault();
+    loadSurvey();
+    apply.scrollIntoView({behavior:'smooth',block:'start'});
+    if(!opened){ opened=true; px('OpenApplication'); }
+  }
+  var gos=root.querySelectorAll('.coa-go'); for(var g=0;g<gos.length;g++){ gos[g].addEventListener('click',go); }
+  if(window.location.hash==='#apply'){ setTimeout(function(){ loadSurvey(); apply.scrollIntoView(); },300); }
+
+  var sticky=document.getElementById('coa-sticky'), cta=root.querySelector('.cta');
+  function onScroll(){
+    var past=cta.getBoundingClientRect().bottom<0, atForm=apply.getBoundingClientRect().top<window.innerHeight*0.6;
+    if(past&&!atForm) sticky.classList.add('show'); else sticky.classList.remove('show');
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  var y=document.getElementById('coa-year'); if(y) y.textContent=String(new Date().getFullYear());
+})();
+</script>
