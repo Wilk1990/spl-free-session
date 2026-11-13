@@ -93,7 +93,7 @@ NICHES = {
   css="""--bg:#ffffff;--soft:#f2f2ee;--ink:#0c0c0c;--muted:#585852;--line:#e3e3dc;--accent:#e4ff3a;--accent-2:#e4ff3a;--accent-ink:#0c0c0c;--hl:#0c0c0c;
   --hero-bg:#0c0c0c;--hero-ink:#ffffff;--hero-sub:#c9c9c0;--pill-bg:rgba(228,255,58,.08);--pill-line:rgba(228,255,58,.35);--pill-ink:#f2f2ea;--chip-bg:rgba(255,255,255,.06);--chip-line:rgba(255,255,255,.16);--chip-ink:#e2e2da;--frame-shadow:0 30px 90px rgba(0,0,0,.6);--radius:6px;--btn-radius:6px;--logo-filter:none;--foot-bg:#0c0c0c;--card-bg:#ffffff""",
   logo="logo-lockup-720.png", logo_w=1485, logo_h=360, hero_dark=True,
-  eyebrow="For coaches and consultants selling $3K+ programs",
+  eyebrow="For LA coaches and consultants doing $50K+ a month",
   h1='Nobody books a call with a coach they forgot. <span class="serif">We make you hard to forget.</span>',
   sub="We film you with cinema cameras and run it as Meta ads that fill your calendar with qualified sales calls. Watch the 4 minute video first.",
   pains_h="Why your ads get likes and no booked calls",
