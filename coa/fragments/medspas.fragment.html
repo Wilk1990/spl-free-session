@@ -68,6 +68,17 @@ html,body{overflow-x:hidden}
 .coa .wgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;text-align:left}
 .coa .wcard h3{margin-top:14px}
 @media (max-width:860px){.coa .feat{grid-template-columns:1fr}.coa .wgrid{grid-template-columns:1fr}}
+.coa .proof{background:var(--soft)}
+.coa .proof .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0 26px}
+.coa .proof .stat{background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:22px 18px;text-align:left}
+.coa .proof .stat b{display:block;font-size:34px;letter-spacing:-.02em;line-height:1.1;margin-bottom:6px}
+.coa .proof .stat span{font-size:15px;color:var(--muted);line-height:1.45}
+.coa .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:left}
+.coa .pgrid .full{grid-column:1/-1}
+.coa .shot{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.06)}
+.coa .shot img{width:100%}
+.coa .proof .cap{font-size:13px;color:var(--muted);margin-top:16px;line-height:1.5;text-align:left}
+@media (max-width:860px){.coa .proof .stats,.coa .pgrid{grid-template-columns:1fr}}
 .coa .pains{background:var(--soft)}
 .coa .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
 .coa .pain{background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px}
