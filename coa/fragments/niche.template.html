@@ -1,4 +1,4 @@
-<!-- City of Angels Advertising · audience page: {{SLUG}} · {{TITLE}} · $5K rate for calls booked by Nov 20 -->
+<!-- City of Angels Advertising · audience page: {{SLUG}} · {{TITLE}} · {{PRICE}} rate for calls booked by Nov 20 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://wilk1990.github.io" crossorigin>
@@ -160,7 +160,7 @@ html,body{overflow-x:hidden}
 <span class="eyebrow">{{EYEBROW}}</span>
 <h1>{{H1}}</h1>
 <p class="sub">{{SUB}}</p>
-<div class="deal" id="coa-deal"><i></i><span><b>$5,000 a month</b> for everyone who books a call by November 20. After that the price goes up.</span><span class="cd" id="coa-cd">Until November 20</span></div>
+<div class="deal" id="coa-deal"><i></i><span><b>{{PRICE}} a month</b> for everyone who books a call by November 20. After that the price goes up.</span><span class="cd" id="coa-cd">Until November 20</span></div>
 
 <div class="vsl" id="coa-vsl">
 <div class="frame"><video id="coa-video" controls playsinline preload="none" poster="https://wilk1990.github.io/spl-free-session/coa/vsl/poster.jpg" title="City of Angels Advertising in 4 minutes"></video></div>
@@ -177,7 +177,7 @@ html,body{overflow-x:hidden}
 
 <div class="cta">
 <a href="#apply" class="btn coa-go">Apply and book your call <span aria-hidden="true">&rarr;</span></a>
-<span class="note">Five quick questions, then you pick a time. Your ads go live within 14 days of the shoot day or your first month's fee is waived.</span>
+{{VIDEO_NOTE}}<span class="note">{{CTA_NOTE}}</span>
 </div>
 </div>
 </header>
@@ -243,10 +243,10 @@ html,body{overflow-x:hidden}
 <div class="wrap">
 <div class="head">
 <h2>{{APPLY_H}}</h2>
-<p id="coa-apply-sub">Everyone who books a call by November 20 gets our management at $5,000 a month. After November 20 the price goes up. Five quick questions, then you pick your time.</p>
+<p id="coa-apply-sub">Everyone who books a call by November 20 gets {{PRICE_WHAT}} at {{PRICE}} a month. After November 20 the price goes up. Five quick questions, then you pick your time.</p>
 </div>
 <div class="terms" id="coa-terms">
-<div><b>$5,000 / mo</b>if you book by Nov 20</div>
+<div><b>{{PRICE}} / mo</b>if you book by Nov 20</div>
 <div><b>$3,000+ / mo</b>your ad budget, paid to Meta</div>
 <div><b>14 days</b>from shoot day to live ads</div>
 </div>
@@ -326,7 +326,7 @@ html,body{overflow-x:hidden}
     var left=DEADLINE-Date.now();
     if(left<=0){
       document.getElementById('coa-deal').innerHTML='<i></i><span><b>The November rate has ended.</b> Apply and we go through current pricing on the call.</span>';
-      var s=document.getElementById('coa-apply-sub'); if(s) s.textContent='The $5,000 rate was for calls booked by November 20. Apply below and we go through current pricing on the call.';
+      var s=document.getElementById('coa-apply-sub'); if(s) s.textContent='The {{PRICE}} rate was for calls booked by November 20. Apply below and we go through current pricing on the call.';
       var t=document.getElementById('coa-terms'); if(t) t.style.display='none'; var hh=document.querySelector('#apply h2'); if(hh) hh.textContent='Apply and book your call';
       return;
     }
