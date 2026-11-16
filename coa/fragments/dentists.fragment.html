@@ -48,6 +48,11 @@ html,body{overflow-x:hidden}
 .coa .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:19px;line-height:1.2;padding:21px 38px;border-radius:var(--btn-radius);border:0;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.14);transition:transform .15s,filter .15s;font-family:inherit}
 .coa .btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
 .coa .cta{margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.coa .bonus{max-width:560px;background:var(--pill-bg);border:1px solid var(--pill-line);border-radius:var(--radius);padding:14px 20px;color:var(--pill-ink);font-size:15px;line-height:1.45;display:flex;flex-direction:column;gap:4px;margin-bottom:6px}
+.coa .bonus .bt{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.coa .hero.dark .bonus .bt{color:var(--accent-2)}
+.coa .bonus b{font-size:17px}
+.coa .bonus a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 .coa .note{font-size:14px;color:var(--hero-sub);opacity:.85;max-width:640px;line-height:1.5}
 
 .coa .work{background:var(--bg)}
@@ -177,6 +182,7 @@ html,body{overflow-x:hidden}
 </div>
 
 <div class="cta">
+<div class="bonus"><span class="bt">Free with every call</span><b>3 video ad ideas, written for your practice</b><span>The hook, the angle and what we would film. We send them before we talk, and you keep them either way. <a href="#ideas">See examples</a></span></div>
 <a href="#apply" class="btn coa-go">Apply and book your call <span aria-hidden="true">&rarr;</span></a>
 <span class="note">Five quick questions, then you pick a time. Your ads go live within 14 days of the shoot day or your first month's fee is waived.</span>
 </div>
@@ -223,7 +229,7 @@ html,body{overflow-x:hidden}
 </div>
 </section>
 
-<section class="ideas">
+<section class="ideas" id="ideas">
 <div class="wrap center">
 <h2>The kind of ads we would film for you</h2>
 <p class="lead">Before your call we write 3 of these for your practice. You keep them either way.</p>

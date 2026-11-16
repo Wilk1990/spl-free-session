@@ -161,7 +161,7 @@ for slug, n in NICHES.items():
       "{{STEPS_H}}": html.escape(n["steps_h"]), "{{STEPS}}": steps(n["steps"]),
       "{{IDEAS_H}}": html.escape(n["ideas_h"]), "{{IDEAS_SUB}}": html.escape(n["ideas_sub"]), "{{IDEAS}}": ideas(n["ideas"]),
       "{{ABOUT}}": html.escape(n["about"]), "{{APPLY_H}}": html.escape(n["apply_h"]), "{{FAQ}}": faq(n["faq"]),
-      "{{SMALL}}": html.escape(n["small"]), "{{WORK_H}}": html.escape(n["work_h"]), "{{WORK_SUB}}": html.escape(n["work_sub"]), "{{IMG}}": IMG, "{{PRICE}}": n.get("price","$5,000"), "{{PRICE_WHAT}}": n.get("price_what","our management"), "{{VIDEO_NOTE}}": n.get("video_note",""), "{{CTA_NOTE}}": n.get("cta_note","Five quick questions, then you pick a time. Your ads go live within 14 days of the shoot day or your first month's fee is waived."), "{{PROOF}}": PROOF if slug=="coaches" else "", "{{TITLE}}": html.escape(n["title"]),
+      "{{SMALL}}": html.escape(n["small"]), "{{WORK_H}}": html.escape(n["work_h"]), "{{WORK_SUB}}": html.escape(n["work_sub"]), "{{IMG}}": IMG, "{{PRICE}}": n.get("price","$5,000"), "{{PRICE_WHAT}}": n.get("price_what","our management"), "{{VIDEO_NOTE}}": n.get("video_note",""), "{{CTA_NOTE}}": n.get("cta_note","Five quick questions, then you pick a time. Your ads go live within 14 days of the shoot day or your first month's fee is waived."), "{{PROOF}}": PROOF if slug=="coaches" else "", "{{BIZ}}": {"dentists":"practice","medspas":"med spa","coaches":"coaching program"}[slug], "{{TITLE}}": html.escape(n["title"]),
     }
     for k, v in rep.items():
         page = page.replace(k, v)
