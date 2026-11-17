@@ -18,13 +18,10 @@ def card(wid, thumb, dur, label, tag, name, results, text):
             f'<span class="pl" aria-hidden="true"></span><span class="du">{dur}</span></button>'
             f'<span class="wtag">{html.escape(tag)}</span><h3>{html.escape(name)}</h3><ul class="res">{res}</ul><p>{html.escape(text)}</p></div>')
 
-TANDLER = card("629ti7yiya", "880d520f3c9cf0f87b49e63a31e4ea44", "0:44", "Tandler", "Recruiting ads", "Tandler",
+TANDLER = card("3bg1jf360c", "a88de2c8dea66035be097b5ebca5450e01d5d69f", "0:44", "Tandler", "Recruiting ads", "Tandler",
     ["60 applicants in 2 months", "6 open positions filled in under 4 weeks", "All 4 apprentice spots filled within 4 weeks"],
     "A manufacturer with 200+ employees needed people. We filmed the ads and ran them.")
-OPBROS = card("m4gq0ahvgu", "55c2be7b6011f92209c79b7adbbdc411d90f0f3d", "0:27", "OP Bros", "Cinematic trailer", "OP Bros",
-    ["Picked for our cinematic look"],
-    "Two operating room nurses who turned hospital humor into a channel with over 1 billion views. They chose our cinematic style for the trailer of one of their formats.")
-HAWART = card("vp09z32ku0", "38fd724ae4270ad7ca6c0ac5d192bda5e3136a28", "4:19", "HAWART", "Film, Reels and ads", "HAWART",
+HAWART = card("fuqa8l7dnz", "e7b95176b40578a6e379c68983022be60e2a96b8", "4:18", "HAWART", "Film, Reels and ads", "HAWART",
     ["12 hires from 37 applicants"],
     "A manufacturer with three locations. One film, Reels and the ads that ran them.")
 
@@ -55,13 +52,13 @@ NICHES = {
   cta_note="Five quick questions, then you pick a time.",
   work_h="What our work did for other businesses",
   work_sub="Different industries, same approach. Real people, real rooms, shot like a film.",
-  cards=[TANDLER, OPBROS, HAWART],
+  cards=[TANDLER, HAWART],
   pains_h="Why most dental ads bring you the wrong patients",
   pains="A $59 new patient special brings in a $59 patient. She takes the cleaning and you never see her again. Every practice in your zip code runs the same stock smile. Nobody picks an implant dentist they have never seen.",
   steps_h="How it works in 3 steps",
   steps=LA_STEPS("practice", "Your doctor, your team"),
-  guarantee="Your ads go live within 14 days of the shoot day or your first month's fee is waived.",
   who="dental practices in the LA area",
+  style_sub="Real people, real rooms, shot like a film. Your practice gets the same look.",
 ),
 "medspas": dict(
   title="Meta video ads for LA med spas", biz="spa",
@@ -76,13 +73,13 @@ NICHES = {
   cta_note="Five quick questions, then you pick a time.",
   work_h="What our work did for other businesses",
   work_sub="Different industries, same approach. Real people, real rooms, shot like a film.",
-  cards=[TANDLER, OPBROS, HAWART],
+  cards=[TANDLER, HAWART],
   pains_h="Why discount ads keep your margins thin",
   pains="Discount tox brings people who chase the next discount. They come once and never buy the package. Fifty med spas near you post the same lips and the same stock model. People book the spa they can see and trust.",
   steps_h="How it works in 3 steps",
   steps=LA_STEPS("spa", "Your injectors"),
-  guarantee="Your ads go live within 14 days of the shoot day or your first month's fee is waived.",
   who="med spas in the LA area",
+  style_sub="Real people, real rooms, shot like a film. Your spa gets the same look.",
 ),
 "coaches": dict(
   title="Video ads for coaches and consultants anywhere in the US", biz="program",
@@ -97,7 +94,7 @@ NICHES = {
   cta_note="Five quick questions, then you pick a time. The video talks about our LA offer. For coaches anywhere in the US we film remotely.",
   work_h="What our cameras did for others",
   work_sub="Different industries, same eye for story.",
-  cards=[OPBROS, TANDLER],
+  cards=[TANDLER, HAWART],
   pains_h="Why your ads get likes and no booked calls",
   pains="Selfie video, captions, a whiteboard. Your feed is full of coaches who say the same thing. A free PDF brings emails, not buyers. Your calendar fills with people who can't afford the program.",
   steps_h="How it works in 3 steps",
@@ -106,8 +103,8 @@ NICHES = {
     ("We edit, run the ads and build the page", "Our editors cut it like a film. Meta ads send the right people to a video page with a short application."),
     ("You take calls with qualified people", "Everyone answers a few questions before they book. You see which ad booked which call."),
   ],
-  guarantee="Your ads go live within 14 days of your filming session or your first month's fee is waived.",
   who="coaches and consultants anywhere in the US",
+  style_sub="Shot like a film, not like another selfie video. Your ads get the same eye for story.",
 ),
 }
 
@@ -140,18 +137,19 @@ for slug, n in NICHES.items():
       "{{PROOF}}": PROOF if slug == "coaches" else "",
       "{{WORK_H}}": html.escape(n["work_h"]), "{{WORK_SUB}}": html.escape(n["work_sub"]), "{{CARDS}}": "\n".join(n["cards"]), "{{WCOLS}}": str(len(n["cards"])),
       "{{PAINS_H}}": html.escape(n["pains_h"]), "{{PAINS}}": html.escape(n["pains"]),
-      "{{STEPS_H}}": html.escape(n["steps_h"]), "{{STEPS}}": steps(n["steps"]), "{{GUARANTEE}}": html.escape(n["guarantee"]),
+      "{{STEPS_H}}": html.escape(n["steps_h"]), "{{STEPS}}": steps(n["steps"]),
       "{{CALL_H}}": "Your free Ad Strategy Session",
       "{{CALL_SUB}}": "30 minutes on video with Dennis. You leave with something you can use, even if we never work together.",
       "{{CALL_ITEMS}}": items(call_items(biz)),
       "{{CALL_FIT}}": f"<b>Who this is for:</b> {html.escape(n['who'])} doing $50K+ a month, with a separate budget for ads. If that is not you yet, this call will not help you. <b>We take two calls a day</b> because we write your 3 ideas before each one.",
+      "{{STYLE_SUB}}": html.escape(n["style_sub"]),
       "{{PS}}": f"<b>P.S.</b> You get 3 video ad ideas written for your {biz} before we talk. They are yours to keep either way. We only take two calls a day, so pick your time now.",
     }
     page = TEMPLATE
     for k, v in rep.items():
         page = page.replace(k, v)
     assert "{{" not in page.replace("{{{", ""), slug
-    for bad in ("November", "$5,000", "$3,000", "—", "–"):
+    for bad in ("November", "$5,000", "$3,000", "—", "–", "14 days", "waived"):
         assert bad not in page, (slug, bad)
     (OUT / f"{slug}.fragment.html").write_text(page, encoding="utf-8")
     print("wrote", slug, len(page))

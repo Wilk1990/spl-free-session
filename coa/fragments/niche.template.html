@@ -76,7 +76,6 @@ html,body{overflow-x:hidden}
 .coa .steps li:last-child{border-bottom:0}
 .coa .steps .n{flex:0 0 auto;font-family:{{SERIF}},Georgia,serif;font-style:italic;font-size:36px;line-height:1;color:var(--hl);min-width:52px}
 .coa .steps p{font-size:17px;color:var(--muted);line-height:1.5}
-.coa .steps .g{font-size:16px;color:var(--muted);max-width:640px;margin:18px auto 0}
 
 .coa .call{background:var(--soft)}
 .coa .call .box{max-width:760px;margin:26px auto 0;background:var(--card-bg);border:1px solid var(--line);border-radius:calc(var(--radius) + 4px);padding:30px 28px;text-align:left}
@@ -93,7 +92,10 @@ html,body{overflow-x:hidden}
 .coa .form{max-width:680px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:calc(var(--radius) + 6px);padding:18px 14px;box-shadow:0 20px 60px rgba(0,0,0,.07);min-height:460px}
 .coa .form iframe{width:100%;border:0;min-height:440px}
 .coa .small{font-size:14px;color:var(--muted);text-align:center;max-width:680px;margin:16px auto 0;line-height:1.5}
-.coa .ps{max-width:680px;margin:34px auto 0;font-size:18px;line-height:1.55;border-left:3px solid var(--accent);padding-left:18px}
+.coa .style{background:var(--soft);padding-top:64px}
+.coa .style .big{max-width:860px;margin:28px auto 0}
+.coa .style .capt{font-size:16px;color:var(--muted);max-width:680px;margin:16px auto 0;line-height:1.5}
+.coa .ps{text-align:left;max-width:680px;margin:40px auto 0;font-size:18px;line-height:1.55;border-left:3px solid var(--accent);padding-left:18px}
 
 .coa .foot{background:var(--foot-bg);color:#a6a29a;padding:40px 0 110px;font-size:13px;line-height:1.6;text-align:center}
 .coa .foot a{color:#e2ded6;text-decoration:underline;text-underline-offset:3px}
@@ -168,7 +170,6 @@ html,body{overflow-x:hidden}
 <ol style="text-align:left">
 {{STEPS}}
 </ol>
-<p class="g">{{GUARANTEE}}</p>
 </div>
 </section>
 
@@ -194,6 +195,15 @@ html,body{overflow-x:hidden}
 </div>
 <div class="form" id="coa-form"></div>
 <p class="small">Your answers are only used to prepare your call. We never sell or share your data.</p>
+</div>
+</section>
+
+<section class="style" id="style">
+<div class="wrap center">
+<h2>This is the style we film in</h2>
+<p class="lead">{{STYLE_SUB}}</p>
+<div class="big"><button type="button" class="film" data-w="a4mxkv0oz5" aria-label="Play the OP Bros trailer"><img src="https://embed-ssl.wistia.com/deliveries/54c9d42e1ec4041e5bb2a6b0279885d036af8bb1.jpg?image_crop_resized=1280x720" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">0:27</span></button></div>
+<p class="capt">OP Bros are two operating room nurses whose channel has over 1 billion views. They chose our cinematic style for the trailer of one of their formats.</p>
 <p class="ps">{{PS}}</p>
 </div>
 </section>
