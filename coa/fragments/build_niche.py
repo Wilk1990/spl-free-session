@@ -25,7 +25,7 @@ MOCK1 = card("9mxljf5jur", "01b8ff233499b0363a714c9e90296ec95e378f73", "0:49", "
 MOCK2 = card("r1ajx1xb2b", "43d220fded996cd5b50082b817a2af3fa0f2331f", "0:38", "Mock, ad concept 2", "Ad concept", "Mock, concept 2", [], "The second concept, a different angle on the same offer.")
 TANDLER = card("3bg1jf360c", "a88de2c8dea66035be097b5ebca5450e01d5d69f", "0:44", "Tandler", "Recruiting ads", "Tandler", ["60 applicants in 2 months", "6 open positions filled in under 4 weeks", "All 4 apprentice spots filled within 4 weeks"], "A manufacturer with 200+ employees needed people. We filmed the ads and ran them.")
 HAWART = card("fuqa8l7dnz", "e7b95176b40578a6e379c68983022be60e2a96b8", "4:18", "HAWART", "Film, Reels and ads", "HAWART",
-    ["12 hires from 37 applicants"],
+    [],
     "A manufacturer with three locations. One film, Reels and the ads that ran them.")
 
 LA_STEPS = lambda place, people: [
@@ -195,7 +195,7 @@ for slug, n in NICHES.items():
     for k, v in rep.items():
         page = page.replace(k, v)
     assert "{{" not in page.replace("{{{", ""), slug
-    for bad in ("November", "$5,000", "$3,000", "—", "–", "14 days", "waived"):
+    for bad in ("$5,000", "$3,000", "—", "–", "14 days", "waived"):
         assert bad not in page, (slug, bad)
     (OUT / (f"{slug}.fragment.html" if slug != "home" else "index.fragment.html")).write_text(page, encoding="utf-8")
     print("wrote", slug, len(page))

@@ -92,6 +92,7 @@ html,body{overflow-x:hidden}
 .coa .apply{padding:76px 0 70px}
 .coa .apply .head{text-align:center;max-width:720px;margin:0 auto 24px}
 .coa .apply .head p{font-size:18px;color:var(--muted);line-height:1.5}
+.coa .rate{max-width:640px;margin:14px auto 0;padding:12px 16px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:var(--radius);background:var(--card-bg);font-size:16px !important;color:var(--ink) !important;text-align:left}
 .coa .form{max-width:680px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:calc(var(--radius) + 6px);padding:18px 14px;box-shadow:0 20px 60px rgba(0,0,0,.07);min-height:460px}
 .coa .form iframe{width:100%;border:0;min-height:440px}
 .coa .small{font-size:14px;color:var(--muted);text-align:center;max-width:680px;margin:16px auto 0;line-height:1.5}
@@ -166,6 +167,7 @@ html,body{overflow-x:hidden}
 <div class="head">
 <h2>Apply for your session</h2>
 <p>Five quick questions. Then you pick your time.</p>
+<p class="rate" id="coa-rate"><b>Book your call by November 25 and you lock in our current rate.</b> After November 25 the price goes up.</p>
 </div>
 <div class="form" id="coa-form"></div>
 <p class="small">Your answers are only used to prepare your call. We never sell or share your data.</p>
@@ -205,7 +207,7 @@ html,body{overflow-x:hidden}
 <div class="wgrid">
 <div class="wcard"><button type="button" class="film" data-w="56f8zp6nwv" aria-label="Play Penning"><img src="https://embed-ssl.wistia.com/deliveries/b4fdabee04bd54b17d2f416ed62c45dd5f2ac740.jpg?image_crop_resized=960x540" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">1:03</span></button><span class="wtag">Recruiting ad</span><h3>Penning</h3><ul class="res"></ul><p>A recruiting ad for a service assistant role.</p></div>
 <div class="wcard"><button type="button" class="film" data-w="m4yop7d35v" aria-label="Play Autohaus Mock"><img src="https://embed-ssl.wistia.com/deliveries/d31ef91d3ff9f1be0f5ecb59ce93c1f2d4490b68.jpg?image_crop_resized=960x540" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">0:53</span></button><span class="wtag">Recruiting ad</span><h3>Autohaus Mock</h3><ul class="res"></ul><p>A recruiting ad for a body shop mechanic at a car dealership.</p></div>
-<div class="wcard"><button type="button" class="film" data-w="fuqa8l7dnz" aria-label="Play HAWART"><img src="https://embed-ssl.wistia.com/deliveries/e7b95176b40578a6e379c68983022be60e2a96b8.jpg?image_crop_resized=960x540" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">4:18</span></button><span class="wtag">Film, Reels and ads</span><h3>HAWART</h3><ul class="res"><li>12 hires from 37 applicants</li></ul><p>A manufacturer with three locations. One film, Reels and the ads that ran them.</p></div>
+<div class="wcard"><button type="button" class="film" data-w="fuqa8l7dnz" aria-label="Play HAWART"><img src="https://embed-ssl.wistia.com/deliveries/e7b95176b40578a6e379c68983022be60e2a96b8.jpg?image_crop_resized=960x540" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">4:18</span></button><span class="wtag">Film, Reels and ads</span><h3>HAWART</h3><ul class="res"></ul><p>A manufacturer with three locations. One film, Reels and the ads that ran them.</p></div>
 </div>
 </div>
 </section>
@@ -340,6 +342,7 @@ html,body{overflow-x:hidden}
   }
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
 
+  try{ var rt=document.getElementById('coa-rate'); if(rt && Date.now()>Date.parse('2026-11-26T00:00:00-08:00')) rt.style.display='none'; }catch(e){}
   var y=document.getElementById('coa-year'); if(y) y.textContent=String(new Date().getFullYear());
 })();
 </script>
