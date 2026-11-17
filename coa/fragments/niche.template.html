@@ -64,6 +64,8 @@ html,body{overflow-x:hidden}
 .coa .proof .stat{background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:22px 18px;text-align:left}
 .coa .proof .stat b{display:block;font-size:34px;letter-spacing:-.02em;line-height:1.1;margin-bottom:6px}
 .coa .proof .stat span{font-size:15px;color:var(--muted);line-height:1.45}
+.coa .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:left}
+.coa .pgrid .full{grid-column:1/-1}
 .coa .shot{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.06)}
 .coa .shot img{width:100%}
 .coa .proof .cap{font-size:14px;color:var(--muted);margin-top:14px;line-height:1.5;text-align:left}
@@ -117,7 +119,7 @@ html,body{overflow-x:hidden}
 .coa .sticky.show{transform:translateY(0)}
 .coa .sticky .btn{width:100%;padding:17px 18px;font-size:19px;box-shadow:none}
 @media (min-width:641px){.coa .sticky{display:none}}
-@media (max-width:860px){.coa .wgrid,.coa .proof .stats{grid-template-columns:1fr}}
+@media (max-width:860px){.coa .wgrid,.coa .proof .stats,.coa .pgrid{grid-template-columns:1fr}}
 @media (max-width:640px){
   .coa section{padding:54px 0}
   .coa .hero{padding:14px 0 44px}

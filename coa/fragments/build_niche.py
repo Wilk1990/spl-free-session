@@ -61,7 +61,7 @@ NICHES = {
   steps=LA_STEPS("business", "Your people"),
   who="businesses", style_sub="",
   about="I'm Dennis. I run City of Angels Advertising from Encino. We are a small team that films, edits and runs the ads ourselves. You talk to me, not an account manager.",
-  order=["work","steps","aud","about","call","apply","psec"], vsl=False,
+  order=["work","proof","steps","aud","about","call","apply","psec"], vsl=False,
 ),
 "dentists": dict(
   title="Meta video ads for LA dental practices", biz="practice",
@@ -133,14 +133,24 @@ NICHES = {
 ),
 }
 
+def _shot(name, w, h, alt, full=False):
+    return (f'<div class="shot{" full" if full else ""}"><picture><source type="image/webp" srcset="{IMG}{name}.webp">'
+            f'<img src="{IMG}{name}.jpg" width="{w}" height="{h}" alt="{alt}" loading="lazy" decoding="async"></picture></div>')
+
 PROOF = (
  '<section class="proof" id="proof">\n<div class="wrap center">\n<h2>We tested it on my wife first</h2>\n'
- '<p class="lead">My wife Elena runs a coaching business. We built every ad, every video, every funnel and the tracking ourselves, with our own money.</p>\n'
+ '<p class="lead">My wife Elena runs a coaching business. We built every ad, every video, every funnel and the tracking ourselves, with our own money. Started in 2024. Over $1.3M in revenue since.</p>\n'
  '<div class="stats"><div class="stat"><b>$1.3M+</b><span>collected since 2024, from our own ads, videos and funnels</span></div>'
  '<div class="stat"><b>$45K to $65K</b><span>per VIP coaching client</span></div>'
  '<div class="stat"><b>$131K</b><span>in 30 days, from the small products alone</span></div></div>\n'
- f'<div class="shot"><picture><source type="image/webp" srcset="{IMG}proof-ablefy-alltime.webp"><img src="{IMG}proof-ablefy-alltime.jpg" width="1600" height="820" alt="Payment dashboard: 569,674 euros received, 1,793 payments, all time" loading="lazy" decoding="async"></picture></div>\n'
- '<p class="cap">Screenshot from our live account, October 2026, German interface. The checkout dashboard only shows the smaller automated products in euros (about $1.08 per euro). VIP coaching paid by invoice is not included. Our results are not a promise of yours. They depend on your offer, your market and your sales calls.</p>\n'
+ '<div class="pgrid">\n'
+ + _shot("proof-ablefy-alltime", 1600, 820, "Payment dashboard: 569,674 euros received, 1,793 payments, all time", True) + "\n"
+ + _shot("proof-ablefy-365", 1600, 875, "Payment dashboard, last 365 days: 435,562 euros, up 332 percent") + "\n"
+ + _shot("proof-ablefy-30", 1600, 840, "Payment dashboard, last 30 days: 121,444 euros, up 390 percent") + "\n"
+ + _shot("proof-youtube-channel", 1600, 781, "YouTube channel I AM ALL with 6,390 subscribers and 179 videos") + "\n"
+ + _shot("proof-youtube-memberships", 1600, 1030, "YouTube Studio: 8,317 dollars in channel membership revenue in 30 days") + "\n"
+ '</div>\n'
+ '<p class="cap">Screenshots from our live accounts, October 2026, German interface. The checkout dashboards only show the smaller automated products in euros (about $1.08 per euro). VIP coaching paid by invoice is not included. Our results are not a promise of yours. They depend on your offer, your market and your sales calls.</p>\n'
  '</div>\n</section>\n\n'
 )
 
@@ -171,7 +181,7 @@ for slug, n in NICHES.items():
       "{{STYLE_SUB}}": html.escape(n["style_sub"]),
       "{{PS}}": f"<b>P.S.</b> You get 3 video ad ideas written for your {biz} before we talk. They are yours to keep either way. We only take two calls a day, so pick your time now.",
     }
-    order = n.get("order", ["apply","style","work","pains","steps","call","psec"])
+    order = n.get("order", ["apply","style","proof","work","pains","steps","call","psec"])
     head = TEMPLATE[:TEMPLATE.index('<header class="hero')]
     hero = re.search(r'<header class="hero.*?</header>\n', TEMPLATE, re.S).group(0)
     tail = TEMPLATE[TEMPLATE.index('<footer class="foot">'):]
