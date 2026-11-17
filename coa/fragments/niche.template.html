@@ -95,8 +95,19 @@ html,body{overflow-x:hidden}
 .coa .style{background:var(--soft);padding-top:64px}
 .coa .style .big{max-width:860px;margin:28px auto 0}
 .coa .style .capt{font-size:16px;color:var(--muted);max-width:680px;margin:16px auto 0;line-height:1.5}
-.coa .ps{text-align:left;max-width:680px;margin:40px auto 0;font-size:18px;line-height:1.55;border-left:3px solid var(--accent);padding-left:18px}
+.coa .psec{padding:10px 0 70px}
+.coa .ps{text-align:left;max-width:680px;margin:0 auto;font-size:18px;line-height:1.55;border-left:3px solid var(--accent);padding-left:18px}
 
+.coa .agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px;text-align:left}
+.coa .acard{display:block;background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;transition:transform .15s,border-color .15s}
+.coa .acard:hover{transform:translateY(-2px);border-color:var(--accent)}
+.coa .acard p{font-size:16px;color:var(--muted);margin-bottom:14px}
+.coa .acard span{font-weight:700;color:var(--hl)}
+.coa .about .row{display:grid;grid-template-columns:320px 1fr;gap:44px;align-items:center;max-width:900px;margin:0 auto}
+.coa .about img{border-radius:var(--radius);width:100%;aspect-ratio:4/5;object-fit:cover}
+.coa .about p{font-size:19px;line-height:1.6;color:var(--ink)}
+.coa .about .sig{margin-top:14px;font-family:{{SERIF}},Georgia,serif;font-style:italic;font-size:26px;color:var(--hl)}
+@media (max-width:860px){.coa .agrid{grid-template-columns:1fr}.coa .about .row{grid-template-columns:1fr;gap:24px}.coa .about img{max-width:300px;margin:0 auto}}
 .coa .foot{background:var(--foot-bg);color:#a6a29a;padding:40px 0 110px;font-size:13px;line-height:1.6;text-align:center}
 .coa .foot a{color:#e2ded6;text-decoration:underline;text-underline-offset:3px}
 .coa .foot .links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin:12px 0 18px}
@@ -136,10 +147,7 @@ html,body{overflow-x:hidden}
 <h1>{{H1}}</h1>
 <p class="sub">{{SUB}}</p>
 
-<div class="vsl" id="coa-vsl">
-<div class="frame"><video id="coa-video" playsinline preload="none" poster="https://wilk1990.github.io/spl-free-session/coa/img/dennis-frame-1400.jpg" title="City of Angels Advertising in 4 minutes"></video><button type="button" class="vplay" id="coa-vplay" aria-label="Play the video, 4 minutes 18 seconds"><span class="pl" aria-hidden="true"></span><span class="rt">Watch the video · 4:18</span></button></div>
-</div>
-
+{{VSL}}
 <div class="cta">
 <a href="#apply" class="btn coa-go">Get my 3 free ad ideas <span aria-hidden="true">&rarr;</span></a>
 <span class="note">{{CTA_NOTE}}</span>
@@ -204,7 +212,36 @@ html,body{overflow-x:hidden}
 <p class="lead">{{STYLE_SUB}}</p>
 <div class="big"><button type="button" class="film" data-w="a4mxkv0oz5" aria-label="Play the OP Bros trailer"><img src="https://embed-ssl.wistia.com/deliveries/54c9d42e1ec4041e5bb2a6b0279885d036af8bb1.jpg?image_crop_resized=1280x720" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">0:27</span></button></div>
 <p class="capt">OP Bros are two operating room nurses whose channel has over 1 billion views. They chose our cinematic style for the trailer of one of their formats.</p>
+</div>
+</section>
+
+<section class="psec">
+<div class="wrap">
 <p class="ps">{{PS}}</p>
+</div>
+</section>
+
+<section class="aud">
+<div class="wrap center">
+<h2>Pick your page</h2>
+<p class="lead">Same approach, written for your business.</p>
+<div class="agrid">
+<a class="acard" href="/medspas"><h3>Med spas</h3><p>Los Angeles area</p><span>See the page &rarr;</span></a>
+<a class="acard" href="/dentists"><h3>Dental practices</h3><p>Los Angeles area</p><span>See the page &rarr;</span></a>
+<a class="acard" href="/coaches"><h3>Coaches and consultants</h3><p>Anywhere in the US, filmed remotely</p><span>See the page &rarr;</span></a>
+</div>
+</div>
+</section>
+
+<section class="about">
+<div class="wrap">
+<div class="row">
+<img src="{{IMG}}dennis-chair-900.jpg" srcset="{{IMG}}dennis-chair-600.jpg 600w, {{IMG}}dennis-chair-900.jpg 900w" sizes="(max-width:860px) 300px, 320px" width="900" height="1125" alt="Dennis Wilk, founder of City of Angels Advertising" loading="lazy" decoding="async">
+<div>
+<p>{{ABOUT}}</p>
+<div class="sig">Dennis Wilk</div>
+</div>
+</div>
 </div>
 </section>
 
@@ -231,7 +268,7 @@ html,body{overflow-x:hidden}
   var SURVEY='https://api.leadconnectorhq.com/widget/survey/qDKr7hHfu9DV9yq3xjVD';
   function qs(){ try{ var s=window.location.search||''; return s+(s?'&':'?')+'page='+NICHE; }catch(e){ return '?page='+NICHE; } }
 
-  var v=document.getElementById('coa-video'), vp=document.getElementById('coa-vplay'), BASE='https://wilk1990.github.io/spl-free-session/coa/vsl/coa-vsl-';
+  var v=document.getElementById('coa-video'), vp=document.getElementById('coa-vplay'), HASV=!!v, BASE='https://wilk1990.github.io/spl-free-session/coa/vsl/coa-vsl-';
   function px(n){ try{ if(window.fbq) fbq('trackCustom',n,{page:NICHE}); }catch(e){} }
   var srcSet=false;
   function start(){
@@ -239,18 +276,18 @@ html,body{overflow-x:hidden}
     v.controls=true; vp.style.display='none';
     var pr=v.play(); if(pr&&pr.catch) pr.catch(function(){});
   }
-  vp.addEventListener('click',start);
   var played=false, marks={25:0,50:0,75:0,95:0};
+  if(HASV){ vp.addEventListener('click',start);
   v.addEventListener('play',function(){ vp.style.display='none'; if(!played){ played=true; px('VSLPlay'); } });
   v.addEventListener('timeupdate',function(){
     var p=v.currentTime/(v.duration||258)*100;
     for(var k in marks){ if(!marks[k] && p>=+k){ marks[k]=1; px('VSL'+k); } }
-  });
+  }); }
 
   var films=root.querySelectorAll('.film[data-w]');
   for(var fi=0;fi<films.length;fi++){ films[fi].addEventListener('click',function(){
     if(this.querySelector('iframe')) return;
-    try{ v.pause(); }catch(e){}
+    try{ if(HASV) v.pause(); }catch(e){}
     var id=this.getAttribute('data-w'), f=document.createElement('iframe');
     f.src='https://fast.wistia.net/embed/iframe/'+id+'?autoPlay=true&playerColor=000000&videoFoam=false';
     f.allow='autoplay; fullscreen'; f.setAttribute('allowfullscreen',''); f.title='Video';
@@ -293,7 +330,7 @@ html,body{overflow-x:hidden}
 
   var sticky=document.getElementById('coa-sticky'), cta=root.querySelector('.cta');
   function onScroll(){
-    var past=cta.getBoundingClientRect().bottom<0, atForm=apply.getBoundingClientRect().top<window.innerHeight*0.6;
+    var past=cta.getBoundingClientRect().bottom<0, ar=apply.getBoundingClientRect(), atForm=ar.top<window.innerHeight*0.6&&ar.bottom>80;
     if(past&&!atForm) sticky.classList.add('show'); else sticky.classList.remove('show');
   }
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();

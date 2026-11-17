@@ -54,7 +54,7 @@ html,body{overflow-x:hidden}
 .coa .film .du{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.65);color:#fff;font-size:13px;font-weight:600;padding:3px 8px;border-radius:4px;font-variant-numeric:tabular-nums}
 .coa .film iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .coa .wtag{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--hl);margin:16px 0 6px}
-.coa .wgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;text-align:left;margin-top:34px}
+.coa .wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:left;margin-top:34px}
 .coa .wcard{background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:14px 14px 22px}
 .coa .wcard h3{margin:0 0 10px}
 .coa .wcard p{font-size:16px;color:var(--muted);line-height:1.5;margin-top:10px}
@@ -96,8 +96,19 @@ html,body{overflow-x:hidden}
 .coa .style{background:var(--soft);padding-top:64px}
 .coa .style .big{max-width:860px;margin:28px auto 0}
 .coa .style .capt{font-size:16px;color:var(--muted);max-width:680px;margin:16px auto 0;line-height:1.5}
-.coa .ps{text-align:left;max-width:680px;margin:40px auto 0;font-size:18px;line-height:1.55;border-left:3px solid var(--accent);padding-left:18px}
+.coa .psec{padding:10px 0 70px}
+.coa .ps{text-align:left;max-width:680px;margin:0 auto;font-size:18px;line-height:1.55;border-left:3px solid var(--accent);padding-left:18px}
 
+.coa .agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px;text-align:left}
+.coa .acard{display:block;background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;transition:transform .15s,border-color .15s}
+.coa .acard:hover{transform:translateY(-2px);border-color:var(--accent)}
+.coa .acard p{font-size:16px;color:var(--muted);margin-bottom:14px}
+.coa .acard span{font-weight:700;color:var(--hl)}
+.coa .about .row{display:grid;grid-template-columns:320px 1fr;gap:44px;align-items:center;max-width:900px;margin:0 auto}
+.coa .about img{border-radius:var(--radius);width:100%;aspect-ratio:4/5;object-fit:cover}
+.coa .about p{font-size:19px;line-height:1.6;color:var(--ink)}
+.coa .about .sig{margin-top:14px;font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-size:26px;color:var(--hl)}
+@media (max-width:860px){.coa .agrid{grid-template-columns:1fr}.coa .about .row{grid-template-columns:1fr;gap:24px}.coa .about img{max-width:300px;margin:0 auto}}
 .coa .foot{background:var(--foot-bg);color:#a6a29a;padding:40px 0 110px;font-size:13px;line-height:1.6;text-align:center}
 .coa .foot a{color:#e2ded6;text-decoration:underline;text-underline-offset:3px}
 .coa .foot .links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin:12px 0 18px}
@@ -148,6 +159,26 @@ html,body{overflow-x:hidden}
 </div>
 </header>
 
+<section class="apply" id="apply">
+<div class="wrap">
+<div class="head">
+<h2>Apply for your session</h2>
+<p>Five quick questions. Then you pick your time.</p>
+</div>
+<div class="form" id="coa-form"></div>
+<p class="small">Your answers are only used to prepare your call. We never sell or share your data.</p>
+</div>
+</section>
+
+<section class="style" id="style">
+<div class="wrap center">
+<h2>This is the style we film in</h2>
+<p class="lead">Shot like a film, not like another selfie video. Your ads get the same eye for story.</p>
+<div class="big"><button type="button" class="film" data-w="a4mxkv0oz5" aria-label="Play the OP Bros trailer"><img src="https://embed-ssl.wistia.com/deliveries/54c9d42e1ec4041e5bb2a6b0279885d036af8bb1.jpg?image_crop_resized=1280x720" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">0:27</span></button></div>
+<p class="capt">OP Bros are two operating room nurses whose channel has over 1 billion views. They chose our cinematic style for the trailer of one of their formats.</p>
+</div>
+</section>
+
 <section class="proof" id="proof">
 <div class="wrap center">
 <h2>We tested it on my wife first</h2>
@@ -158,12 +189,14 @@ html,body{overflow-x:hidden}
 </div>
 </section>
 
+
 <section class="work" id="work">
 <div class="wrap center">
-<h2>What our cameras did for others</h2>
+<h2>More films and ads we shot</h2>
 <p class="lead">Different industries, same eye for story.</p>
 <div class="wgrid">
-<div class="wcard"><button type="button" class="film" data-w="3bg1jf360c" aria-label="Play Tandler"><img src="https://embed-ssl.wistia.com/deliveries/a88de2c8dea66035be097b5ebca5450e01d5d69f.jpg?image_crop_resized=960x540" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">0:44</span></button><span class="wtag">Recruiting ads</span><h3>Tandler</h3><ul class="res"><li>60 applicants in 2 months</li><li>6 open positions filled in under 4 weeks</li><li>All 4 apprentice spots filled within 4 weeks</li></ul><p>A manufacturer with 200+ employees needed people. We filmed the ads and ran them.</p></div>
+<div class="wcard"><button type="button" class="film" data-w="56f8zp6nwv" aria-label="Play Penning"><img src="https://embed-ssl.wistia.com/deliveries/b4fdabee04bd54b17d2f416ed62c45dd5f2ac740.jpg?image_crop_resized=960x540" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">1:03</span></button><span class="wtag">Recruiting ad</span><h3>Penning</h3><ul class="res"></ul><p>A recruiting ad for a service assistant role.</p></div>
+<div class="wcard"><button type="button" class="film" data-w="m4yop7d35v" aria-label="Play Autohaus Mock"><img src="https://embed-ssl.wistia.com/deliveries/d31ef91d3ff9f1be0f5ecb59ce93c1f2d4490b68.jpg?image_crop_resized=960x540" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">0:53</span></button><span class="wtag">Recruiting ad</span><h3>Autohaus Mock</h3><ul class="res"></ul><p>A recruiting ad for a body shop mechanic at a car dealership.</p></div>
 <div class="wcard"><button type="button" class="film" data-w="fuqa8l7dnz" aria-label="Play HAWART"><img src="https://embed-ssl.wistia.com/deliveries/e7b95176b40578a6e379c68983022be60e2a96b8.jpg?image_crop_resized=960x540" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">4:18</span></button><span class="wtag">Film, Reels and ads</span><h3>HAWART</h3><ul class="res"><li>12 hires from 37 applicants</li></ul><p>A manufacturer with three locations. One film, Reels and the ads that ran them.</p></div>
 </div>
 </div>
@@ -203,23 +236,8 @@ html,body{overflow-x:hidden}
 </div>
 </section>
 
-<section class="apply" id="apply">
+<section class="psec">
 <div class="wrap">
-<div class="head">
-<h2>Apply for your session</h2>
-<p>Five quick questions. Then you pick your time.</p>
-</div>
-<div class="form" id="coa-form"></div>
-<p class="small">Your answers are only used to prepare your call. We never sell or share your data.</p>
-</div>
-</section>
-
-<section class="style" id="style">
-<div class="wrap center">
-<h2>This is the style we film in</h2>
-<p class="lead">Shot like a film, not like another selfie video. Your ads get the same eye for story.</p>
-<div class="big"><button type="button" class="film" data-w="a4mxkv0oz5" aria-label="Play the OP Bros trailer"><img src="https://embed-ssl.wistia.com/deliveries/54c9d42e1ec4041e5bb2a6b0279885d036af8bb1.jpg?image_crop_resized=1280x720" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">0:27</span></button></div>
-<p class="capt">OP Bros are two operating room nurses whose channel has over 1 billion views. They chose our cinematic style for the trailer of one of their formats.</p>
 <p class="ps"><b>P.S.</b> You get 3 video ad ideas written for your program before we talk. They are yours to keep either way. We only take two calls a day, so pick your time now.</p>
 </div>
 </section>
@@ -247,7 +265,7 @@ html,body{overflow-x:hidden}
   var SURVEY='https://api.leadconnectorhq.com/widget/survey/qDKr7hHfu9DV9yq3xjVD';
   function qs(){ try{ var s=window.location.search||''; return s+(s?'&':'?')+'page='+NICHE; }catch(e){ return '?page='+NICHE; } }
 
-  var v=document.getElementById('coa-video'), vp=document.getElementById('coa-vplay'), BASE='https://wilk1990.github.io/spl-free-session/coa/vsl/coa-vsl-';
+  var v=document.getElementById('coa-video'), vp=document.getElementById('coa-vplay'), HASV=!!v, BASE='https://wilk1990.github.io/spl-free-session/coa/vsl/coa-vsl-';
   function px(n){ try{ if(window.fbq) fbq('trackCustom',n,{page:NICHE}); }catch(e){} }
   var srcSet=false;
   function start(){
@@ -255,18 +273,18 @@ html,body{overflow-x:hidden}
     v.controls=true; vp.style.display='none';
     var pr=v.play(); if(pr&&pr.catch) pr.catch(function(){});
   }
-  vp.addEventListener('click',start);
   var played=false, marks={25:0,50:0,75:0,95:0};
+  if(HASV){ vp.addEventListener('click',start);
   v.addEventListener('play',function(){ vp.style.display='none'; if(!played){ played=true; px('VSLPlay'); } });
   v.addEventListener('timeupdate',function(){
     var p=v.currentTime/(v.duration||258)*100;
     for(var k in marks){ if(!marks[k] && p>=+k){ marks[k]=1; px('VSL'+k); } }
-  });
+  }); }
 
   var films=root.querySelectorAll('.film[data-w]');
   for(var fi=0;fi<films.length;fi++){ films[fi].addEventListener('click',function(){
     if(this.querySelector('iframe')) return;
-    try{ v.pause(); }catch(e){}
+    try{ if(HASV) v.pause(); }catch(e){}
     var id=this.getAttribute('data-w'), f=document.createElement('iframe');
     f.src='https://fast.wistia.net/embed/iframe/'+id+'?autoPlay=true&playerColor=000000&videoFoam=false';
     f.allow='autoplay; fullscreen'; f.setAttribute('allowfullscreen',''); f.title='Video';
@@ -309,7 +327,7 @@ html,body{overflow-x:hidden}
 
   var sticky=document.getElementById('coa-sticky'), cta=root.querySelector('.cta');
   function onScroll(){
-    var past=cta.getBoundingClientRect().bottom<0, atForm=apply.getBoundingClientRect().top<window.innerHeight*0.6;
+    var past=cta.getBoundingClientRect().bottom<0, ar=apply.getBoundingClientRect(), atForm=ar.top<window.innerHeight*0.6&&ar.bottom>80;
     if(past&&!atForm) sticky.classList.add('show'); else sticky.classList.remove('show');
   }
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();

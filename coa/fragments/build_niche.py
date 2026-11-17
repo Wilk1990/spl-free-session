@@ -6,7 +6,7 @@ Structure follows the framework "Regelwerk fuer High-Ticket Call Funnels auf kal
 4 three steps · 5 the call (what you get, who it is for, capacity) · 6 embedded application + P.S.
 No retainer price, no deadline, no dollar value on the call, no promised number of consults.
 """
-import html, pathlib
+import html, pathlib, re
 
 OUT = pathlib.Path(__file__).parent
 IMG = "https://wilk1990.github.io/spl-free-session/coa/img/"
@@ -18,9 +18,12 @@ def card(wid, thumb, dur, label, tag, name, results, text):
             f'<span class="pl" aria-hidden="true"></span><span class="du">{dur}</span></button>'
             f'<span class="wtag">{html.escape(tag)}</span><h3>{html.escape(name)}</h3><ul class="res">{res}</ul><p>{html.escape(text)}</p></div>')
 
-TANDLER = card("3bg1jf360c", "a88de2c8dea66035be097b5ebca5450e01d5d69f", "0:44", "Tandler", "Recruiting ads", "Tandler",
-    ["60 applicants in 2 months", "6 open positions filled in under 4 weeks", "All 4 apprentice spots filled within 4 weeks"],
-    "A manufacturer with 200+ employees needed people. We filmed the ads and ran them.")
+PENNING = card("56f8zp6nwv", "b4fdabee04bd54b17d2f416ed62c45dd5f2ac740", "1:03", "Penning", "Recruiting ad", "Penning", [], "A recruiting ad for a service assistant role.")
+MOCK = card("m4yop7d35v", "d31ef91d3ff9f1be0f5ecb59ce93c1f2d4490b68", "0:53", "Autohaus Mock", "Recruiting ad", "Autohaus Mock", [], "A recruiting ad for a body shop mechanic at a car dealership.")
+OPBROS = card("a4mxkv0oz5", "54c9d42e1ec4041e5bb2a6b0279885d036af8bb1", "0:27", "OP Bros", "Cinematic trailer", "OP Bros", [], "Two operating room nurses whose channel has over 1 billion views. They chose our cinematic style for the trailer of one of their formats.")
+MOCK1 = card("9mxljf5jur", "01b8ff233499b0363a714c9e90296ec95e378f73", "0:49", "Mock, ad concept 1", "Ad concept", "Mock, concept 1", [], "One of two ad concepts filmed for the same client.")
+MOCK2 = card("r1ajx1xb2b", "43d220fded996cd5b50082b817a2af3fa0f2331f", "0:38", "Mock, ad concept 2", "Ad concept", "Mock, concept 2", [], "The second concept, a different angle on the same offer.")
+TANDLER = card("3bg1jf360c", "a88de2c8dea66035be097b5ebca5450e01d5d69f", "0:44", "Tandler", "Recruiting ads", "Tandler", ["60 applicants in 2 months", "6 open positions filled in under 4 weeks", "All 4 apprentice spots filled within 4 weeks"], "A manufacturer with 200+ employees needed people. We filmed the ads and ran them.")
 HAWART = card("fuqa8l7dnz", "e7b95176b40578a6e379c68983022be60e2a96b8", "4:18", "HAWART", "Film, Reels and ads", "HAWART",
     ["12 hires from 37 applicants"],
     "A manufacturer with three locations. One film, Reels and the ads that ran them.")
@@ -39,6 +42,27 @@ def call_items(biz):
     ]
 
 NICHES = {
+"home": dict(
+  title="Video ads, Meta ads and booking funnels from Los Angeles", biz="business",
+  fonts="family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@1",
+  sans='"Instrument Sans"', serif='"Instrument Serif"',
+  css="""--bg:#ffffff;--soft:#f6f4ef;--ink:#111111;--muted:#5b5b5b;--line:#e5e1d8;--accent:#b8893a;--accent-2:#d9b86a;--accent-ink:#111111;--hl:#b8893a;
+  --hero-bg:#0b0b0b;--hero-ink:#ffffff;--hero-sub:#cfc9bd;--frame-shadow:0 30px 90px rgba(0,0,0,.6);--radius:10px;--btn-radius:8px;--foot-bg:#0b0b0b;--card-bg:#ffffff""",
+  hero_dark=True,
+  eyebrow="City of Angels Advertising · Los Angeles",
+  h1='Video ads that look like film. <span class="serif">And book like ads.</span>',
+  sub="We film your business with cinema cameras, run it as Meta ads and build the page that books the call. See the work below.",
+  cta_note="Five quick questions, then you pick a time.",
+  work_h="Our work",
+  work_sub="Films and ads we shot for other businesses. Tap any video to watch.",
+  cards=[OPBROS, HAWART, PENNING, MOCK, MOCK1, MOCK2, TANDLER], wcols=2,
+  pains_h="", pains="",
+  steps_h="How it works in 3 steps",
+  steps=LA_STEPS("business", "Your people"),
+  who="businesses", style_sub="",
+  about="I'm Dennis. I run City of Angels Advertising from Encino. We are a small team that films, edits and runs the ads ourselves. You talk to me, not an account manager.",
+  order=["work","steps","aud","about","call","apply","psec"], vsl=False,
+),
 "dentists": dict(
   title="Meta video ads for LA dental practices", biz="practice",
   fonts="family=Manrope:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,500",
@@ -50,9 +74,9 @@ NICHES = {
   h1='Fill your chairs with implant consults from cinematic video ads. <span class="serif">Without the $59 new patient special.</span>',
   sub="Watch the 4 minute video. Then claim 3 video ad ideas written for your practice.",
   cta_note="Five quick questions, then you pick a time.",
-  work_h="What our work did for other businesses",
+  work_h="More films and ads we shot",
   work_sub="Different industries, same approach. Real people, real rooms, shot like a film.",
-  cards=[TANDLER, HAWART],
+  cards=[PENNING, MOCK, HAWART],
   pains_h="Why most dental ads bring you the wrong patients",
   pains="A $59 new patient special brings in a $59 patient. She takes the cleaning and you never see her again. Every practice in your zip code runs the same stock smile. Nobody picks an implant dentist they have never seen.",
   steps_h="How it works in 3 steps",
@@ -71,9 +95,9 @@ NICHES = {
   h1='Book high value consults with cinematic video ads. <span class="serif">Without another discount special.</span>',
   sub="Watch the 4 minute video. Then claim 3 video ad ideas written for your spa.",
   cta_note="Five quick questions, then you pick a time.",
-  work_h="What our work did for other businesses",
+  work_h="More films and ads we shot",
   work_sub="Different industries, same approach. Real people, real rooms, shot like a film.",
-  cards=[TANDLER, HAWART],
+  cards=[PENNING, MOCK, HAWART],
   pains_h="Why discount ads keep your margins thin",
   pains="Discount tox brings people who chase the next discount. They come once and never buy the package. Fifty med spas near you post the same lips and the same stock model. People book the spa they can see and trust.",
   steps_h="How it works in 3 steps",
@@ -92,9 +116,9 @@ NICHES = {
   h1='Fill your calendar with qualified sales calls from video ads. <span class="serif">Without flying in a film crew.</span>',
   sub="Watch the 4 minute video. Then claim 3 video ad ideas written for your program.",
   cta_note="Five quick questions, then you pick a time. The video talks about our LA offer. For coaches anywhere in the US we film remotely.",
-  work_h="What our cameras did for others",
+  work_h="More films and ads we shot",
   work_sub="Different industries, same eye for story.",
-  cards=[TANDLER, HAWART],
+  cards=[PENNING, MOCK, HAWART],
   pains_h="Why your ads get likes and no booked calls",
   pains="Selfie video, captions, a whiteboard. Your feed is full of coaches who say the same thing. A free PDF brings emails, not buyers. Your calendar fills with people who can't afford the program.",
   steps_h="How it works in 3 steps",
@@ -104,6 +128,7 @@ NICHES = {
     ("You take calls with qualified people", "Everyone answers a few questions before they book. You see which ad booked which call."),
   ],
   who="coaches and consultants anywhere in the US",
+  order=["apply","style","proof","work","pains","steps","call","psec"],
   style_sub="Shot like a film, not like another selfie video. Your ads get the same eye for story.",
 ),
 }
@@ -120,6 +145,7 @@ PROOF = (
 )
 
 TEMPLATE = open(OUT / "niche.template.html", encoding="utf-8").read()
+VSL = open(OUT / "vsl.block.html", encoding="utf-8").read()
 
 def steps(items):
     return "\n".join(f'<li><span class="n">{i+1:02d}</span><div><h3>{html.escape(t)}</h3><p>{html.escape(d)}</p></div></li>' for i,(t,d) in enumerate(items))
@@ -134,7 +160,7 @@ for slug, n in NICHES.items():
       "{{LOGO}}": IMG + "logo-lockup-720.png", "{{LOGO_W}}": "1485", "{{LOGO_H}}": "360",
       "{{HERO_CLASS}}": "dark" if n["hero_dark"] else "light",
       "{{EYEBROW}}": html.escape(n["eyebrow"]), "{{H1}}": n["h1"], "{{SUB}}": html.escape(n["sub"]), "{{CTA_NOTE}}": html.escape(n["cta_note"]),
-      "{{PROOF}}": PROOF if slug == "coaches" else "",
+      
       "{{WORK_H}}": html.escape(n["work_h"]), "{{WORK_SUB}}": html.escape(n["work_sub"]), "{{CARDS}}": "\n".join(n["cards"]), "{{WCOLS}}": str(len(n["cards"])),
       "{{PAINS_H}}": html.escape(n["pains_h"]), "{{PAINS}}": html.escape(n["pains"]),
       "{{STEPS_H}}": html.escape(n["steps_h"]), "{{STEPS}}": steps(n["steps"]),
@@ -145,11 +171,21 @@ for slug, n in NICHES.items():
       "{{STYLE_SUB}}": html.escape(n["style_sub"]),
       "{{PS}}": f"<b>P.S.</b> You get 3 video ad ideas written for your {biz} before we talk. They are yours to keep either way. We only take two calls a day, so pick your time now.",
     }
-    page = TEMPLATE
+    order = n.get("order", ["apply","style","work","pains","steps","call","psec"])
+    head = TEMPLATE[:TEMPLATE.index('<header class="hero')]
+    hero = re.search(r'<header class="hero.*?</header>\n', TEMPLATE, re.S).group(0)
+    tail = TEMPLATE[TEMPLATE.index('<footer class="foot">'):]
+    secs = {m.group(1).split()[0]: m.group(0) for m in re.finditer(r'<section class="([^"]+)".*?</section>\n', TEMPLATE, re.S)}
+    secs["proof"] = PROOF
+    page = head + hero + "\n" + "\n".join(secs[k] for k in order) + "\n" + tail
+    rep["{{VSL}}"] = VSL if n.get("vsl", True) else ""
+    rep["{{WCOLS}}"] = str(n.get("wcols", len(n["cards"])))
+    rep["{{IMG}}"] = IMG
+    rep["{{ABOUT}}"] = html.escape(n.get("about", ""))
     for k, v in rep.items():
         page = page.replace(k, v)
     assert "{{" not in page.replace("{{{", ""), slug
     for bad in ("November", "$5,000", "$3,000", "—", "–", "14 days", "waived"):
         assert bad not in page, (slug, bad)
-    (OUT / f"{slug}.fragment.html").write_text(page, encoding="utf-8")
+    (OUT / (f"{slug}.fragment.html" if slug != "home" else "index.fragment.html")).write_text(page, encoding="utf-8")
     print("wrote", slug, len(page))
