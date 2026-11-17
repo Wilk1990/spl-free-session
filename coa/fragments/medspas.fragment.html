@@ -1,12 +1,12 @@
-<!-- City of Angels Advertising · audience page: medspas · Meta video ads for LA med spas · $5,000 rate for calls booked by Nov 20 -->
+<!-- City of Angels Advertising · audience page: medspas · Meta video ads for LA med spas · framework build (6 blocks, no price, embedded application) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://wilk1990.github.io" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <style>
 .coa,.coa *{box-sizing:border-box;margin:0;padding:0}
 .coa{--bg:#fbf7f3;--soft:#f3e9e1;--ink:#2b1f1b;--muted:#6f5d55;--line:#e8d9cd;--accent:#a8705a;--accent-2:#c79a84;--accent-ink:#ffffff;--hl:#a8705a;
-  --hero-bg:radial-gradient(1200px 500px at 50% 0%,#f6e7dc 0%,#fbf7f3 70%);--hero-ink:#2b1f1b;--hero-sub:#5e4d46;--pill-bg:#fffaf6;--pill-line:#e3cfc0;--pill-ink:#2b1f1b;--chip-bg:#fffaf6;--chip-line:#e8d9cd;--chip-ink:#5e4d46;--frame-shadow:0 30px 80px rgba(80,45,30,.18);--radius:4px;--btn-radius:2px;--logo-filter:none;--foot-bg:#2b1f1b;--card-bg:#fffaf6;
+  --hero-bg:radial-gradient(1200px 500px at 50% 0%,#f6e7dc 0%,#fbf7f3 70%);--hero-ink:#2b1f1b;--hero-sub:#5e4d46;--frame-shadow:0 30px 80px rgba(80,45,30,.18);--radius:4px;--btn-radius:2px;--foot-bg:#2b1f1b;--card-bg:#fffaf6;
   font-family:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;overflow-x:clip;
   width:100vw;position:relative;left:50%;margin-left:-50vw;text-align:left}
 @supports not (overflow:clip){.coa{overflow-x:hidden}}
@@ -16,115 +16,85 @@ html,body{overflow-x:hidden}
 .coa .wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 20px}
 .coa .serif{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:500;letter-spacing:0}
 .coa h2{font-size:clamp(28px,3.8vw,42px);line-height:1.1;letter-spacing:-.02em;font-weight:700;margin-bottom:14px;text-wrap:balance}
-.coa h3{font-size:19px;line-height:1.3;letter-spacing:-.01em;font-weight:700;margin-bottom:6px}
+.coa h3{font-size:20px;line-height:1.3;letter-spacing:-.01em;font-weight:700;margin-bottom:6px}
 .coa .lead{font-size:18px;color:var(--muted);max-width:680px;margin:0 auto}
-.coa section{padding:84px 0}
+.coa section{padding:76px 0}
 .coa .center{text-align:center}
 
-.coa .hero{background:var(--hero-bg);color:var(--hero-ink);padding:26px 0 72px;text-align:center}
-.coa .logo{display:flex;justify-content:center;margin-bottom:34px}
-.coa .logo img{height:42px;width:auto}
+.coa .hero{background:var(--hero-bg);color:var(--hero-ink);padding:22px 0 64px;text-align:center}
+.coa .logo{display:flex;justify-content:center;margin-bottom:26px}
+.coa .logo img{height:40px;width:auto}
 .coa .hero.light .logo img{filter:saturate(1.15) brightness(.82)}
-.coa .eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);margin-bottom:16px}
+.coa .eyebrow{display:inline-block;font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);margin-bottom:14px}
 .coa .hero.light .eyebrow{color:var(--accent)}
-.coa h1{font-size:clamp(34px,5.2vw,60px);line-height:1.05;letter-spacing:-.03em;font-weight:700;margin:0 auto 18px;max-width:940px;text-wrap:balance}
+.coa h1{font-size:clamp(31px,5vw,58px);line-height:1.06;letter-spacing:-.03em;font-weight:700;margin:0 auto 14px;max-width:940px;text-wrap:balance}
 .coa h1 .serif{display:block;color:var(--accent-2);font-size:1.02em}
 .coa .hero.light h1 .serif{color:var(--accent)}
-.coa .sub{font-size:clamp(17px,2vw,20px);color:var(--hero-sub);max-width:720px;margin:0 auto 26px;line-height:1.5}
-.coa .deal{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 14px;background:var(--pill-bg);border:1px solid var(--pill-line);border-radius:999px;padding:10px 20px;font-size:15px;color:var(--pill-ink);margin-bottom:30px}
-.coa .deal i{display:inline-block;width:9px;height:9px;border-radius:50%;background:#2fb26a;box-shadow:0 0 0 4px rgba(47,178,106,.2)}
-.coa .deal .cd{font-variant-numeric:tabular-nums;color:var(--accent);font-weight:600}
-.coa .hero.dark .deal .cd{color:var(--accent-2)}
+.coa .sub{font-size:clamp(17px,2vw,20px);color:var(--hero-sub);max-width:680px;margin:0 auto 22px;line-height:1.45}
 
 .coa .vsl{max-width:900px;margin:0 auto}
 .coa .vsl .frame{position:relative;padding-top:56.25%;background:#000;border-radius:var(--radius);overflow:hidden;box-shadow:var(--frame-shadow)}
 .coa .vsl video{position:absolute;inset:0;width:100%;height:100%;background:#000;object-fit:cover}
-.coa .chapters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px}
-.coa .chapters button{font-family:inherit;font-size:13px;color:var(--chip-ink);background:var(--chip-bg);border:1px solid var(--chip-line);border-radius:999px;padding:7px 12px;cursor:pointer;line-height:1.2}
-.coa .chapters button b{color:var(--accent);font-weight:600;margin-right:6px;font-variant-numeric:tabular-nums}
-.coa .hero.dark .chapters button b{color:var(--accent-2)}
-.coa .chapters button:hover,.coa .chapters button.on{border-color:var(--accent)}
+.coa .vplay{position:absolute;inset:0;width:100%;height:100%;border:0;cursor:pointer;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.55) 100%);display:flex;align-items:center;justify-content:center;font-family:inherit}
+.coa .vplay .pl{width:84px;height:84px;border-radius:50%;background:var(--accent);box-shadow:0 10px 30px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center}
+.coa .vplay .pl:after{content:"";margin-left:6px;border-style:solid;border-width:14px 0 14px 23px;border-color:transparent transparent transparent var(--accent-ink)}
+.coa .vplay .rt{position:absolute;left:14px;bottom:14px;background:rgba(0,0,0,.7);color:#fff;font-size:15px;font-weight:600;padding:6px 12px;border-radius:6px;font-variant-numeric:tabular-nums}
 
-.coa .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:19px;line-height:1.2;padding:21px 38px;border-radius:var(--btn-radius);border:0;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.14);transition:transform .15s,filter .15s;font-family:inherit}
+.coa .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:24px;line-height:1.2;padding:22px 40px;border-radius:var(--btn-radius);border:0;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.14);transition:transform .15s,filter .15s;font-family:inherit}
 .coa .btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
-.coa .cta{margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:12px}
-.coa .bonus{max-width:560px;background:var(--pill-bg);border:1px solid var(--pill-line);border-radius:var(--radius);padding:14px 20px;color:var(--pill-ink);font-size:15px;line-height:1.45;display:flex;flex-direction:column;gap:4px;margin-bottom:6px}
-.coa .bonus .bt{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-.coa .hero.dark .bonus .bt{color:var(--accent-2)}
-.coa .bonus b{font-size:17px}
-.coa .bonus a{color:inherit;text-decoration:underline;text-underline-offset:3px}
-.coa .note{font-size:14px;color:var(--hero-sub);opacity:.85;max-width:640px;line-height:1.5}
+.coa .cta{margin-top:24px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.coa .note{font-size:15px;color:var(--hero-sub);max-width:640px;line-height:1.5}
 
 .coa .work{background:var(--bg)}
-.coa .work .lead{margin-bottom:34px}
 .coa .film{position:relative;display:block;width:100%;padding-top:56.25%;background:#000;border-radius:var(--radius);overflow:hidden;cursor:pointer;border:0}
 .coa .film img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,opacity .2s}
 .coa .film:hover img{transform:scale(1.03)}
-.coa .film .pl{position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:var(--accent);box-shadow:0 10px 30px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center}
-.coa .film .pl:after{content:"";margin-left:5px;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent var(--accent-ink)}
+.coa .film .pl{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--accent);box-shadow:0 10px 30px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center}
+.coa .film .pl:after{content:"";margin-left:5px;border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent var(--accent-ink)}
 .coa .film .du{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.65);color:#fff;font-size:13px;font-weight:600;padding:3px 8px;border-radius:4px;font-variant-numeric:tabular-nums}
 .coa .film iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.coa .feat{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;align-items:center;margin-bottom:34px;text-align:left}
-.coa .feat .film .pl{width:88px;height:88px;margin:-44px 0 0 -44px}
-.coa .wtag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--hl);margin-bottom:8px}
-.coa .feat h3{font-size:28px;margin-bottom:10px}
-.coa .feat p,.coa .wcard p{font-size:16px;color:var(--muted);line-height:1.55}
-.coa .res{display:inline-block;margin-top:10px;font-size:14px;font-weight:700;color:var(--ink);border-left:3px solid var(--accent);padding-left:10px}
-.coa .wgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;text-align:left}
-.coa .wcard h3{margin-top:14px}
-@media (max-width:860px){.coa .feat{grid-template-columns:1fr}.coa .wgrid{grid-template-columns:1fr}}
+.coa .wtag{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--hl);margin:16px 0 6px}
+.coa .wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:left;margin-top:34px}
+.coa .wcard{background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:14px 14px 22px}
+.coa .wcard h3{margin:0 0 10px}
+.coa .wcard p{font-size:16px;color:var(--muted);line-height:1.5;margin-top:10px}
+.coa .res{list-style:none;display:grid;gap:8px}
+.coa .res li{font-size:17px;font-weight:700;color:var(--ink);border-left:3px solid var(--accent);padding-left:10px;line-height:1.35}
 .coa .proof{background:var(--soft)}
-.coa .proof .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0 26px}
+.coa .proof .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0 20px}
 .coa .proof .stat{background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:22px 18px;text-align:left}
 .coa .proof .stat b{display:block;font-size:34px;letter-spacing:-.02em;line-height:1.1;margin-bottom:6px}
 .coa .proof .stat span{font-size:15px;color:var(--muted);line-height:1.45}
-.coa .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:left}
-.coa .pgrid .full{grid-column:1/-1}
 .coa .shot{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.06)}
 .coa .shot img{width:100%}
-.coa .proof .cap{font-size:13px;color:var(--muted);margin-top:16px;line-height:1.5;text-align:left}
-@media (max-width:860px){.coa .proof .stats,.coa .pgrid{grid-template-columns:1fr}}
+.coa .proof .cap{font-size:14px;color:var(--muted);margin-top:14px;line-height:1.5;text-align:left}
+
 .coa .pains{background:var(--soft)}
-.coa .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
-.coa .pain{background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px}
-.coa .pain h3{color:var(--hl)}
-.coa .pain p{font-size:16px;color:var(--muted);line-height:1.55}
+.coa .pains p{font-size:clamp(19px,2.3vw,23px);line-height:1.5;max-width:720px;margin:18px auto 0;color:var(--ink)}
 
-.coa .steps ol{list-style:none;max-width:780px;margin:34px auto 0;display:grid;gap:14px}
-.coa .steps li{display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-bottom:1px solid var(--line)}
+.coa .steps ol{list-style:none;max-width:780px;margin:30px auto 0;display:grid;gap:6px}
+.coa .steps li{display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--line)}
 .coa .steps li:last-child{border-bottom:0}
-.coa .steps .n{flex:0 0 auto;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:34px;line-height:1;color:var(--hl);min-width:52px}
-.coa .steps p{font-size:16px;color:var(--muted);line-height:1.55}
+.coa .steps .n{flex:0 0 auto;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:36px;line-height:1;color:var(--hl);min-width:52px}
+.coa .steps p{font-size:17px;color:var(--muted);line-height:1.5}
+.coa .steps .g{font-size:16px;color:var(--muted);max-width:640px;margin:18px auto 0}
 
-.coa .ideas{background:var(--soft)}
-.coa .idea{background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;display:flex;flex-direction:column;gap:8px}
-.coa .idea .tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--hl)}
-.coa .idea h3{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:500;font-size:23px;line-height:1.25}
-.coa .idea p{font-size:16px;color:var(--muted);line-height:1.55}
+.coa .call{background:var(--soft)}
+.coa .call .box{max-width:760px;margin:26px auto 0;background:var(--card-bg);border:1px solid var(--line);border-radius:calc(var(--radius) + 4px);padding:30px 28px;text-align:left}
+.coa .call ul{list-style:none;display:grid;gap:14px}
+.coa .call li{position:relative;padding-left:30px;font-size:18px;line-height:1.45}
+.coa .call li:before{content:"";position:absolute;left:0;top:11px;width:16px;height:3px;background:var(--accent)}
+.coa .call .fit{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);font-size:17px;color:var(--muted);line-height:1.5}
+.coa .call .fit b{color:var(--ink)}
+.coa .call .cta{margin-top:26px}
 
-.coa .about .row{display:grid;grid-template-columns:320px 1fr;gap:44px;align-items:center;max-width:900px;margin:0 auto}
-.coa .about img{border-radius:var(--radius);width:100%;aspect-ratio:4/5;object-fit:cover}
-.coa .about p{font-size:19px;line-height:1.6;color:var(--ink)}
-.coa .about .sig{margin-top:14px;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:26px;color:var(--hl)}
-
-.coa .apply{background:var(--soft);padding:80px 0 84px}
-.coa .apply .head{text-align:center;max-width:720px;margin:0 auto 26px}
-.coa .apply p{font-size:17px;color:var(--muted);line-height:1.55}
-.coa .terms{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:760px;margin:22px auto 26px}
-.coa .terms div{background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);padding:14px 12px;text-align:center;font-size:14px;color:var(--muted);line-height:1.4}
-.coa .terms b{display:block;font-size:20px;color:var(--ink);letter-spacing:-.01em;margin-bottom:2px}
+.coa .apply{padding:76px 0 70px}
+.coa .apply .head{text-align:center;max-width:720px;margin:0 auto 24px}
+.coa .apply .head p{font-size:18px;color:var(--muted);line-height:1.5}
 .coa .form{max-width:680px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:calc(var(--radius) + 6px);padding:18px 14px;box-shadow:0 20px 60px rgba(0,0,0,.07);min-height:460px}
 .coa .form iframe{width:100%;border:0;min-height:440px}
-.coa .small{font-size:13px;color:var(--muted);text-align:center;max-width:680px;margin:16px auto 0;line-height:1.5}
-
-.coa .faq .list{max-width:760px;margin:30px auto 0}
-.coa .faq details{border-bottom:1px solid var(--line);padding:18px 0}
-.coa .faq summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
-.coa .faq summary::-webkit-details-marker{display:none}
-.coa .faq summary:after{content:"+";color:var(--hl);font-weight:400;font-size:24px;line-height:1}
-.coa .faq details[open] summary:after{content:"\2212"}
-.coa .faq details p{margin-top:10px;color:var(--muted);font-size:16px;line-height:1.6}
-.coa .final{text-align:center;padding:10px 0 90px}
+.coa .small{font-size:14px;color:var(--muted);text-align:center;max-width:680px;margin:16px auto 0;line-height:1.5}
+.coa .ps{max-width:680px;margin:34px auto 0;font-size:18px;line-height:1.55;border-left:3px solid var(--accent);padding-left:18px}
 
 .coa .foot{background:var(--foot-bg);color:#a6a29a;padding:40px 0 110px;font-size:13px;line-height:1.6;text-align:center}
 .coa .foot a{color:#e2ded6;text-decoration:underline;text-underline-offset:3px}
@@ -133,27 +103,25 @@ html,body{overflow-x:hidden}
 
 .coa .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--foot-bg);padding:12px 16px calc(12px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .25s ease}
 .coa .sticky.show{transform:translateY(0)}
-.coa .sticky .btn{width:100%;padding:17px 18px;font-size:17px;box-shadow:none}
+.coa .sticky .btn{width:100%;padding:17px 18px;font-size:19px;box-shadow:none}
 @media (min-width:641px){.coa .sticky{display:none}}
-@media (max-width:860px){.coa .grid3{grid-template-columns:1fr}.coa .about .row{grid-template-columns:1fr;gap:24px}.coa .about img{max-width:300px;margin:0 auto}}
+@media (max-width:860px){.coa .wgrid,.coa .proof .stats{grid-template-columns:1fr}}
 @media (max-width:640px){
-  .coa section{padding:60px 0}
-  .coa .hero{padding:20px 0 54px}
-  .coa .logo{margin-bottom:24px}
-  .coa .logo img{height:34px}
-  .coa .deal{border-radius:12px;font-size:14px}
-  .coa .deal i{display:none}
+  .coa section{padding:54px 0}
+  .coa .hero{padding:14px 0 44px}
+  .coa .logo{margin-bottom:14px}
+  .coa .logo img{height:28px}
+  .coa .eyebrow{font-size:12px;letter-spacing:.1em;margin-bottom:10px}
+  .coa h1{margin-bottom:10px}
+  .coa .sub{font-size:16px;margin-bottom:16px}
   .coa .vsl{margin:0 -20px}
   .coa .vsl .frame{border-radius:0}
-  .coa .btn{width:100%;padding:19px 18px;font-size:18px}
-  .coa .chapters{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding:0 16px 4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  .coa .chapters::-webkit-scrollbar{display:none}
-  .coa .chapters button{flex:0 0 auto}
-  .coa .terms{gap:8px}
-  .coa .terms div{padding:12px 6px;font-size:12px}
-  .coa .terms b{font-size:16px}
+  .coa .vplay .pl{width:68px;height:68px}
+  .coa .cta{margin-top:18px}
+  .coa .btn{width:100%;padding:19px 16px;font-size:21px}
+  .coa .call .box{padding:24px 18px}
   .coa .form{padding:12px 6px}
-  .coa .apply{padding:56px 0 64px}
+  .coa .apply{padding:54px 0 56px}
 }
 @media (prefers-reduced-motion:reduce){.coa .sticky,.coa .btn{transition:none}}
 </style>
@@ -164,123 +132,78 @@ html,body{overflow-x:hidden}
 <div class="wrap">
 <div class="logo"><img src="https://wilk1990.github.io/spl-free-session/coa/img/logo-lockup-720.png" width="1485" height="360" alt="City of Angels Advertising"></div>
 <span class="eyebrow">For Los Angeles med spas doing $50K+ a month</span>
-<h1>Book clients who buy the package. <span class="serif">Not the $9 a unit special.</span></h1>
-<p class="sub">We film your injectors and your spa with cinema cameras and run it as Meta ads that book high value consults. Watch the 4 minute video first.</p>
-<div class="deal" id="coa-deal"><i></i><span><b>$5,000 a month</b> for everyone who books a call by November 20. After that the price goes up.</span><span class="cd" id="coa-cd">Until November 20</span></div>
+<h1>Book high value consults with cinematic video ads. <span class="serif">Without another discount special.</span></h1>
+<p class="sub">Watch the 4 minute video. Then claim 3 video ad ideas written for your spa.</p>
 
 <div class="vsl" id="coa-vsl">
-<div class="frame"><video id="coa-video" controls playsinline preload="none" poster="https://wilk1990.github.io/spl-free-session/coa/vsl/poster.jpg" title="City of Angels Advertising in 4 minutes"></video></div>
-<div class="chapters" id="coa-ch">
-<button type="button" data-t="0"><b>0:00</b>The 90 second version</button>
-<button type="button" data-t="31"><b>0:31</b>The November offer</button>
-<button type="button" data-t="57"><b>0:57</b>Who I am</button>
-<button type="button" data-t="78"><b>1:18</b>Our own business</button>
-<button type="button" data-t="168"><b>2:48</b>A US client</button>
-<button type="button" data-t="215"><b>3:35</b>Why LA</button>
-<button type="button" data-t="248"><b>4:08</b>Next step</button>
-</div>
+<div class="frame"><video id="coa-video" playsinline preload="none" poster="https://wilk1990.github.io/spl-free-session/coa/vsl/poster.jpg" title="City of Angels Advertising in 4 minutes"></video><button type="button" class="vplay" id="coa-vplay" aria-label="Play the video, 4 minutes 18 seconds"><span class="pl" aria-hidden="true"></span><span class="rt">Watch the video · 4:18</span></button></div>
 </div>
 
 <div class="cta">
-<div class="bonus"><span class="bt">Free with every call</span><b>3 video ad ideas, written for your med spa</b><span>The hook, the angle and what we would film. We send them before we talk, and you keep them either way. <a href="#ideas">See examples</a></span></div>
-<a href="#apply" class="btn coa-go">Apply and book your call <span aria-hidden="true">&rarr;</span></a>
-<span class="note">Five quick questions, then you pick a time. Your ads go live within 14 days of the shoot day or your first month's fee is waived.</span>
+<a href="#apply" class="btn coa-go">Get my 3 free ad ideas <span aria-hidden="true">&rarr;</span></a>
+<span class="note">Five quick questions, then you pick a time.</span>
 </div>
 </div>
 </header>
 
 <section class="work" id="work">
 <div class="wrap center">
-<h2>Proof we can film</h2>
-<p class="lead">This is what our crew and cameras have made for other brands. Your spa gets the same look: your injectors, your rooms, shot like a film.</p>
-<div class="feat">
-<button type="button" class="film" data-w="m4gq0ahvgu" aria-label="Play OP Bros"><img src="https://embed-ssl.wistia.com/deliveries/55c2be7b6011f92209c79b7adbbdc411d90f0f3d.jpg?image_crop_resized=1280x720" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">0:27</span></button>
-<div><span class="wtag">YouTube production</span><h3>OP Bros</h3><p>Two operating room nurses who turned hospital humor into a channel millions of people watch. We shot their YouTube videos.</p><span class="res">1 billion views in their first year</span></div>
-</div>
+<h2>What our work did for other businesses</h2>
+<p class="lead">Different industries, same approach. Real people, real rooms, shot like a film.</p>
 <div class="wgrid">
-<div class="wcard"><button type="button" class="film" data-w="dh9clkw3mv" aria-label="Play Harley Davidson dealership"><img src="https://embed-ssl.wistia.com/deliveries/88f994aaca594cb15f509ce07d5ab0db.jpg?image_crop_resized=1280x720" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">3:14</span></button><span class="wtag" style="margin-top:16px">Location film</span><h3 style="margin-top:0">Harley Davidson dealership</h3><p>One of the largest Harley Davidson dealerships in northern Germany. A location film that shows the place the way customers feel it.</p></div>
-<div class="wcard"><button type="button" class="film" data-w="629ti7yiya" aria-label="Play Tandler, six open positions"><img src="https://embed-ssl.wistia.com/deliveries/880d520f3c9cf0f87b49e63a31e4ea44.jpg?image_crop_resized=1280x720" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">0:44</span></button><span class="wtag" style="margin-top:16px">Short ad</span><h3 style="margin-top:0">Tandler, six open positions</h3><p>One short ad for six open roles at a 200+ employee manufacturer.</p><span class="res">All six filled in under 4 weeks</span></div>
-<div class="wcard"><button type="button" class="film" data-w="ba2ame6nvp" aria-label="Play Etelser"><img src="https://embed-ssl.wistia.com/deliveries/21590f94817846ad14d438c9896f5cd23afec67b.jpg?image_crop_resized=1280x720" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">1:15</span></button><span class="wtag" style="margin-top:16px">Brand film + Reels</span><h3 style="margin-top:0">Etelser</h3><p>A family owned food producer with nearly 300 employees. Brand films plus Reels for their marketing team.</p></div>
-<div class="wcard"><button type="button" class="film" data-w="vp09z32ku0" aria-label="Play HAWART"><img src="https://embed-ssl.wistia.com/deliveries/38fd724ae4270ad7ca6c0ac5d192bda5e3136a28.jpg?image_crop_resized=1280x720" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">4:19</span></button><span class="wtag" style="margin-top:16px">Brand film + Reels + ads</span><h3 style="margin-top:0">HAWART</h3><p>A manufacturer with three locations. A film, Reels and the ads that ran them.</p><span class="res">12 hires from 37 applicants</span></div>
+<div class="wcard"><button type="button" class="film" data-w="629ti7yiya" aria-label="Play Tandler"><img src="https://embed-ssl.wistia.com/deliveries/880d520f3c9cf0f87b49e63a31e4ea44.jpg?image_crop_resized=960x540" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">0:44</span></button><span class="wtag">Recruiting ads</span><h3>Tandler</h3><ul class="res"><li>60 applicants in 2 months</li><li>6 open positions filled in under 4 weeks</li><li>All 4 apprentice spots filled within 4 weeks</li></ul><p>A manufacturer with 200+ employees needed people. We filmed the ads and ran them.</p></div>
+<div class="wcard"><button type="button" class="film" data-w="m4gq0ahvgu" aria-label="Play OP Bros"><img src="https://embed-ssl.wistia.com/deliveries/55c2be7b6011f92209c79b7adbbdc411d90f0f3d.jpg?image_crop_resized=960x540" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">0:27</span></button><span class="wtag">Cinematic trailer</span><h3>OP Bros</h3><ul class="res"><li>Picked for our cinematic look</li></ul><p>Two operating room nurses who turned hospital humor into a channel with over 1 billion views. They chose our cinematic style for the trailer of one of their formats.</p></div>
+<div class="wcard"><button type="button" class="film" data-w="vp09z32ku0" aria-label="Play HAWART"><img src="https://embed-ssl.wistia.com/deliveries/38fd724ae4270ad7ca6c0ac5d192bda5e3136a28.jpg?image_crop_resized=960x540" alt="" loading="lazy" decoding="async"><span class="pl" aria-hidden="true"></span><span class="du">4:19</span></button><span class="wtag">Film, Reels and ads</span><h3>HAWART</h3><ul class="res"><li>12 hires from 37 applicants</li></ul><p>A manufacturer with three locations. One film, Reels and the ads that ran them.</p></div>
 </div>
 </div>
 </section>
 
 <section class="pains">
 <div class="wrap center">
-<h2>Why discount ads keep your calendar full and your margins thin</h2>
-<div class="grid3" style="text-align:left">
-<div class="pain"><h3>Coupon clients</h3><p>Discount tox brings people who chase the next discount. They come once, never rebook and never buy the membership.</p></div>
-<div class="pain"><h3>No shows and ghosts</h3><p>$20 leads look great in a report. Then 4 out of 10 show up and your front desk spends the week chasing the rest.</p></div>
-<div class="pain"><h3>Everyone looks the same</h3><p>Fifty med spas within ten miles post the same lips, the same lasers and the same stock model. Trust goes to the one people can see.</p></div>
-</div>
+<h2>Why discount ads keep your margins thin</h2>
+<p>Discount tox brings people who chase the next discount. They come once and never buy the package. Fifty med spas near you post the same lips and the same stock model. People book the spa they can see and trust.</p>
 </div>
 </section>
 
 <section class="steps">
 <div class="wrap center">
-<h2>How we bring you clients who stay</h2>
+<h2>How it works in 3 steps</h2>
 <ol style="text-align:left">
-<li><span class="n">01</span><div><h3>We sharpen the offer</h3><p>Memberships, laser packages, body contouring, full face treatments. We sell what keeps clients coming back, not a one time discount.</p></div></li>
-<li><span class="n">02</span><div><h3>We film at your spa</h3><p>Your injectors, your rooms, your vibe. Shot on cinema cameras in one day, cut into Reels, Stories and feed ads.</p></div></li>
-<li><span class="n">03</span><div><h3>We build the booking page</h3><p>Every click lands on a page made for that treatment. Clients pick a consult time right there, no phone tag.</p></div></li>
-<li><span class="n">04</span><div><h3>We run it and track it</h3><p>Meta ads to women and men around your spa. Every booked consult shows up next to the ad that booked it.</p></div></li>
+<li><span class="n">01</span><div><h3>We film at your spa</h3><p>Your injectors, your rooms. One shoot day with cinema cameras. We direct everything.</p></div></li>
+<li><span class="n">02</span><div><h3>We run the ads and build the booking page</h3><p>Meta ads to people near you. Every click lands on a page where they pick a consult time.</p></div></li>
+<li><span class="n">03</span><div><h3>You meet people who are ready</h3><p>Every lead answers a few questions before they book. You see which ad booked which consult.</p></div></li>
 </ol>
+<p class="g">Your ads go live within 14 days of the shoot day or your first month&#x27;s fee is waived.</p>
 </div>
 </section>
 
-<section class="ideas" id="ideas">
+<section class="call" id="call">
 <div class="wrap center">
-<h2>The kind of ads we would film for you</h2>
-<p class="lead">Before your call we write 3 of these for your spa. They are yours, even if we never work together.</p>
-<div class="grid3" style="text-align:left">
-<div class="idea"><span class="tag">Idea 1</span><h3>“What a natural result actually looks like”</h3><p>Your lead injector explains her approach while she works. Soft light, real client, no filters. Trust in 30 seconds.</p></div>
-<div class="idea"><span class="tag">Idea 2</span><h3>“Why I stopped buying tox on sale”</h3><p>A member tells why she pays more at your spa. Sells the membership without saying the word discount.</p></div>
-<div class="idea"><span class="tag">Idea 3</span><h3>“Your first visit, start to finish”</h3><p>From the front door to the treatment room. First timers book when they know exactly what happens.</p></div>
+<h2>Your free Ad Strategy Session</h2>
+<p class="lead">30 minutes on video with Dennis. You leave with something you can use, even if we never work together.</p>
+<div class="box">
+<ul>
+<li><b>3 video ad ideas written for your spa.</b> The hook, the angle and what we would film. You get them before we talk.</li>
+<li><b>We walk through them together.</b> You see how each idea turns into an ad that books the right people.</li>
+<li><b>A straight answer.</b> If we are not the right fit, we tell you on the call.</li>
+</ul>
+<p class="fit"><b>Who this is for:</b> med spas in the LA area doing $50K+ a month, with a separate budget for ads. If that is not you yet, this call will not help you. <b>We take two calls a day</b> because we write your 3 ideas before each one.</p>
 </div>
-</div>
-</section>
-
-<section class="about">
-<div class="wrap">
-<div class="row">
-<img src="https://wilk1990.github.io/spl-free-session/coa/img/dennis-chair-900.jpg" srcset="https://wilk1990.github.io/spl-free-session/coa/img/dennis-chair-600.jpg 600w, https://wilk1990.github.io/spl-free-session/coa/img/dennis-chair-900.jpg 900w" sizes="(max-width:860px) 300px, 320px" width="900" height="1125" alt="Dennis Wilk, founder of City of Angels Advertising" loading="lazy" decoding="async">
-<div>
-<p>I&#x27;m Dennis. I run City of Angels Advertising from Encino. We are a small team that films, edits and runs the ads ourselves. You talk to me, not an account manager.</p>
-<div class="sig">Dennis Wilk</div>
-</div>
-</div>
+<div class="cta"><a href="#apply" class="btn coa-go">Get my 3 free ad ideas <span aria-hidden="true">&rarr;</span></a></div>
 </div>
 </section>
 
 <section class="apply" id="apply">
 <div class="wrap">
 <div class="head">
-<h2>Book your call by November 20 and lock in $5,000 a month</h2>
-<p id="coa-apply-sub">Everyone who books a call by November 20 gets our management at $5,000 a month. After November 20 the price goes up. Five quick questions, then you pick your time.</p>
-</div>
-<div class="terms" id="coa-terms">
-<div><b>$5,000 / mo</b>if you book by Nov 20</div>
-<div><b>$3,000+ / mo</b>your ad budget, paid to Meta</div>
-<div><b>14 days</b>from shoot day to live ads</div>
+<h2>Apply for your session</h2>
+<p>Five quick questions. Then you pick your time.</p>
 </div>
 <div class="form" id="coa-form"></div>
 <p class="small">Your answers are only used to prepare your call. We never sell or share your data.</p>
+<p class="ps"><b>P.S.</b> You get 3 video ad ideas written for your spa before we talk. They are yours to keep either way. We only take two calls a day, so pick your time now.</p>
 </div>
 </section>
-
-<section class="faq">
-<div class="wrap center">
-<h2>Questions we hear a lot</h2>
-<div class="list" style="text-align:left">
-<details><summary>Meta keeps rejecting our ads. Will that happen here?</summary><p>We build every ad around Meta&#x27;s rules for aesthetics from the start. No banned before and after photos, no body shaming hooks. Your injector and your clients carry the story.</p></details>
-<details><summary>Do our injectors need to be on camera?</summary><p>It works best when they are. We direct everything and only need them for an hour or two between appointments.</p></details>
-<details><summary>We do promos every month. Do we have to stop?</summary><p>No. We just stop leading with them. The ads sell the experience and the result, the promo can still close the deal on the consult.</p></details>
-<details><summary>What does it cost?</summary><p>$5,000 a month for management if you book your call by November 20. Your ad budget goes straight to Meta, we recommend at least $3,000 a month.</p></details>
-</div>
-</div>
-</section>
-<div class="final"><div class="wrap"><a href="#apply" class="btn coa-go">Apply and book your call <span aria-hidden="true">&rarr;</span></a></div></div>
 
 <footer class="foot">
 <div class="wrap">
@@ -294,7 +217,7 @@ html,body{overflow-x:hidden}
 </div>
 </footer>
 
-<div class="sticky" id="coa-sticky"><a href="#apply" class="btn coa-go">Apply and book your call <span aria-hidden="true">&rarr;</span></a></div>
+<div class="sticky" id="coa-sticky"><a href="#apply" class="btn coa-go">Get my 3 free ad ideas <span aria-hidden="true">&rarr;</span></a></div>
 
 </div>
 
@@ -303,30 +226,24 @@ html,body{overflow-x:hidden}
   var root=document.getElementById('coa'); if(!root) return;
   var NICHE=root.getAttribute('data-niche');
   var SURVEY='https://api.leadconnectorhq.com/widget/survey/qDKr7hHfu9DV9yq3xjVD';
-  var DEADLINE=Date.parse('2026-11-21T00:00:00-08:00'); // end of Nov 20, Pacific time
   function qs(){ try{ var s=window.location.search||''; return s+(s?'&':'?')+'page='+NICHE; }catch(e){ return '?page='+NICHE; } }
 
-  var v=document.getElementById('coa-video'), BASE='https://wilk1990.github.io/spl-free-session/coa/vsl/coa-vsl-';
-  var big=false; try{ big=window.innerWidth>=900 && !(navigator.connection&&navigator.connection.saveData); }catch(e){}
-  v.src=BASE+(big?'1080':'720')+'.mp4';
+  var v=document.getElementById('coa-video'), vp=document.getElementById('coa-vplay'), BASE='https://wilk1990.github.io/spl-free-session/coa/vsl/coa-vsl-';
   function px(n){ try{ if(window.fbq) fbq('trackCustom',n,{page:NICHE}); }catch(e){} }
-  var played=false, marks={25:0,50:0,75:0,95:0};
-  v.addEventListener('play',function(){ if(!played){ played=true; px('VSLPlay'); } });
-  var chs=root.querySelectorAll('#coa-ch button');
-  v.addEventListener('timeupdate',function(){
-    var t=v.currentTime, d=v.duration||258, p=t/d*100;
-    for(var k in marks){ if(!marks[k] && p>=+k){ marks[k]=1; px('VSL'+k); } }
-    for(var i=0;i<chs.length;i++){ var a=+chs[i].getAttribute('data-t'), b=i+1<chs.length?+chs[i+1].getAttribute('data-t'):1e9; if(t>=a&&t<b) chs[i].classList.add('on'); else chs[i].classList.remove('on'); }
-  });
-  function seek(t){
-    if(v.readyState>=1){ try{ v.currentTime=t; }catch(e){} }
-    else { v.addEventListener('loadedmetadata',function f(){ v.removeEventListener('loadedmetadata',f); try{ v.currentTime=t; }catch(e){} }); }
+  var srcSet=false;
+  function start(){
+    if(!srcSet){ srcSet=true; var big=false; try{ big=window.innerWidth>=900 && !(navigator.connection&&navigator.connection.saveData); }catch(e){} v.src=BASE+(big?'1080':'720')+'.mp4'; }
+    v.controls=true; vp.style.display='none';
     var pr=v.play(); if(pr&&pr.catch) pr.catch(function(){});
   }
-  for(var c=0;c<chs.length;c++){ chs[c].addEventListener('click',function(){ seek(+this.getAttribute('data-t')); }); }
+  vp.addEventListener('click',start);
+  var played=false, marks={25:0,50:0,75:0,95:0};
+  v.addEventListener('play',function(){ vp.style.display='none'; if(!played){ played=true; px('VSLPlay'); } });
+  v.addEventListener('timeupdate',function(){
+    var p=v.currentTime/(v.duration||258)*100;
+    for(var k in marks){ if(!marks[k] && p>=+k){ marks[k]=1; px('VSL'+k); } }
+  });
 
-
-  // showreel: click to play Wistia
   var films=root.querySelectorAll('.film[data-w]');
   for(var fi=0;fi<films.length;fi++){ films[fi].addEventListener('click',function(){
     if(this.querySelector('iframe')) return;
@@ -337,21 +254,6 @@ html,body{overflow-x:hidden}
     this.appendChild(f); var pl=this.querySelector('.pl'); if(pl) pl.style.display='none';
     px('WorkPlay_'+id);
   }); }
-
-  var cd=document.getElementById('coa-cd');
-  function tick(){
-    var left=DEADLINE-Date.now();
-    if(left<=0){
-      document.getElementById('coa-deal').innerHTML='<i></i><span><b>The November rate has ended.</b> Apply and we go through current pricing on the call.</span>';
-      var s=document.getElementById('coa-apply-sub'); if(s) s.textContent='The $5,000 rate was for calls booked by November 20. Apply below and we go through current pricing on the call.';
-      var t=document.getElementById('coa-terms'); if(t) t.style.display='none'; var hh=document.querySelector('#apply h2'); if(hh) hh.textContent='Apply and book your call';
-      return;
-    }
-    var d=Math.floor(left/864e5), h=Math.floor(left%864e5/36e5), m=Math.floor(left%36e5/6e4);
-    cd.textContent='Until November 20 · '+(d>0?d+'d ':'')+h+'h '+m+'m left';
-    setTimeout(tick,30000);
-  }
-  tick();
 
   var embedReady=false, embedLoading=false, queue=[];
   function loadEmbed(cb){
@@ -370,10 +272,9 @@ html,body{overflow-x:hidden}
     form.appendChild(ifr);
   }
   function loadSurvey(){ loadEmbed(mount); setTimeout(mount,4000); }
-  loadEmbed(function(){});
   var apply=document.getElementById('apply');
   if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){ for(var i=0;i<es.length;i++){ if(es[i].isIntersecting){ loadSurvey(); io.disconnect(); break; } } },{rootMargin:'500px 0px'});
+    var io=new IntersectionObserver(function(es){ for(var i=0;i<es.length;i++){ if(es[i].isIntersecting){ loadSurvey(); io.disconnect(); break; } } },{rootMargin:'900px 0px'});
     io.observe(apply);
   } else { loadSurvey(); }
 
