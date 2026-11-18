@@ -36,8 +36,8 @@ LA_STEPS = lambda place, people: [
 
 def call_items(biz):
     return [
-        (f"3 video ad ideas written for your {biz}.", "The hook, the angle and what we would film. You get them before we talk."),
-        ("We walk through them together.", "You see how each idea turns into an ad that books the right people."),
+        (f"3 high converting video ad concepts for your {biz}.", "The hook, the angle and what we would film. We prepare them before the call and walk you through each one."),
+        ("They're yours to keep afterward.", "You see how each concept turns into an ad that books the right people."),
         ("A straight answer.", "If we are not the right fit, we tell you on the call."),
     ]
 
@@ -72,7 +72,7 @@ NICHES = {
   hero_dark=False,
   eyebrow="For LA dental practices doing $50K+ a month",
   h1='Fill your chairs with implant consults from cinematic video ads. <span class="serif">Without the $59 new patient special.</span>',
-  sub="Watch the 4 minute video. Then claim 3 video ad ideas written for your practice.",
+  sub="Watch the 4 minute video. Then book your call and see 3 video ad concepts built for your practice.",
   cta_note="Five quick questions, then you pick a time.",
   work_h="More films and ads we shot",
   work_sub="Different industries, same approach. Real people, real rooms, shot like a film.",
@@ -93,7 +93,7 @@ NICHES = {
   hero_dark=False,
   eyebrow="For Los Angeles med spas doing $50K+ a month",
   h1='Book high value consults with cinematic video ads. <span class="serif">Without another discount special.</span>',
-  sub="Watch the 4 minute video. Then claim 3 video ad ideas written for your spa.",
+  sub="Watch the 4 minute video. Then book your call and see 3 video ad concepts built for your spa.",
   cta_note="Five quick questions, then you pick a time.",
   work_h="More films and ads we shot",
   work_sub="Different industries, same approach. Real people, real rooms, shot like a film.",
@@ -114,7 +114,7 @@ NICHES = {
   hero_dark=True,
   eyebrow="For coaches and consultants doing $50K+ a month, anywhere in the US",
   h1='Fill your calendar with qualified sales calls from video ads. <span class="serif">Without flying in a film crew.</span>',
-  sub="Watch the 4 minute video. Then claim 3 video ad ideas written for your program.",
+  sub="Watch the 4 minute video. Then book your call and see 3 video ad concepts built for your program.",
   cta_note="Five quick questions, then you pick a time. The video talks about our LA offer. For coaches anywhere in the US we film remotely.",
   work_h="More films and ads we shot",
   work_sub="Different industries, same eye for story.",
@@ -177,9 +177,9 @@ for slug, n in NICHES.items():
       "{{CALL_H}}": "Your free Ad Strategy Session",
       "{{CALL_SUB}}": "30 minutes on video with Dennis. You leave with something you can use, even if we never work together.",
       "{{CALL_ITEMS}}": items(call_items(biz)),
-      "{{CALL_FIT}}": f"<b>Who this is for:</b> {html.escape(n['who'])} doing $50K+ a month, with a separate budget for ads. If that is not you yet, this call will not help you. <b>We take two calls a day</b> because we write your 3 ideas before each one.",
+      "{{CALL_FIT}}": f"<b>Who this is for:</b> {html.escape(n['who'])} doing $50K+ a month, with a separate budget for ads. If that is not you yet, this call will not help you. <b>We only take a few calls a day</b> because we prepare 3 concepts for each one.",
       "{{STYLE_SUB}}": html.escape(n["style_sub"]),
-      "{{PS}}": f"<b>P.S.</b> You get 3 video ad ideas written for your {biz} before we talk. They are yours to keep either way. We only take two calls a day, so pick your time now.",
+      "{{PS}}": f"<b>P.S.</b> On the call we walk you through 3 high converting video ad concepts built for your {biz}. They're yours to keep afterward. We only take a few calls a day, so pick your time now.",
     }
     order = n.get("order", ["apply","style","proof","work","pains","steps","call","psec"])
     head = TEMPLATE[:TEMPLATE.index('<header class="hero')]
